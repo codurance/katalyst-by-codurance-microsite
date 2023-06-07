@@ -1,0 +1,27 @@
+{
+  "name": "katalyst-by-codurance-microsite",
+  "version": "1.0.0",
+  "description": "Promotional microsite for the Katalyst by Codurance brand, which is part of Codurance's Learning & Development service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "upload": "npx hs upload version_control version_control",
+    "upload:dev": "hs upload --account=sandbox version_control version_control",
+    "watch:dev": "hs watch --account=sandbox version_control version_control -i --remove",
+    "prettier": "npx prettier --write --trailing-comma none '**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codurance/katalyst-by-codurance-microsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codurance/katalyst-by-codurance-microsite/issues"
+  },
+  "homepage": "https://github.com/codurance/katalyst-by-codurance-microsite#readme",
+  "dependencies": {
+    "@hubspot/cli": "^4.0.0",
+    "js-yaml": "^3.14.0"
+  }
+}

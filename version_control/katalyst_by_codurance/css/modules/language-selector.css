@@ -1,0 +1,26 @@
+.language-selector {
+  list-style-type: none;
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.language-selector li:not(:first-of-type):before {
+  content: "|";
+}
+
+.language-selector a {
+  color: var(--black);
+}
+
+.language-selector a:focus,
+.language-selector a:hover,
+.language-selector a.active {
+  text-decoration: none;
+  color: var(--orange);
+}
+
+.not-translated {
+  color: gray;
+  cursor: not-allowed;
+}

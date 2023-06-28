@@ -3,9 +3,11 @@
   label: Footer
 -->
 <footer class="footer">
-  Katalyst by
-  {% module 'footer_logo'
-    path='@hubspot/logo'
-    label="Footer Logo"
-    no_wrapper=True %}
+  <div class="footer-wrapper">
+    <p>Powered by</p>
+    {% module 'footer_logo'
+      path='@hubspot/logo'
+      label="Footer Logo"
+      no_wrapper=True %}
+  </div>
 </footer>

@@ -3,16 +3,18 @@
   label: Website header
 -->
 <header class="header">
-  {# The link below is used for a navigation skipper which allows users navigating the site with their keyboard to skip over the site navigation. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+  <div class="header__wrapper">
+    {# The link below is used for a navigation skipper which allows users navigating the site with their keyboard to skip over the site navigation. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
 
-  <a href="#main-content" class="header__skip">Skip to content</a>
-  
-  <div class="header__logo header__logo--main">
-    {% module "site_logo"
-      path="@hubspot/logo"
-      img={
-        "loading": "eager"
-      }
-    %}
+    <a href="#main-content" class="header__skip">Skip to content</a>
+    
+    <div class="header__logo header__logo--main">
+      {% module "site_logo"
+        path="@hubspot/logo"
+        img={
+          "loading": "eager"
+        }
+      %}
+    </div>
   </div>
 </header>

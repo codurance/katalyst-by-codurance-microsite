@@ -1,7 +1,14 @@
-/* Header wrapper */
+/* Header */
 header.header {
+  background: white;
+}
+
+.header__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 40px 0;
+  max-width: var(--content-max-width);
+  margin-inline: auto;
 }
 
 /* Navigation skipper */
@@ -30,7 +37,6 @@ header.header {
   align-items: center;
   display: flex;
   height: auto;
-  margin-right: auto;
   max-width: 200px;
   overflow: hidden;
 }

@@ -4,8 +4,9 @@ header.header {
 }
 
 .header__wrapper {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   align-items: center;
   padding: 40px 0;
   max-width: var(--content-max-width);
@@ -40,7 +41,7 @@ header.header {
   height: auto;
   max-width: 200px;
   overflow: hidden;
-  margin-left: auto;
+  grid-column-start: 2;
 }
 
 .header__logo img {

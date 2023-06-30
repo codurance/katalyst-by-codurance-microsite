@@ -1,4 +1,17 @@
+:root {
+  --fs--1: clamp(0.83rem, calc(0.81rem + 0.12vw), 0.90rem);
+  --fs-0: clamp(1.00rem, calc(0.96rem + 0.22vw), 1.13rem);
+  --fs-1: clamp(1.20rem, calc(1.13rem + 0.36vw), 1.41rem);
+  --fs-2: clamp(1.44rem, calc(1.33rem + 0.55vw), 1.76rem);
+  --fs-3: clamp(1.73rem, calc(1.56rem + 0.82vw), 2.20rem);
+  --fs-4: clamp(2.07rem, calc(1.84rem + 1.17vw), 2.75rem);
+  --fs-5: clamp(2.49rem, calc(2.16rem + 1.64vw), 3.43rem);
+  --fs-6: clamp(2.99rem, calc(2.53rem + 2.27vw), 4.29rem);
+
+}
+
 body {
+  font-size: var(--fs-0);
   line-height: 1.4;
   overflow-wrap: break-word;
 }

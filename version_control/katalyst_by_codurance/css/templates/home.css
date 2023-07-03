@@ -1,0 +1,21 @@
+
+
+.hero-banner {
+    padding: 0 var(--space-s);
+}
+
+
+.hero-banner img {
+    margin-top: var(--space-l);
+}
+
+
+@media(width >= 50rem) {
+    .hero-banner {
+        display: flex;
+        gap: var(--space-m);
+        max-width: var(--content-max-width);
+        margin-inline: auto;
+    }
+
+}

@@ -201,48 +201,42 @@ a:active {
 
 /* Headings */
 
-h1,
-.h1 {
+h1 {
   {{ h1_font.style }};
   color: {{ h1_font.color }};
   font-size: var(--fs-5);
   text-transform: {{ h1_text_transform }};
 }
 
-h2,
-.h2 {
+h2 {
   {{ h2_font.style }};
   color: {{ h2_font.color }};
   font-size: var(--fs-4);
   text-transform: {{ h2_text_transform }};
 }
 
-h3,
-.h3 {
+h3 {
   {{ h3_font.style }};
   color: {{ h3_font.color }};
   font-size: var(--fs-3);
   text-transform: {{ h3_text_transform }};
 }
 
-h4,
-.h4 {
+h4 {
   {{ h4_font.style }};
   color: {{ h4_font.color }};
   font-size: var(--fs-2);
   text-transform: {{ h4_text_transform }};
 }
 
-h5,
-.h5 {
+h5 {
   {{ h5_font.style }};
   color: {{ h5_font.color }};
   font-size: var(--fs-1);
   text-transform: {{ h5_text_transform }};
 }
 
-h6,
-.h6 {
+h6 {
   {{ h6_font.style }};
   color: {{ h6_font.color }};
   font-size: var(--fs-0);

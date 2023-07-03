@@ -1,0 +1,5 @@
+{% for item in module.benefits %}
+	{% inline_text field="icon" value="{{ item.icon }}" %}
+	{% inline_text field="title" value="{{ item.title }}" %}
+	{% inline_text field="text" value="{{ item.text }}" %}
+{% endfor %}

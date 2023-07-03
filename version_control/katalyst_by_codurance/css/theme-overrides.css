@@ -206,6 +206,7 @@ h1 {
   color: {{ h1_font.color }};
   font-size: var(--fs-5);
   text-transform: {{ h1_text_transform }};
+  line-height: 1em;
 }
 
 h2 {
@@ -257,13 +258,13 @@ button,
 .button,
 .hs-button,
 .hs-blog-post-listing__post-button {
-  {{ button_border }}
-  {{ button_spacing }}
-  {{ button_font.style }};
-  background-color: {{ button_bg_color }};
-  border-radius: {{ button_corner_radius }};
-  color: {{ button_font.color }};
-  font-size: var(--fs-0);
+  {{ primary_font }};
+  font-size: 1rem;
+  background-color: var(--orange);
+  color: white;
+  margin-top: var(--space-s);
+  padding: .7rem 1.5rem;
+  border-radius: 2rem;
   text-transform: {{ button_text_transform }};
 }
 
@@ -275,10 +276,9 @@ button:focus,
 .hs-button:focus,
 .hs-blog-post-listing__post-button:hover,
 .hs-blog-post-listing__post-button:focus {
-  {{ button_border_hover }};
-  color: {{ button_color_hover }};
-  background-color: {{ button_background_hover }};
-  border-radius: {{ button_corner_radius_hover }};
+  color: white;
+  background-color: var(--light-orange);
+  border-radius: 2rem;
 }
 
 button:active,

@@ -24,6 +24,7 @@ Base HMTL elements are styled in this section (<body>, <h1>, <a>, <p>, <button> 
 */
 
 {% include './elements/_typography.css' %}
+{% include './elements/_colors.css' %}
 {% include './elements/_buttons.css' %}
 {% include './elements/_forms.css' %}
 {% include './elements/_tables.css' %}
@@ -33,6 +34,7 @@ Specific pieces of UI that are stylized. Typically used for global partial styli
 */
 
 {% include './components/_header.css' %}
+{% include './components/_footer.css' %}
 {% include './components/_default-modules.css' %}
 
 /* Utilities

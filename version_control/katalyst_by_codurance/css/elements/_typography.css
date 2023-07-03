@@ -1,4 +1,16 @@
+:root {
+  --fs--1: clamp(0.83rem, calc(0.81rem + 0.12vw), 0.90rem); /* 13.33-14.40 px */
+  --fs-0: clamp(1.00rem, calc(0.96rem + 0.22vw), 1.13rem); /* 16-18 px */
+  --fs-1: clamp(1.20rem, calc(1.13rem + 0.36vw), 1.41rem); /* 19.20-22.50 px */
+  --fs-2: clamp(1.44rem, calc(1.33rem + 0.55vw), 1.76rem); /* 23.04-28.13 px */
+  --fs-3: clamp(1.73rem, calc(1.56rem + 0.82vw), 2.20rem); /* 27.65-35.16 px */
+  --fs-4: clamp(2.07rem, calc(1.84rem + 1.17vw), 2.75rem); /* 33.18-43.95 px */
+  --fs-5: clamp(2.49rem, calc(2.16rem + 1.64vw), 3.43rem); /* 39.81-54.93 px */
+  --fs-6: clamp(2.99rem, calc(2.53rem + 2.27vw), 4.29rem); /* 47.78-68.66 px */
+}
+
 body {
+  font-size: var(--fs-0);
   line-height: 1.4;
   overflow-wrap: break-word;
 }
@@ -15,7 +27,7 @@ html[lang^="ko"] body {
 
 p {
   font-size: 1rem;
-  margin: 0 0 1.4rem;
+  margin-bottom: .5rem;
 }
 
 /* Anchors */
@@ -32,14 +44,14 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 1.4rem;
+  margin-bottom: .8rem;
 }
 
 /* Lists */
 
 ul,
 ol {
-  margin: 0 0 1.4rem;
+  margin-bottom: .5rem;
 }
 
 ul ul,

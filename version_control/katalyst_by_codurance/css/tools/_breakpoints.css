@@ -26,13 +26,13 @@
 {% endmacro %}
 
 {% macro medium() %}
-  @media ({{small_screen}} >= witdth <= {{medium_screen}}) {
+  @media ({{small_screen}} >= width <= {{medium_screen}}) {
     {{ caller() }}
   }
 {% endmacro %}
 
 {% macro medium_and_large() %}
-  @media ({{medium_screen}} >= witdth <= {{large_screen}}) {
+  @media ({{medium_screen}} >= width <= {{large_screen}}) {
     {{ caller() }}
   }
 {% endmacro %}
@@ -44,7 +44,7 @@
 {% endmacro %}
 
 {% macro large() %}
-  @media ({{ medium_screen }} >= witdth <= {{ large_screen }}) {
+  @media ({{ medium_screen }} >= width <= {{ large_screen }}) {
     {{ caller() }}
   }
 {% endmacro %}

@@ -1,0 +1,27 @@
+{% import "../tools/_breakpoints.css" as breakpoints %}
+
+/* Benefits section */
+.benefits {
+    background: var(--dark-blue);
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-3xl);
+}
+
+.benefits h2,
+.benefits p {
+    color: white;
+    text-align: center;
+    max-width: 37.5rem;
+    margin-inline: auto;
+}
+
+.benefits h2 {
+    font-size: var(--fs-2);
+}
+
+{% call breakpoints.small_medium_and_large() %}
+    .benefits {
+        padding-inline: var(--space-s);
+    }
+{% endcall %}
+/* End benefits section */

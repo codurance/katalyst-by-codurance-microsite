@@ -10,8 +10,20 @@
 
 {% block body %}
 
-
 {# 1 HEADER INTRO TEXT AND IMAGE #}
+
+<section class="hero-banner">
+  <div class="hero-banner__content">
+    <h1>{% module "hero_title" label="Hero title" path="@hubspot/text" no_wrapper=True%}</h1>
+    <p>{% module "hero_subtitle" label="Hero subtitle" path="@hubspot/text" no_wrapper=True%}</p>
+      {% module "button" label="Hero button" path="@hubspot/button" no_wrapper=True %}
+  </div>
+  <div class="hero-banner__image">
+    {% module "linked_image" label="Hero image" path="@hubspot/linked_image" no_wrapper=True %}
+  </div>
+</section>
+
+
 {# 2 INTRO TEXT + ICON WITH TITLE AND SUBTITLE #}
 <section class="benefits">
   {% section_header "benefits_header" label="Benefits Section Header" %}
@@ -22,6 +34,5 @@
 {# 5 TEXT AND IMAGE #}
 {# 6 TESTIMONIAL CARDS #}
 {# 7 CONTACT FORM #}
-
 
 {% endblock body %}

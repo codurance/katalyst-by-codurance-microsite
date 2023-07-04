@@ -1,7 +1,7 @@
 {% import '../tools/_breakpoints.css' as utils %}
 
 .hero-banner {
-    padding: 0 var(--space-s);
+    padding: var(--space-2xl) var(--space-s);
 }
 
 
@@ -14,12 +14,17 @@
     .hero-banner {
         display: flex;
         gap: var(--space-m);
+        align-items: center;
         max-width: var(--content-max-width);
         margin-inline: auto;
     }
 
     .hero-banner__content {
-        max-width: 60%;
+        width: 60%;
+    }
+
+    .hero-banner__image {
+        width: 40%;
     }
 
     .hero-banner img {

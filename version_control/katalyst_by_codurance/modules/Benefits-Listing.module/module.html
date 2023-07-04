@@ -1,4 +1,6 @@
-<ul>
+{{ require_css(get_asset_url("../css/modules/benefits-listing.css")) }}
+
+<ul class="benefits__listing" role="list">
 	{% for benefit in module.benefits %}
 		<li>
 			<i class="las {{ benefit.icon }}"></i>

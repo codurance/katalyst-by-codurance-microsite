@@ -1,0 +1,27 @@
+.benefits__listing {
+    display: flex;
+    gap: var(--space-2xl);
+    justify-content: center;
+    max-width: var(--content-max-width);
+    margin-inline: auto;
+}
+
+.benefits__listing li {
+    text-align: center;
+    flex-basis: 25%;
+}
+
+.benefits__listing i {
+    color: var(--orange);
+    font-size: var(--fs-5);
+}
+
+.benefits__listing h3,
+.benefits__listing p {
+    color: white;
+}
+
+.benefits__listing h3 {
+    font-size: var(--fs-1);
+    margin-top: var(--space-2xs);
+}

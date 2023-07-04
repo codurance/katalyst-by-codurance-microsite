@@ -4,6 +4,10 @@
     padding: var(--space-2xl) var(--space-s);
 }
 
+.hero-banner__content {
+    text-wrap: balance;
+}
+
 
 .hero-banner img {
     margin-top: var(--space-l);
@@ -13,7 +17,7 @@
 {% call utils.medium_large_and_extra_large() %}
     .hero-banner {
         display: flex;
-        gap: var(--space-m);
+        gap: var(--space-l);
         align-items: center;
         max-width: var(--content-max-width);
         margin-inline: auto;

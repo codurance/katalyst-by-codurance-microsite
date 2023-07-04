@@ -27,6 +27,8 @@
 .benefits__listing h3 {
     font-size: var(--fs-1);
     margin-top: var(--space-2xs);
+    font-family: {{ theme.text.body_font.font.font }};
+    font-weight: bold;
 }
 
 {% call utils.small_and_medium() %}

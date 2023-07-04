@@ -8,7 +8,7 @@
   "occurrence" : {
     "min" : null,
     "max" : 4,
-    "sorting_label_field" : null,
+    "sorting_label_field" : "daefbeb7-41e2-11e6-418a-4aea055a13c7",
     "default" : null
   },
   "children" : [ {

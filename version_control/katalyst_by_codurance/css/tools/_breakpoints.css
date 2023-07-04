@@ -1,63 +1,62 @@
-{% set small_max = 767 %}
+/* 768px  */
+{% set small_screen = "48rem" %}
+  
+/* 1024px */
+{% set medium_screen = "64rem" %}
 
-{% set medium_min = 768 %}
-{% set medium_max = 1023 %}
-
-{% set large_min = 1024 %}
-{% set large_max = 1299 %}
-
-{% set extra_large_min = 1300 %}
+/* 1300px */ 
+{% set large_screen = "81.25rem" %}
 
 {% macro small() %}
-  @media (max-width: {{small_max}}px) {
+  @media (width <= {{small_screen}}) {
     {{ caller() }}
   }
 {% endmacro %}
 
 {% macro small_and_medium() %}
-  @media (max-width: {{medium_max}}px) {
+  @media (width <= {{medium_screen}}) {
     {{ caller() }}
   }
 {% endmacro %}
 
 {% macro small_medium_and_large() %}
-  @media (max-width: {{large_max}}px) {
+  @media (width <= {{large_screen}}) {
     {{ caller() }}
   }
 {% endmacro %}
 
 {% macro medium() %}
-  @media (min-width: {{medium_min}}px) and (max-width: {{medium_max}}px) {
+  @media ({{small_screen}} >= width <= {{medium_screen}}) {
     {{ caller() }}
   }
 {% endmacro %}
 
 {% macro medium_and_large() %}
-  @media (min-width: {{medium_min}}px) and (max-width: {{large_max}}px) {
+  @media ({{medium_screen}} >= width <= {{large_screen}}) {
     {{ caller() }}
   }
 {% endmacro %}
 
 {% macro medium_large_and_extra_large() %}
-  @media (min-width: {{medium_min}}px) {
+  @media (width >= {{small_screen}}) {
     {{ caller() }}
   }
 {% endmacro %}
 
 {% macro large() %}
-  @media (min-width: {{large_min}}px) and (max-width: {{large_max}}px) {
+  @media ({{ medium_screen }} >= width <= {{ large_screen }}) {
     {{ caller() }}
   }
 {% endmacro %}
 
 {% macro large_and_extra_large() %}
-  @media (min-width: {{large_min}}px) {
+  @media (width >= {{ medium_screen }}) {
     {{ caller() }}
   }
 {% endmacro %}
 
 {% macro extra_large() %}
-  @media (min-width: {{extra_large_min}}px) {
+  @media (width >= {{ large_screen }}) {
     {{ caller() }}
   }
 {% endmacro %}

@@ -1,0 +1,40 @@
+{% import '../tools/_breakpoints.css' as utils %}
+
+.hero-banner {
+    padding: var(--space-2xl) var(--space-s);
+}
+
+.hero-banner__content {
+    text-wrap: balance;
+}
+
+
+.hero-banner img {
+    margin-top: var(--space-l);
+    width: 100%;
+}
+
+{% call utils.medium_large_and_extra_large() %}
+    .hero-banner {
+        display: flex;
+        gap: var(--space-l);
+        align-items: center;
+        max-width: var(--content-max-width);
+        margin-inline: auto;
+    }
+
+    .hero-banner__content {
+        width: 60%;
+    }
+
+    .hero-banner__image {
+        width: 40%;
+    }
+
+    .hero-banner img {
+        margin-top: initial;
+    }
+{% endcall %}
+
+
+

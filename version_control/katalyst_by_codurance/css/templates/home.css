@@ -19,6 +19,10 @@
     font-size: var(--fs-2);
 }
 
+.benefits__listing {
+    margin-top: var(--space-3xl);
+}
+
 {% call breakpoints.small_medium_and_large() %}
     .benefits {
         padding-inline: var(--space-s);

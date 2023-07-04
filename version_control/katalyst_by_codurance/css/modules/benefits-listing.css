@@ -1,3 +1,5 @@
+{% import "../tools/_breakpoints.css" as breakpoints %}
+
 .benefits__listing {
     display: flex;
     gap: var(--space-2xl);
@@ -9,6 +11,7 @@
 .benefits__listing li {
     text-align: center;
     flex-basis: 25%;
+    flex-grow: 1;
 }
 
 .benefits__listing i {
@@ -25,3 +28,21 @@
     font-size: var(--fs-1);
     margin-top: var(--space-2xs);
 }
+
+{% call breakpoints.small_and_medium() %}
+    .benefits__listing {
+        flex-wrap: wrap;
+    }
+{% endcall %}
+
+{% call breakpoints.medium() %}
+    .benefits__listing li {
+        flex-basis: 45%;
+    }
+{% endcall %}
+
+{% call breakpoints.small() %}
+    .benefits__listing li {
+        flex-basis: 100%;
+    }
+{% endcall %}

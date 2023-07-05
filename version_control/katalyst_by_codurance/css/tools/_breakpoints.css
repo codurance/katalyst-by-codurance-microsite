@@ -38,7 +38,7 @@
 {% endmacro %}
 
 {% macro medium_large_and_extra_large() %}
-  @media (width >= {{medium_large}}) {
+  @media (width >= {{medium_screen}}) {
     {{ caller() }}
   }
 {% endmacro %}

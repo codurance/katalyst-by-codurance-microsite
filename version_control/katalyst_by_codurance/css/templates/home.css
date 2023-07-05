@@ -81,3 +81,10 @@
     font-family: {{ theme.global_fonts.primary.font }};
 }
 
+/* Methodology section */
+
+.methodology {
+    background: var(--dark-blue);
+    padding: var(--space-3xl) 0;
+}
+

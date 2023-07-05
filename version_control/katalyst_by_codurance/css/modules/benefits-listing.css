@@ -1,17 +1,12 @@
 {% import "../tools/_breakpoints.css" as utils %}
 
 .benefits__listing {
-    display: flex;
-    gap: var(--space-2xl);
-    justify-content: center;
     max-width: var(--content-max-width);
     margin-inline: auto;
 }
 
 .benefits__listing li {
     text-align: center;
-    flex-basis: 25%;
-    flex-grow: 1;
 }
 
 .benefits__listing i {
@@ -31,20 +26,26 @@
     font-weight: bold;
 }
 
-{% call utils.small_and_medium() %}
+{% call utils.medium_large_and_extra_large() %}
+    .benefits__listing {
+        display: flex;
+        gap: var(--space-2xl);
+        justify-content: center;
+    }
+
+    .benefits__listing li {
+        flex: 1 1 35%;
+    }
+{% endcall %}
+
+{% call utils.medium() %}
     .benefits__listing {
         flex-wrap: wrap;
     }
 {% endcall %}
 
-{% call utils.medium() %}
-    .benefits__listing li {
-        flex-basis: 45%;
-    }
-{% endcall %}
-
 {% call utils.small() %}
-    .benefits__listing li {
-        flex-basis: 100%;
+    .benefits__listing li:not(:first-of-type) {
+        margin-top: var(--space-2xl);
     }
 {% endcall %}

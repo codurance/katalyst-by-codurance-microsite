@@ -1,0 +1,13 @@
+{{ require_css(get_asset_url("../css/modules/benefits-listing.css")) }}
+{{ require_css("https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css") }}
+
+
+<ul class="benefits__listing" role="list">
+	{% for benefit in module.benefits %}
+		<li>
+			<i class="las {{ benefit.icon }}"></i>
+			<h3>{{ benefit.title }}</h3>
+			<p>{{ benefit.text }}</p>
+		</li>
+	{% endfor %}
+</ul>

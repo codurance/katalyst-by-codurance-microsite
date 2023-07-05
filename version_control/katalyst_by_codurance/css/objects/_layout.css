@@ -13,3 +13,8 @@
   --space-2xl: clamp(4.00rem, calc(3.82rem + 0.91vw), 4.50rem); /* 64-80px */
   --space-3xl: clamp(6.00rem, calc(5.73rem + 1.36vw), 6.75rem); /* 96-120px */
 }
+
+.container {
+    max-width: min(var(--content-max-width), 100% - var(--space-l));
+    margin-inline: auto;
+}

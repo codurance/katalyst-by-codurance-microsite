@@ -14,3 +14,9 @@
   --space-3xl: clamp(6.00rem, calc(5.73rem + 1.36vw), 6.75rem);
   
 }
+
+
+.container {
+    max-width: min(var(--content-max-width), 100% - var(--space-s));
+    margin-inline: auto;
+}

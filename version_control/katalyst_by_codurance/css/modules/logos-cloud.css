@@ -3,11 +3,12 @@
 
 .logos-container {
     filter: contrast(0%);
-    margin: 1.5em 0;
     display: grid;
     gap: 1em;
     grid-template-columns: repeat( auto-fit, minmax(130px, 1fr) );
     justify-items: center;
+    margin-top: var(--space-l);
+    margin-bottom: var(--space-l);
 }
 
 .logos-container img {

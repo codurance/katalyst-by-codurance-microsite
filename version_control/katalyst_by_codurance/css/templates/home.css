@@ -36,7 +36,9 @@
     }
 {% endcall %}
 
-
+.client-logos {
+    padding: var(--space-2xl) 0;
+}
 
 .client-logos h2 {
     text-align: center;

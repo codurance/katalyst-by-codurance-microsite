@@ -1,0 +1,53 @@
+[ {
+  "id" : "ff0a525c-489d-e031-1aa5-d04c0f36d09c",
+  "name" : "benefits",
+  "display_width" : null,
+  "label" : "Benefits",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : 4,
+    "sorting_label_field" : "daefbeb7-41e2-11e6-418a-4aea055a13c7",
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "0791709a-6d55-f31b-b3d9-19b8a52176e5",
+    "name" : "icon",
+    "display_width" : null,
+    "label" : "Icon",
+    "inline_help_text" : "Please, input an icon class (la-...) from the <a href='https://icons8.com/line-awesome'>Line Awesome icon library</a>",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "daefbeb7-41e2-11e6-418a-4aea055a13c7",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "cd65b6c2-9695-a869-7c74-8c4141dc8111",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+} ]

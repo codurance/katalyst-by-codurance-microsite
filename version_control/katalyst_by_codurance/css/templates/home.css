@@ -46,12 +46,15 @@
     padding-bottom: var(--space-3xl);
 }
 
+.benefits .section-header {
+    max-width: 37.5rem;
+    margin-inline: auto;
+}
+
 .benefits h2,
 .benefits p {
     color: white;
     text-align: center;
-    max-width: 37.5rem;
-    margin-inline: auto;
 }
 
 .benefits h2 {

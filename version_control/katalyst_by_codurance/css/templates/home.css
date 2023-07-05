@@ -1,5 +1,6 @@
 {% import '../tools/_breakpoints.css' as breakpoints %}
 
+/* Hero Banner */
 .hero-banner {
     padding: var(--space-2xl) var(--space-s);
 }
@@ -7,7 +8,6 @@
 .hero-banner__content {
     text-wrap: balance;
 }
-
 
 .hero-banner img {
     margin-top: var(--space-l);
@@ -35,7 +35,6 @@
         margin-top: initial;
     }
 {% endcall %}
-
 
 /* Benefits section */
 
@@ -70,7 +69,7 @@
     }
 {% endcall %}
 
-
+/* Client logos */
 
 .client-logos {
     padding: var(--space-2xl) 0;

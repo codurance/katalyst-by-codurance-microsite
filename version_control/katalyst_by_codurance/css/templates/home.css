@@ -1,4 +1,4 @@
-{% import '../tools/_breakpoints.css' as utils %}
+{% import '../tools/_breakpoints.css' as breakpoints %}
 
 .hero-banner {
     padding: var(--space-2xl) var(--space-s);
@@ -14,7 +14,7 @@
     width: 100%;
 }
 
-{% call utils.medium_large_and_extra_large() %}
+{% call breakpoints.medium_large_and_extra_large() %}
     .hero-banner {
         display: flex;
         gap: var(--space-l);
@@ -37,4 +37,10 @@
 {% endcall %}
 
 
+
+.client-logos h2 {
+    text-align: center;
+    font-size: var(--fs-1);
+    font-family: {{ theme.global_fonts.primary.font }};
+}
 

@@ -36,6 +36,42 @@
     }
 {% endcall %}
 
+
+/* Benefits section */
+
+.benefits {
+    background: var(--dark-blue);
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-3xl);
+}
+
+.benefits .section-header {
+    max-width: 37.5rem;
+    margin-inline: auto;
+}
+
+.benefits h2,
+.benefits p {
+    color: white;
+    text-align: center;
+}
+
+.benefits h2 {
+    font-size: var(--fs-2);
+}
+
+.benefits__listing {
+    margin-top: var(--space-3xl);
+}
+
+{% call utils.small_medium_and_large() %}
+    .benefits {
+        padding-inline: var(--space-s);
+    }
+{% endcall %}
+
+
+
 .client-logos {
     padding: var(--space-2xl) 0;
 }

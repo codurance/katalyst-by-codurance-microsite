@@ -1,0 +1,6 @@
+
+{% for item in module.testimonials_group %}
+	{% inline_text field="quote_text" value="{{ item.quote_text }}" %}
+	{% inline_text field="author.full_name" value="{{ item.author.full_name }}" %}
+	{% inline_text field="author.position" value="{{ item.author.position }}" %}
+{% endfor %}

@@ -1,5 +1,6 @@
 {% import '../tools/_breakpoints.css' as breakpoints %}
 
+/* Hero Banner */
 .hero-banner {
     padding: var(--space-2xl) var(--space-s);
 }
@@ -7,7 +8,6 @@
 .hero-banner__content {
     text-wrap: balance;
 }
-
 
 .hero-banner img {
     margin-top: var(--space-l);
@@ -35,7 +35,6 @@
         margin-top: initial;
     }
 {% endcall %}
-
 
 /* Benefits section */
 
@@ -70,7 +69,7 @@
     }
 {% endcall %}
 
-
+/* Client logos */
 
 .client-logos {
     padding: var(--space-2xl) 0;
@@ -81,4 +80,55 @@
     font-size: var(--fs-1);
     font-family: {{ theme.global_fonts.primary.font }};
 }
+
+/* Methodology section */
+
+.methodology {
+    background: var(--dark-blue);
+    padding: var(--space-3xl) 0;
+}
+
+.methodology h2,
+.methodology p {
+    color: white;
+}
+
+.methodology h2 {
+    font-size: var(--fs-2);
+}
+
+.methodology .secondary-header,
+.methodology .hs-button {
+    margin-top: var(--space-l);
+}
+
+.methodology .secondary-header {
+    margin-bottom: 0;
+}
+
+.methodology img {
+    height: auto;
+}
+
+{% call breakpoints.medium_large_and_extra_large() %}
+    .methodology__wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: var(--space-3xl);
+    }
+
+    .methodology__content {
+        width: 55%;
+    }
+
+    .methodology__image {
+        width: 45%;
+    }
+{% endcall %}
+
+{% call breakpoints.small() %}
+    .methodology__image {
+        margin-top: var(--space-xl);
+    }
+{% endcall %}
 

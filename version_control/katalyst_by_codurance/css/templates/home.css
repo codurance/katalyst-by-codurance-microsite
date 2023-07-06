@@ -93,6 +93,10 @@
     color: white;
 }
 
+.methodology h2 {
+    font-size: var(--fs-2);
+}
+
 .methodology .secondary-header,
 .methodology .hs-button {
     margin-top: var(--space-l);

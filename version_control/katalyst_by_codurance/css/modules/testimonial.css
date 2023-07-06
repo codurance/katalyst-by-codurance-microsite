@@ -1,13 +1,17 @@
+{% import '../tools/_breakpoints.css' as breakpoints %}
 
 .testimonials-wrapper {
     display: flex;
     gap: var(--space-m);
     margin-top: var(--space-l);
+    max-width: min(var(--content-max-width), 100% - var(--space-l));
+    margin-inline: auto;
 }
+
 
 .testimonial {
     padding: var(--space-l) var(--space-m);
-    outline: 4px solid {{ primary_color }};
+    border: 4px solid {{ primary_color }};
     border-radius: 1rem;
 }
 
@@ -23,3 +27,20 @@
 .author-content__name {
     font-weight: 700;
 }
+
+
+{% call breakpoints.small_and_medium() %}
+    .testimonials-wrapper {
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+        padding-right: var(--space-l);
+        margin-left: var(--space-s);
+        max-width: initial;
+    }
+
+    .testimonial {
+        min-width: 17rem;
+        scroll-snap-align: start;
+        scroll-behavior: smooth;
+    }
+{% endcall %}

@@ -244,11 +244,7 @@ h6 {
   text-transform: {{ h6_text_transform }};
 }
 
-/* Blockquote */
 
-blockquote {
-  border-left-color: {{ secondary_color }};
-}
 
 {###########################################################################}
 {############################   4. Buttons   ###############################}

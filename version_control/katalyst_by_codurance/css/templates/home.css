@@ -71,6 +71,7 @@
 {% endcall %}
 
 
+/* Clients section */
 
 .client-logos {
     padding: var(--space-2xl) 0;
@@ -82,3 +83,21 @@
     font-family: {{ theme.global_fonts.primary.font }};
 }
 
+
+
+/* Testimonials section */
+
+.testimonials {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+}
+
+.testimonials .section-header {
+    text-align: center;
+    max-width: 50ch;
+    margin-inline: auto;
+}
+
+.section-header {
+    text-align: center;
+}

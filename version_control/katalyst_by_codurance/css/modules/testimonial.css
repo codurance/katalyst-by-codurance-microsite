@@ -33,7 +33,7 @@
     .testimonials-wrapper {
         overflow: scroll;
         scroll-snap-type: x mandatory;
-        padding-right: var(--space-l);
+        padding-right: var(--space-s);
         margin-left: var(--space-s);
         max-width: initial;
     }

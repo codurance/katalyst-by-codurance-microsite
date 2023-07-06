@@ -1,6 +1,15 @@
+{{ require_css(get_asset_url("../../css/modules/testimonial.css")) }}
 
-{% for item in module.testimonials_group %}
-	{% inline_text field="quote_text" value="{{ item.quote_text }}" %}
-	{% inline_text field="author.full_name" value="{{ item.author.full_name }}" %}
-	{% inline_text field="author.position" value="{{ item.author.position }}" %}
-{% endfor %}
+<div class="testimonials-wrapper">
+	{% for testimonial in module.testimonials_group %}
+		<figure class="testimonial">
+			<blockquote>
+				<p>{{ testimonial.quote_text }}</p>
+			</blockquote>
+			<figcaption class="testimonial__author-content">
+				<p class="author-content__name">{{ testimonial.author.full_name }}</p>
+				<p>{{ testimonial.author.position }}</p>
+			</figcaption>
+		</figure>
+	{% endfor %}
+</div>

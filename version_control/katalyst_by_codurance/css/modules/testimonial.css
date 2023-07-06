@@ -1,0 +1,25 @@
+
+.testimonials-wrapper {
+    display: flex;
+    gap: var(--space-m);
+    margin-top: var(--space-l);
+}
+
+.testimonial {
+    padding: var(--space-l) var(--space-m);
+    outline: 4px solid {{ primary_color }};
+    border-radius: 1rem;
+}
+
+.testimonial__author-content {
+    color: var(--orange);
+    margin-top: var(--space-l);
+}
+
+.testimonial__author-content p {
+    margin-bottom: 0;
+}
+
+.author-content__name {
+    font-weight: 700;
+}

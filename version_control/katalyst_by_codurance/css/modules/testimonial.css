@@ -28,6 +28,10 @@
     font-weight: 700;
 }
 
+.author-content__name cite {
+    display: block;
+}
+
 
 {% call breakpoints.small_and_medium() %}
     .testimonials-wrapper {

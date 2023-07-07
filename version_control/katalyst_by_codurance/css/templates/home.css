@@ -154,5 +154,9 @@
     font-size: var(--fs-2);
 }
 
+.contact__form {
+    margin-top: var(--space-l);
+}
+
 
 

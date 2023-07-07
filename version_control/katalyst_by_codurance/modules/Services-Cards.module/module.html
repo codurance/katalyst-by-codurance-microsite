@@ -1,0 +1,10 @@
+{% for item in module.cards %}
+	{% icon
+		name="{{ item.icon_field.name }}"
+		style="{{ item.icon_field.type }}"
+		unicode="{{ item.icon_field.unicode }}"
+		icon_set="{{ item.icon_field.icon_set }}"
+	%}
+	{% inline_text field="title" value="{{ item.title }}" %}
+	{% inline_text field="description" value="{{ item.description }}" %}
+{% endfor %}

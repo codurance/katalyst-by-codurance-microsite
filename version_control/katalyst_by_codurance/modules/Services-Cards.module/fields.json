@@ -1,0 +1,53 @@
+[ {
+  "id" : "18872f70-035e-ffe6-4ad1-f30eadf13bf5",
+  "name" : "cards",
+  "display_width" : null,
+  "label" : "Cards",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "e5726518-bad5-e737-dfd2-9f84f238c29e",
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "bc608ca6-a456-6415-8840-fbaa5f80bdac",
+    "name" : "icon_field",
+    "display_width" : null,
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-5.14.0",
+    "type" : "icon",
+    "default" : { }
+  }, {
+    "id" : "e5726518-bad5-e737-dfd2-9f84f238c29e",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "94803d20-db62-5eff-567d-93d2518794ae",
+    "name" : "description",
+    "display_width" : null,
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "icon_field" : { }
+  }
+} ]

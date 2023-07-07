@@ -78,6 +78,7 @@ code {
 }
 
 /* Blockquotes */
+
 blockquote:before {
   content: open-quote;
   font-size: var(--fs-4);
@@ -85,11 +86,15 @@ blockquote:before {
 }
 
 blockquote p {
-  font-size: var(--fs-1);
+  font-size: var(--fs-0);
 }
 
 blockquote {
   quotes: "“" "”";
+}
+
+cite {
+  font-style: normal;
 }
 
 /* Horizontal rules */

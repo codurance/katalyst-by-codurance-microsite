@@ -2,14 +2,12 @@
 
 <div class="testimonials-wrapper">
 	{% for testimonial in module.testimonials_group %}
-		<figure class="testimonial">
-			<blockquote>
-				<p>{{ testimonial.quote_text }}</p>
-			</blockquote>
-			<figcaption class="testimonial__author-content">
-				<p class="author-content__name">{{ testimonial.author.full_name }}</p>
-				<p>{{ testimonial.author.position }}</p>
-			</figcaption>
-		</figure>
+		<blockquote class="testimonial">
+			<p>{{ testimonial.quote_text }}</p>
+			<footer class="testimonial__author-content">
+				<cite class="author-content__name">{{ testimonial.author.full_name }}</cite>
+				<cite>{{ testimonial.author.position }}</cite>
+			</footer>
+		</blockquote>
 	{% endfor %}
 </div>

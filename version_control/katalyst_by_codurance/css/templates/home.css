@@ -155,7 +155,9 @@
 }
 
 .contact__form {
-    margin-top: var(--space-l);
+    margin-top: var(--space-2xs);
+    max-width: 48rem;
+    margin-inline: auto;
 }
 
 

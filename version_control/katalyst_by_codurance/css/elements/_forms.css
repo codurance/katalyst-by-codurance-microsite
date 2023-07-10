@@ -8,7 +8,7 @@
 
 form label {
   display: block;
-  font-size: 0.875rem;
+  font-size: var(--fs--1);
   margin-bottom: 0.35rem;
 }
 
@@ -20,7 +20,7 @@ form label {
 /* Help text */
 
 form legend {
-  font-size: 0.875rem;
+  font-size: var(--fs--1);
 }
 
 /* Inputs */
@@ -35,8 +35,8 @@ form input[type=file],
 form select,
 form textarea {
   display: inline-block;
-  font-size: 0.875rem;
-  padding: 0.7rem;
+  font-size: var(--fs--1);
+  padding: var(--space-s);
   width: 100%;
 }
 
@@ -113,7 +113,7 @@ form input[type=file] {
 
 form .hs-richtext,
 form .hs-richtext p {
-  font-size: 0.875rem;
+  font-size: var(--fs--1);
   margin: 0 0 1.4rem;
 }
 

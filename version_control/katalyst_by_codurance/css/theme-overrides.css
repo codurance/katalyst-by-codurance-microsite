@@ -360,33 +360,6 @@ form textarea {
   color: {{ primary_color }};
 }
 
-/* Submit button */
-
-form input[type=submit],
-form .hs-button {
-  {{ form_submit_button_spacing }};
-  {{ form_submit_button_font.style }};
-  color: {{form_submit_button_font.color}};
-  font-size: {{form_submit_button_font.size ~ form_submit_button_font.size_unit}};
-  background-color: {{ form_submit_button_bg_color }};
-  border-radius: {{ button_corner_radius }};
-  text-transform: {{ button_text_transform }};
-}
-
-form input[type=submit]:hover,
-form input[type=submit]:focus,
-form .hs-button:hover,
-form .hs-button:focus {
-  background-color: {{ form_submit_button_bg_color_hover }};
-  color: {{form_submit_button_color_hover}};
-}
-
-form input[type=submit]:active,
-form .hs-button:active {
-  background-color: rgba({{ color_variant(theme.buttons.background.color.color, 40)|convert_rgb }}, {{ theme.buttons.background.color.opacity / 100 }});
-  border-color: {{ color_variant(theme.buttons.border.border.top.color, 40) }};
-}
-
 {###########################################################################}
 {#############################   6. Tables   ###############################}
 {###########################################################################}

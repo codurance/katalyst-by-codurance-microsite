@@ -154,17 +154,6 @@ form .hs-richtext img {
   margin-top: 0.35rem;
 }
 
-/* Submit button */
-
-form input[type=submit],
-form .hs-button {
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  transition: all 0.15s linear;
-  white-space: normal;
-}
-
 /* Captcha */
 
 .grecaptcha-badge {

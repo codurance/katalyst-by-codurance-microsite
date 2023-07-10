@@ -126,7 +126,17 @@ form .hs-richtext img {
 /* GDPR */
 
 .legal-consent-container .hs-form-booleancheckbox-display > span {
-  margin-left: var(--space-l);
+  margin-left: var(--space-l) !important;
+}
+
+.legal-consent-container .hs-form-booleancheckbox-display input {
+  width: var(--space-s);
+  height: var(--space-s);
+}
+
+.legal-consent-container .hs-form-booleancheckbox-display p {
+  font-size: var(--fs--1);
+  font-weight: bold;
 }
 
 /* Validation */

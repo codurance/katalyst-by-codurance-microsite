@@ -911,11 +911,6 @@
                   "hidden_subfields": {
                     "opacity": true
                   }
-                },
-                "inherited_value": {
-                  "property_value_paths": {
-                    "color": "theme.global_fonts.primary.color"
-                  }
                 }
               }
             ]

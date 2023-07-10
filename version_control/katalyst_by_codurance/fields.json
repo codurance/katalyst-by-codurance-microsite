@@ -386,15 +386,10 @@
             },
             "inherited_value": {
               "property_value_paths": {
-                "color": "theme.global_fonts.primary.color",
                 "fallback": "theme.global_fonts.primary.fallback",
                 "font": "theme.global_fonts.primary.font",
                 "font_set": "theme.global_fonts.primary.font_set"
               }
-            },
-            "default": {
-              "size": 24,
-              "size_unit": "px"
             }
           }
         ]
@@ -754,32 +749,10 @@
                     "size": "theme.text.h3.font.size",
                     "font": "theme.global_fonts.secondary.font",
                     "font_set": "theme.global_fonts.secondary.font_set",
-                    "color": "theme.global_fonts.secondary.color",
                     "variant": "theme.text.h3.font.variant"
                   }
                 },
                 "load_external_fonts": true
-              }
-            ]
-          },
-          {
-            "label": "Border",
-            "name": "border",
-            "type": "group",
-            "children": [
-              {
-                "label": "Border",
-                "name": "border",
-                "type": "border",
-                "allow_custom_border_sides": true,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "top.color": "theme.forms.title.background.color.color",
-                    "right.color": "theme.forms.title.background.color.color",
-                    "bottom.color": "theme.forms.title.background.color.color",
-                    "left.color": "theme.forms.title.background.color.color"
-                  }
-                }
               }
             ]
           },
@@ -862,11 +835,6 @@
                 "visibility": {
                   "hidden_subfields": {
                     "opacity": true
-                  }
-                },
-                "inherited_value": {
-                  "property_value_paths": {
-                    "color": "theme.global_fonts.primary.color"
                   }
                 }
               }
@@ -1017,27 +985,6 @@
                 },
                 "placeholder": "",
                 "validation_regex": ""
-              }
-            ]
-          },
-          {
-            "label": "Border",
-            "name": "border",
-            "type": "group",
-            "children": [
-              {
-                "label": "Border",
-                "name": "border",
-                "type": "border",
-                "allow_custom_border_sides": false,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "top.color": "theme.global_colors.primary.color",
-                    "left.color": "theme.global_colors.primary.color",
-                    "right.color": "theme.global_colors.primary.color",
-                    "bottom.color": "theme.global_colors.primary.color"
-                  }
-                }
               }
             ]
           },

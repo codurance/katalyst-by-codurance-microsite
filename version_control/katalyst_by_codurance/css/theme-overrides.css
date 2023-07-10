@@ -84,7 +84,6 @@
 {% set form_title_font = theme.forms.title.text.font %}
 {% set form_title_bg_color =  color(theme.forms.title.background.color) %}
 {% set form_title_spacing = theme.forms.title.spacing.spacing.css %}
-{% set form_title_border = theme.forms.title.border.border.css %}
 {% set form_title_top_left_corner_radius = theme.forms.title.corner.top_left_radius ~ "px" %}
 {% set form_title_top_right_corner_radius = theme.forms.title.corner.top_right_radius ~ "px" %}
 {% set form_title_bottom_left_corner_radius = theme.forms.title.corner.bottom_left_radius ~ "px" %}
@@ -111,7 +110,6 @@
 
 {% set form_submit_button_font = theme.forms.button.text.font %}
 {% set form_submit_button_bg_color = color(theme.forms.button.background.color) %}
-{% set form_submit_button_border = theme.forms.button.border.border.css %}
 {% set form_submit_button_spacing = theme.forms.button.spacing.spacing.css %}
 
 {% set form_submit_button_bg_color_hover = color(theme.forms.button.hover.background.color) %}
@@ -169,7 +167,6 @@ html {
 
 body {
   {{ body_font.style }};
-  color: {{ body_font.color }};
   font-size: var(--fs-0);
 }
 
@@ -306,7 +303,6 @@ form,
 /* Form title */
 
 .form-title {
-  {{ form_title_border}};
   {{ form_title_spacing }};
   {{ form_title_font.style }};
   border-top-left-radius: {{ form_title_top_left_corner_radius }};
@@ -387,7 +383,6 @@ form textarea {
 
 form input[type=submit],
 form .hs-button {
-  {{ form_submit_button_border }};
   {{ form_submit_button_spacing }};
   {{ form_submit_button_font.style }};
   color: {{form_submit_button_font.color}};
@@ -403,7 +398,6 @@ form .hs-button:hover,
 form .hs-button:focus {
   background-color: {{ form_submit_button_bg_color_hover }};
   color: {{form_submit_button_color_hover}};
-  {{ form_submit_button_border_hover }};
 }
 
 form input[type=submit]:active,

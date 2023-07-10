@@ -36,7 +36,7 @@
     }
 {% endcall %}
 
-/* Benefits section */
+/* Benefits Section */
 
 .benefits {
     background: var(--dark-blue);
@@ -69,7 +69,7 @@
     }
 {% endcall %}
 
-/* Client logos */
+/* Client Logos Section */
 
 .client-logos {
     padding: var(--space-2xl) 0;
@@ -81,7 +81,7 @@
     font-family: {{ theme.global_fonts.primary.font }};
 }
 
-/* Methodology section */
+/* Methodology Section */
 
 .methodology {
     background: var(--dark-blue);
@@ -132,6 +132,19 @@
     }
 {% endcall %}
 
+/* Testimonials section */
+
+.testimonials {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+}
+
+.testimonials .section-header {
+    text-align: center;
+    max-width: min(50ch, 100% - var(--space-l));
+    margin-inline: auto;
+}
+
 /* Contact section */
 
 .contact {
@@ -159,6 +172,3 @@
     max-width: 48rem;
     margin-inline: auto;
 }
-
-
-

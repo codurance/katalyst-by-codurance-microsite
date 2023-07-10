@@ -1,0 +1,13 @@
+{{ require_css(get_asset_url("../../css/modules/testimonial.css")) }}
+
+<div class="testimonials-wrapper">
+	{% for testimonial in module.testimonials_group %}
+		<blockquote class="testimonial">
+			<p>{{ testimonial.quote_text }}</p>
+			<footer class="testimonial__author-content">
+				<cite class="author-content__name">{{ testimonial.author.full_name }}</cite>
+				<cite>{{ testimonial.author.position }}</cite>
+			</footer>
+		</blockquote>
+	{% endfor %}
+</div>

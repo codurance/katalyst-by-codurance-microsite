@@ -254,26 +254,7 @@ button,
 .hs-button,
 .hs-blog-post-listing__post-button {
   {{ primary_font }};
-  font-size: 1rem;
-  background-color: var(--orange);
-  color: white;
-  margin-top: var(--space-s);
-  padding: .7rem 1.5rem;
-  border-radius: 2rem;
   text-transform: {{ button_text_transform }};
-}
-
-button:hover,
-button:focus,
-.button:hover,
-.button:focus,
-.hs-button:hover,
-.hs-button:focus,
-.hs-blog-post-listing__post-button:hover,
-.hs-blog-post-listing__post-button:focus {
-  color: white;
-  background-color: var(--light-orange);
-  border-radius: 2rem;
 }
 
 button:active,

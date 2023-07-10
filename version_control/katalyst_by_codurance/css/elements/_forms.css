@@ -38,6 +38,8 @@ form textarea {
   font-size: var(--fs--1);
   padding: var(--space-s);
   width: 100%;
+  border: black solid 2px;
+  border-radius: 20px;
 }
 
 form textarea {
@@ -118,14 +120,13 @@ form .hs-richtext p {
 }
 
 form .hs-richtext img {
-  max-width: 100% !important;
+  max-width: 100%;
 }
 
 /* GDPR */
 
-.legal-consent-container .hs-form-booleancheckbox-display > span,
-.legal-consent-container .hs-form-booleancheckbox-display > span p {
-  margin-left: 1rem !important;
+.legal-consent-container .hs-form-booleancheckbox-display > span {
+  margin-left: var(--space-l);
 }
 
 /* Validation */

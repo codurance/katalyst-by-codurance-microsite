@@ -1356,26 +1356,6 @@
         "type": "group",
         "children": [
           {
-            "label": "Background",
-            "name": "background",
-            "type": "group",
-            "children": [
-              {
-                "label": "Color",
-                "name": "color",
-                "type": "color",
-                "inherited_value": {
-                  "property_value_paths": {
-                    "color": "theme.global_colors.secondary.color"
-                  }
-                },
-                "default": {
-                  "opacity": 100
-                }
-              }
-            ]
-          },
-          {
             "label": "Spacing",
             "name": "spacing",
             "type": "group",
@@ -1422,14 +1402,6 @@
                 "name": "border",
                 "type": "border",
                 "allow_custom_border_sides": true,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "top.color": "theme.forms.form.background.color.color",
-                    "right.color": "theme.forms.form.background.color.color",
-                    "bottom.color": "theme.forms.form.background.color.color",
-                    "left.color": "theme.forms.form.background.color.color"
-                  }
-                },
                 "default": {
                   "top": {
                     "width": {

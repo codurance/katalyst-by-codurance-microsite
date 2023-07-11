@@ -84,3 +84,19 @@
   height: auto;
   max-width: 100%;
 }
+
+/* Section headers (title + subtitle) */
+.section-header {
+  text-align: center;
+  max-width: min(50ch, 100% - var(--space-l));
+  margin-inline: auto;
+}
+
+.section-header h2 {
+  font-size: var(--fs-4);
+  color: black;
+}
+
+.section-header p {
+  font-size: var(--fs-1);
+}

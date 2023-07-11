@@ -44,19 +44,9 @@
     padding-bottom: var(--space-3xl);
 }
 
-.benefits .section-header {
-    max-width: 37.5rem;
-    margin-inline: auto;
-}
-
 .benefits h2,
 .benefits p {
     color: white;
-    text-align: center;
-}
-
-.benefits h2 {
-    font-size: var(--fs-2);
 }
 
 .benefits__listing {
@@ -94,7 +84,7 @@
 }
 
 .methodology h2 {
-    font-size: var(--fs-2);
+    font-size: var(--fs-4);
 }
 
 .methodology .secondary-header,
@@ -132,21 +122,22 @@
     }
 {% endcall %}
 
-
-
-/* Testimonials Section */
+/* Testimonials section */
 
 .testimonials {
     padding-top: var(--space-2xl);
     padding-bottom: var(--space-2xl);
 }
 
-.testimonials .section-header {
-    text-align: center;
-    max-width: min(50ch, 100% - var(--space-l));
-    margin-inline: auto;
+/* Contact section */
+
+.contact {
+    padding: var(--space-2xl) 0;
+    background: var(--light-green) url("https://www.katalystbycodurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/bg-logo-isotype-contact-us.svg") bottom right no-repeat;
 }
 
-.section-header {
-    text-align: center;
+.contact__form {
+    margin-top: var(--space-l);
+    max-width: 48rem;
+    margin-inline: auto;
 }

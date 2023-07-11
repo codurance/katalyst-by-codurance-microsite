@@ -8,7 +8,7 @@
 
 form label {
   display: block;
-  font-size: 0.875rem;
+  font-size: var(--fs--1);
   margin-bottom: 0.35rem;
 }
 
@@ -20,7 +20,7 @@ form label {
 /* Help text */
 
 form legend {
-  font-size: 0.875rem;
+  font-size: var(--fs--1);
 }
 
 /* Inputs */
@@ -35,9 +35,11 @@ form input[type=file],
 form select,
 form textarea {
   display: inline-block;
-  font-size: 0.875rem;
-  padding: 0.7rem;
+  font-size: var(--fs--1);
+  padding: var(--space-s);
   width: 100%;
+  border: black solid 2px;
+  border-radius: 20px;
 }
 
 form textarea {
@@ -113,19 +115,29 @@ form input[type=file] {
 
 form .hs-richtext,
 form .hs-richtext p {
-  font-size: 0.875rem;
+  font-size: var(--fs--1);
   margin: 0 0 1.4rem;
 }
 
 form .hs-richtext img {
-  max-width: 100% !important;
+  max-width: 100%;
 }
 
 /* GDPR */
 
-.legal-consent-container .hs-form-booleancheckbox-display > span,
-.legal-consent-container .hs-form-booleancheckbox-display > span p {
-  margin-left: 1rem !important;
+.legal-consent-container .hs-form-booleancheckbox-display > span {
+  margin-left: var(--space-l) !important;
+}
+
+.legal-consent-container .hs-form-booleancheckbox-display input {
+  width: var(--space-s);
+  height: var(--space-s);
+}
+
+.legal-consent-container .hs-form-booleancheckbox-display p {
+  font-size: var(--fs--1);
+  font-weight: bold;
+  color: var(--purple);
 }
 
 /* Validation */
@@ -141,17 +153,6 @@ form .hs-richtext img {
 .hs-error-msg {
   color: #EF6B51;
   margin-top: 0.35rem;
-}
-
-/* Submit button */
-
-form input[type=submit],
-form .hs-button {
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  transition: all 0.15s linear;
-  white-space: normal;
 }
 
 /* Captcha */

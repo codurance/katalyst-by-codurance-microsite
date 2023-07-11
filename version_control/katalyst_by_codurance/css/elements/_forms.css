@@ -137,6 +137,7 @@ form .hs-richtext img {
 .legal-consent-container .hs-form-booleancheckbox-display p {
   font-size: var(--fs--1);
   font-weight: bold;
+  color: var(--purple);
 }
 
 /* Validation */

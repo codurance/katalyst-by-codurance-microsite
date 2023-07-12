@@ -78,6 +78,10 @@
     padding: var(--space-3xl) 0;
 }
 
+.methodology .section-header {
+    text-align: left;
+}
+
 .methodology h2,
 .methodology p {
     color: white;
@@ -127,6 +131,10 @@
 .testimonials {
     padding-top: var(--space-2xl);
     padding-bottom: var(--space-2xl);
+}
+
+.testimonial {
+    flex: 1 1 0;
 }
 
 /* Contact section */

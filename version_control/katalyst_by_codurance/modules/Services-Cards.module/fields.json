@@ -11,17 +11,22 @@
     "sorting_label_field" : "e5726518-bad5-e737-dfd2-9f84f238c29e",
     "default" : null
   },
-  "children" : [ {
-    "id" : "bc608ca6-a456-6415-8840-fbaa5f80bdac",
-    "name" : "icon_field",
-    "display_width" : null,
-    "label" : "Icon",
-    "required" : false,
-    "locked" : false,
-    "icon_set" : "fontawesome-5.14.0",
-    "type" : "icon",
-    "default" : { }
-  }, {
+  "children" : [ 
+    {
+    "name": "icon",
+    "label": "Icon",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "validation_error_message": "",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "placeholder": "",
+    "inline_help_text" : "Please, input an icon class (la-...) from the <a href='https://icons8.com/line-awesome'>Line Awesome icon library</a>",
+    "help_text": "",
+    "default": null 
+    }, {
     "id" : "e5726518-bad5-e737-dfd2-9f84f238c29e",
     "name" : "title",
     "display_width" : null,

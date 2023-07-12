@@ -78,6 +78,10 @@
     padding: var(--space-3xl) 0;
 }
 
+.methodology .section-header {
+    text-align: left;
+}
+
 .methodology h2,
 .methodology p {
     color: white;

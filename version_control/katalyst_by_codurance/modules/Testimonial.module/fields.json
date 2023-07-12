@@ -1,0 +1,66 @@
+[ {
+  "id" : "7e46321f-132b-38d5-82ae-8e727dc2e400",
+  "name" : "testimonials_group",
+  "display_width" : null,
+  "label" : "Testimonials Group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 3,
+    "sorting_label_field" : "af123650-8a38-0692-dfd4-98370b858505",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "ede1c24c-ae30-0c65-ea99-325e76a055ed",
+    "name" : "quote_text",
+    "display_width" : null,
+    "label" : "Quote Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "af123650-8a38-0692-dfd4-98370b858505",
+    "name" : "author",
+    "display_width" : null,
+    "label" : "Author",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "61a60a80-3b27-f0c2-8401-1abdb6d07653",
+      "name" : "full_name",
+      "display_width" : null,
+      "label" : "Full Name",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text"
+    }, {
+      "id" : "64854a5d-76e3-935d-c002-d5c8d620de00",
+      "name" : "position",
+      "display_width" : null,
+      "label" : "Position",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : { }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "author" : { }
+  } ]
+} ]

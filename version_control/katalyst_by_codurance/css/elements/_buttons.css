@@ -1,16 +1,40 @@
 button,
 .button,
-.hs-button {
+.hs-button,
+.hs-blog-post-listing__post-button,
+input[type="submit"] {
   cursor: pointer;
   display: inline-block;
   text-align: center;
   transition: all 0.15s linear;
   white-space: normal;
+  background-color: var(--orange);
+  color: white;
+  margin-top: var(--space-s);
+  padding: .7rem 1.5rem;
+  border-radius: 2rem;
+  border: none;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+.hs-button:hover,
+.hs-button:focus,
+.hs-blog-post-listing__post-button:hover,
+.hs-blog-post-listing__post-button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  color: white;
+  background-color: var(--light-orange);
+  border-radius: 2rem;
 }
 
 button:disabled,
 .button:disabled,
-.hs-button:disabled {
+.hs-button:disabled,
+input[type="submit"]:disabled, {
   background-color: #D0D0D0;
   border-color: #D0D0D0;
   color: #E6E6E6;

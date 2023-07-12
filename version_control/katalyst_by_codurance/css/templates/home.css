@@ -1,5 +1,6 @@
-{% import '../tools/_breakpoints.css' as utils %}
+{% import '../tools/_breakpoints.css' as breakpoints %}
 
+/* Hero Banner */
 .hero-banner {
     padding: var(--space-2xl) var(--space-s);
 }
@@ -8,13 +9,12 @@
     text-wrap: balance;
 }
 
-
 .hero-banner img {
     margin-top: var(--space-l);
     width: 100%;
 }
 
-{% call utils.medium_large_and_extra_large() %}
+{% call breakpoints.medium_large_and_extra_large() %}
     .hero-banner {
         display: flex;
         gap: var(--space-l);
@@ -56,5 +56,116 @@
     font-size: var(--fs-2);
 }
 
+/* Benefits Section */
 
+.benefits {
+    background: var(--dark-blue);
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-3xl);
+}
 
+.benefits h2,
+.benefits p {
+    color: white;
+}
+
+.benefits__listing {
+    margin-top: var(--space-3xl);
+}
+
+{% call utils.small_medium_and_large() %}
+    .benefits {
+        padding-inline: var(--space-s);
+    }
+{% endcall %}
+
+/* Client Logos Section */
+
+.client-logos {
+    padding: var(--space-2xl) 0;
+}
+
+.client-logos h2 {
+    text-align: center;
+    font-size: var(--fs-1);
+    font-family: {{ theme.global_fonts.primary.font }};
+}
+
+/* Methodology Section */
+
+.methodology {
+    background: var(--dark-blue);
+    padding: var(--space-3xl) 0;
+}
+
+.methodology .section-header {
+    text-align: left;
+}
+
+.methodology h2,
+.methodology p {
+    color: white;
+}
+
+.methodology h2 {
+    font-size: var(--fs-4);
+}
+
+.methodology .secondary-header,
+.methodology .hs-button {
+    margin-top: var(--space-l);
+}
+
+.methodology .secondary-header {
+    margin-bottom: 0;
+}
+
+.methodology img {
+    height: auto;
+}
+
+{% call breakpoints.medium_large_and_extra_large() %}
+    .methodology__wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: var(--space-3xl);
+    }
+
+    .methodology__content {
+        width: 55%;
+    }
+
+    .methodology__image {
+        width: 45%;
+    }
+{% endcall %}
+
+{% call breakpoints.small() %}
+    .methodology__image {
+        margin-top: var(--space-xl);
+    }
+{% endcall %}
+
+/* Testimonials section */
+
+.testimonials {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+}
+
+.testimonial {
+    flex: 1 1 0;
+}
+
+/* Contact section */
+
+.contact {
+    padding: var(--space-2xl) 0;
+    background: var(--light-green) url("https://www.katalystbycodurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/bg-logo-isotype-contact-us.svg") bottom right no-repeat;
+}
+
+.contact__form {
+    margin-top: var(--space-l);
+    max-width: 48rem;
+    margin-inline: auto;
+}

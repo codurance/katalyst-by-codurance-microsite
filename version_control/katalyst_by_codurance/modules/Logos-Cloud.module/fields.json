@@ -1,0 +1,43 @@
+[ {
+  "id" : "53dc7ddb-d18c-ff31-60e5-f3e740cc083b",
+  "name" : "logos_group",
+  "display_width" : null,
+  "label" : "Logos Group",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "8d960c7e-badc-941a-5283-5ebe28fdd247",
+    "name" : "logo_image",
+    "display_width" : null,
+    "label" : "Logo Image",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : null
+    },
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "logo_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }
+} ]

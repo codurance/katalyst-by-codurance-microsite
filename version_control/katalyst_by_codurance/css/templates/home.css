@@ -38,7 +38,9 @@
 
 /* Services section */
 .services {
-    margin-top: var(--space-3xl);
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
+    background-color: var(--light-green);
 }
 
 .services .section-header {

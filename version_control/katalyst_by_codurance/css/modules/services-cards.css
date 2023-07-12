@@ -1,0 +1,40 @@
+
+.services-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m);
+    margin-top: var(--space-xl);
+}
+
+.services-cards article {
+    flex: 1 1 25%;  
+    padding: var(--space-l);
+    background-color: white;
+    border-radius: 20px;
+    transition: scale .2s,
+                outline .2s;
+}
+
+.services-cards article:hover {
+    outline: 2px solid var(--orange);
+    scale: 1.05;
+    transition: scale .3s,
+                outline .2s; 
+}
+
+.services-cards i {
+    font-size: var(--fs-3);
+    color: var(--orange);
+}
+.services-cards h3 {
+    font-family: {{theme.global_fonts.primary.font}};
+    font-weight: 400;
+    font-size: var(--fs-1);
+    margin-top: var(--space-s);
+    margin-bottom: 0;
+}
+
+.services-cards p {
+    margin-top: var(--space-xs);
+  
+}

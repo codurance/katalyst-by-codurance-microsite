@@ -1,31 +1,68 @@
+{% import '../tools/_breakpoints.css' as breakpoints %}
 
 .services-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-m);
-    margin-top: var(--space-xl);
+    margin-top: var(--space-l);
 }
 
-.services-cards article {
-    flex: 1 1 25%;  
+.service-cards__card {
     padding: var(--space-l);
     background-color: white;
     border-radius: 20px;
-    transition: scale .2s,
-                outline .2s;
 }
 
-.services-cards article:hover {
+{% call breakpoints.small_and_medium() %}
+.services-cards article:not(:first-child) {
+    margin-top: var(--space-m);
+}
+{% endcall %}
+
+{% call breakpoints.large_and_extra_large() %}
+    .services-cards {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--space-m);
+    }
+
+    .col-3 {
+        grid-column: span 3;
+    }
+
+    .col-4 {
+        grid-column: span 4;
+    }
+
+    .service-cards__card {
+        transition: scale .2s,
+                    outline .2s;
+    }
+{% endcall %}    
+
+
+
+.service-cards__card:hover,
+.service-cards__card:focus {
     outline: 2px solid var(--orange);
     scale: 1.05;
     transition: scale .3s,
                 outline .2s; 
 }
 
-.services-cards i {
+.icon-wrapper {
+    position: relative;
+}
+
+.triangle {
+    position: absolute;
+    top: 0;
+    left: -30px;
+}
+
+.icon-wrapper i {
     font-size: var(--fs-3);
     color: var(--orange);
+    position: relative;
 }
+
 .services-cards h3 {
     font-family: {{theme.global_fonts.primary.font}};
     font-weight: 400;
@@ -36,5 +73,5 @@
 
 .services-cards p {
     margin-top: var(--space-xs);
-  
 }
+

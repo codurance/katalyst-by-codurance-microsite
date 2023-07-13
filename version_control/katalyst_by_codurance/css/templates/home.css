@@ -43,20 +43,6 @@
     background-color: var(--light-green);
 }
 
-.services .section-header {
-    text-align: center;
-    max-width: 37.5rem; /* 600px */
-    margin-inline: auto;
-}
-
-.services h2,
-.services .section-header p {
-    color: black;
-}
-
-.services h2 {
-    font-size: var(--fs-2);
-}
 
 /* Benefits Section */
 

@@ -2,10 +2,24 @@
 
 <div class="services-cards container">
 	{% for item in module.cards %}
-		<article>
-			<i class="las {{item.icon}}"></i>
-			<h3>{{ item.title }}</h3>
-			<p>{{ item.description }}</p>
-		</article>
+		{% if loop.index <= 3 %}
+			<article class="service-cards__card col-4">
+				<div class="icon-wrapper">
+					<i class="las {{item.icon}}"></i>
+					<img class="triangle" src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/triangle_hover.svg" alt=""/>
+				</div>
+				<h3>{{ item.title }}</h3>
+				<p>{{ item.description }}</p>
+			</article>
+		{% else %}
+			<article class="service-cards__card col-3">
+				<div class="icon-wrapper">
+					<i class="las {{item.icon}}"></i>
+					<img class="triangle" src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/triangle_hover.svg" alt=""/>
+				</div>
+				<h3>{{ item.title }}</h3>
+				<p>{{ item.description }}</p>
+			</article>
+		{% endif %}	
 	{% endfor %}
 </div>

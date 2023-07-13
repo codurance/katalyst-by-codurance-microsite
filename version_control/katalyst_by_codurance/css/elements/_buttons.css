@@ -11,9 +11,10 @@ input[type="submit"] {
   background-color: var(--orange);
   color: white;
   margin-top: var(--space-s);
-  padding: .7rem 1.5rem;
+  padding: var(--space-xs) var(--space-l);
   border-radius: 2rem;
   border: none;
+  font-weight: bold;
 }
 
 button:hover,

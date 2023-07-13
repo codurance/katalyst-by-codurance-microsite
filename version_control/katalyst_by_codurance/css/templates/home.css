@@ -2,25 +2,28 @@
 
 /* Hero Banner */
 .hero-banner {
-    padding: var(--space-2xl) var(--space-s);
+    padding: var(--space-3xl) 0;
+    background: var(--light-green);
 }
 
 .hero-banner__content {
     text-wrap: balance;
 }
 
+.hero-banner__content p {
+    font-size: var(--fs-1);
+    max-width: 40ch;
+}
+
 .hero-banner img {
-    margin-top: var(--space-l);
+    margin-top: var(--space-2xl);
     width: 100%;
 }
 
 {% call breakpoints.medium_large_and_extra_large() %}
-    .hero-banner {
+    .hero-banner__wrapper {
         display: flex;
-        gap: var(--space-l);
-        align-items: center;
-        max-width: var(--content-max-width);
-        margin-inline: auto;
+        gap: var(--space-2xl);
     }
 
     .hero-banner__content {

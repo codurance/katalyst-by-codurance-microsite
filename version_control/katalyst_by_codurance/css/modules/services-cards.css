@@ -64,10 +64,11 @@
     top: var(--space-xs);
     left: calc(-1 * var(--space-s));
     z-index: -1;
-    animation: fade-in-backwards .2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: fade-out-backwards .2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.service-cards__card:hover .triangle {
+.service-cards__card:hover .triangle,
+.service-cards__card:focus .triangle {
     opacity: 1;
     animation: fade-in-forward .4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -104,7 +105,7 @@
     }
 }
 
-@keyframes fade-in-backwards {
+@keyframes fade-out-backwards {
     0% {
         opacity: 1;
         transform: translateZ(0);

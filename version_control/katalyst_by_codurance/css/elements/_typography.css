@@ -8,6 +8,7 @@
   --fs-5: clamp(2.49rem, calc(2.16rem + 1.64vw), 3.43rem); /* 39.81-54.93 px */
   --fs-6: clamp(2.99rem, calc(2.53rem + 2.27vw), 4.29rem); /* 47.78-68.66 px */
 
+  --fw-medium: 500;
   --fw-extra-bold: 800;
 }
 

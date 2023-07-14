@@ -2,15 +2,19 @@
   list-style-type: none;
   margin-left: auto;
   display: flex;
-  gap: 8px;
+  gap: var(--space-3xs);
+  justify-content: center;
+  padding: 0;
 }
 
 .language-selector li:not(:first-of-type):before {
   content: "|";
 }
 
-.language-selector a {
+.language-selector a,
+.language-selector li:before {
   color: var(--black);
+  font-size: var(--fs--1);
 }
 
 .language-selector a:focus,
@@ -18,6 +22,7 @@
 .language-selector a.active {
   text-decoration: none;
   color: var(--orange);
+  font-weight: var(--fw-extra-bold);
 }
 
 .not-translated {

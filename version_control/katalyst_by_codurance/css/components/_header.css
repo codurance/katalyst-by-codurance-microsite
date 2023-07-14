@@ -1,17 +1,22 @@
+{% import '../tools/_breakpoints.css' as breakpoints %}
+
 /* Header */
 header.header {
   background: white;
 }
 
 .header__wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  align-items: center;
-  padding: 40px 0;
-  max-width: var(--content-max-width);
-  margin-inline: auto;
+  padding: var(--space-l) 0;
 }
+
+{% call breakpoints.medium_large_and_extra_large() %}
+  .header__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: baseline;
+  }
+{% endcall %}
 
 /* Navigation skipper */
 .header__skip {
@@ -36,12 +41,10 @@ header.header {
 
 /* Logo */
 .header__logo {
-  align-items: center;
-  display: flex;
   height: auto;
   max-width: 200px;
-  overflow: hidden;
   grid-column-start: 2;
+  margin-inline: auto;
 }
 
 .header__logo img {

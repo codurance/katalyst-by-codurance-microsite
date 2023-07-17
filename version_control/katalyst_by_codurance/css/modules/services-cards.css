@@ -81,7 +81,7 @@
 
 .services-cards h3 {
     font-family: {{theme.global_fonts.primary.font}};
-    font-weight: 400;
+    font-weight: var(--fw-semibold);
     font-size: var(--fs-1);
     margin-top: var(--space-s);
     margin-bottom: 0;

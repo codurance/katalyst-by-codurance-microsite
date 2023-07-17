@@ -36,6 +36,14 @@
     }
 {% endcall %}
 
+/* Services section */
+.services {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
+    background-color: var(--light-green);
+}
+
+
 /* Benefits Section */
 
 .benefits {

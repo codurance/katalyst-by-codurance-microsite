@@ -1,0 +1,117 @@
+{% import '../tools/_breakpoints.css' as breakpoints %}
+
+.services-cards {
+    margin-top: var(--space-l);
+}
+
+.service-cards__card {
+    padding: var(--space-l);
+    background-color: white;
+    border-radius: 20px;
+}
+
+{% call breakpoints.small_and_medium() %}
+.services-cards article:not(:first-child) {
+    margin-top: var(--space-m);
+}
+{% endcall %}
+
+{% call breakpoints.large_and_extra_large() %}
+    .services-cards {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--space-m);
+    }
+
+    .col-3 {
+        grid-column: span 3;
+    }
+
+    .col-4 {
+        grid-column: span 4;
+    }
+
+    .service-cards__card {
+        align-self: start;
+        transition: scale .2s,
+                    outline .2s;
+    }
+{% endcall %}    
+
+
+
+.service-cards__card:hover,
+.service-cards__card:focus {
+    outline: 2px solid var(--orange);
+    scale: 1.05;
+    transition: scale .3s,
+                outline .2s; 
+}
+
+.icon-wrapper {
+    position: relative;
+}
+
+.service-cards__card:hover h3,
+.service-cards__card:focus h3 {
+    margin-top: var(--space-l);
+    transition: margin .2s ease-in-out;
+}
+
+.triangle {
+    position: absolute;
+    opacity: 0; 
+    top: var(--space-xs);
+    left: calc(-1 * var(--space-s));
+    z-index: -1;
+    animation: fade-out-backwards .2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.service-cards__card:hover .triangle,
+.service-cards__card:focus .triangle {
+    opacity: 1;
+    animation: fade-in-forward .4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.icon-wrapper i {
+    font-size: var(--fs-3);
+    color: var(--orange);
+    position: relative;
+}
+
+.services-cards h3 {
+    font-family: {{theme.global_fonts.primary.font}};
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-1);
+    margin-top: var(--space-s);
+    margin-bottom: 0;
+    transition: margin .2s ease-in-out;
+}
+
+.services-cards p {
+    margin-top: var(--space-xs);
+}
+
+
+
+@keyframes fade-in-forward {
+    0% {
+        opacity: 0;
+        transform: translateZ(-1400px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+@keyframes fade-out-backwards {
+    0% {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateZ(-1400px);
+    }
+}

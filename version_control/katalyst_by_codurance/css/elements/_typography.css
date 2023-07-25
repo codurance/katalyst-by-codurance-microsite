@@ -9,6 +9,7 @@
   --fs-6: clamp(2.99rem, calc(2.53rem + 2.27vw), 4.29rem); /* 47.78-68.66 px */
 
   --fw-medium: 500;
+  --fw-semibold: 600;
   --fw-extra-bold: 800;
 }
 

@@ -47,15 +47,10 @@
 /* Benefits Section */
 
 .benefits {
-    background: var(--dark-blue);
     padding-top: var(--space-2xl);
     padding-bottom: var(--space-3xl);
 }
 
-.benefits h2,
-.benefits p {
-    color: white;
-}
 
 .benefits__listing {
     margin-top: var(--space-3xl);

@@ -4,19 +4,13 @@
 	{% for item in module.cards %}
 		{% if loop.index >= 3 and loop.index <= 5 %}
 			<article class="service-cards__card col-4">
-				<div class="icon-wrapper">
-					<img class="triangle" src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/triangle_hover.svg" alt=""/>
-					<i class="las {{item.icon}}"></i>
-				</div>
+				<i class="las {{item.icon}}"></i>
 				<h3>{{ item.title }}</h3>
 				<p>{{ item.description }}</p>
 			</article>
 		{% else %}
 			<article class="service-cards__card col-6">
-				<div class="icon-wrapper">
-					<img class="triangle" src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/triangle_hover.svg" alt=""/>
-					<i class="las {{item.icon}}"></i>
-				</div>
+				<i class="las {{item.icon}}"></i>
 				<h3>{{ item.title }}</h3>
 				<p>{{ item.description }}</p>
 			</article>

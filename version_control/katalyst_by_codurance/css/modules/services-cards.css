@@ -8,7 +8,7 @@
 
 {% call breakpoints.small_and_medium() %}
 .services-cards article:not(:first-child) {
-    margin-top: var(--space-m);
+    margin-top: var(--space-l);
 }
 {% endcall %}
 
@@ -16,7 +16,7 @@
     .services-cards {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        gap: var(--space-m);
+        gap: var(--space-l);
     }
 
     .col-3 {

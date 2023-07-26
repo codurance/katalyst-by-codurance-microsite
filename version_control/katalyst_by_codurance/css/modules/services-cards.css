@@ -2,9 +2,10 @@
 {% import '../tools/_macros.css' as macros %}
 
 .service-cards__card {
-    padding: var(--space-l);
+    padding: var(--space-xl) var(--space-l);
     background-color: white;
     {{ macros.card_styles() }}
+    position: relative;
 }
 
 {% call breakpoints.small_and_medium() %}
@@ -35,6 +36,7 @@
 
 .service-cards__card i {
     font-size: var(--fs-3);
+    position: relative;
 }
 
 .services-cards h3 {

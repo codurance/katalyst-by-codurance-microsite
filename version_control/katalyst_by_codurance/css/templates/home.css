@@ -82,7 +82,7 @@
 
 .client-logos h2 {
     text-align: center;
-    font-size: var(--fs-1);
+    font-size: var(--fs-0);
     font-family: {{ theme.global_fonts.primary.font }};
 }
 

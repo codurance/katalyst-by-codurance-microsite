@@ -1,9 +1,5 @@
 {% import '../tools/_breakpoints.css' as breakpoints %}
 
-.services-cards {
-    margin-top: var(--space-l);
-}
-
 .service-cards__card {
     padding: var(--space-l);
     background-color: white;

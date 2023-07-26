@@ -1,10 +1,10 @@
 {% import '../tools/_breakpoints.css' as breakpoints %}
+{% import '../tools/_macros.css' as macros %}
 
 .service-cards__card {
     padding: var(--space-l);
     background-color: white;
-    border: 2px solid var(--orange);
-    box-shadow: 8px 8px var(--light-green);
+    {{ macros.card_styles() }}
 }
 
 {% call breakpoints.small_and_medium() %}

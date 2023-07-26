@@ -3,7 +3,8 @@
 .service-cards__card {
     padding: var(--space-l);
     background-color: white;
-    border-radius: 20px;
+    border: 2px solid var(--orange);
+    box-shadow: 8px 8px var(--light-green);
 }
 
 {% call breakpoints.small_and_medium() %}

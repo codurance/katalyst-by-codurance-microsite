@@ -2,18 +2,15 @@
 
 <div class="services-cards container">
 	{% for item in module.cards %}
+		{% set card_width_class = "col-6" %}
 		{% if loop.index >= 3 and loop.index <= 5 %}
-			<article class="service-cards__card col-4">
-				<i class="las {{item.icon}}"></i>
-				<h3>{{ item.title }}</h3>
-				<p>{{ item.description }}</p>
-			</article>
-		{% else %}
-			<article class="service-cards__card col-6">
-				<i class="las {{item.icon}}"></i>
-				<h3>{{ item.title }}</h3>
-				<p>{{ item.description }}</p>
-			</article>
-		{% endif %}	
+			{% set card_width_class = "col-4" %}
+		{% endif %}
+		
+		<article class="service-cards__card {{ card_width_class }}">
+			<i class="las {{item.icon}}"></i>
+			<h3>{{ item.title }}</h3>
+			<p>{{ item.description }}</p>
+		</article>
 	{% endfor %}
 </div>

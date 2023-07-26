@@ -34,6 +34,13 @@
     }
 {% endcall %}    
 
+.service-cards__card svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
 .service-cards__card i {
     font-size: var(--fs-3);
     position: relative;

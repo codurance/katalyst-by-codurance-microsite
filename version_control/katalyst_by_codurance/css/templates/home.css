@@ -88,13 +88,10 @@
 
 /* Methodology Section */
 
-.methodology {
-    background: var(--dark-blue);
-    padding: var(--space-3xl) 0;
-}
 
 .methodology .section-header {
     text-align: left;
+    margin-inline: inherit;
 }
 
 .methodology h2,
@@ -115,24 +112,24 @@
     margin-bottom: 0;
 }
 
-.methodology img {
-    height: auto;
-}
 
 {% call breakpoints.medium_large_and_extra_large() %}
     .methodology__wrapper {
         display: flex;
         flex-direction: row-reverse;
-        gap: var(--space-3xl);
     }
+
+    .methodology img {
+        object-fit: cover;
+    }
+
 
     .methodology__content {
-        width: 55%;
+        width: 60%;
+        background: var(--dark-blue);
+        padding: var(--space-2xl);
     }
 
-    .methodology__image {
-        width: 45%;
-    }
 {% endcall %}
 
 {% call breakpoints.small() %}
@@ -140,6 +137,8 @@
         margin-top: var(--space-xl);
     }
 {% endcall %}
+
+
 
 /* Testimonials section */
 

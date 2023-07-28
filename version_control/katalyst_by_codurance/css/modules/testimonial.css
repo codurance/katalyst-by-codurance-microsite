@@ -1,4 +1,5 @@
 {% import '../tools/_breakpoints.css' as breakpoints %}
+{% import '../tools/_macros.css' as macro %}
 
 .testimonials-wrapper {
     display: flex;
@@ -11,8 +12,7 @@
 
 .testimonial {
     padding: var(--space-l) var(--space-m);
-    border: 4px solid {{ primary_color }};
-    border-radius: 1rem;
+    {{ macro.card_styles() }}
 }
 
 .testimonial__author-content {
@@ -25,6 +25,7 @@
 }
 
 .author-content__name {
+    display: block; 
     font-weight: 700;
 }
 

@@ -87,6 +87,7 @@ blockquote:before {
   content: open-quote;
   font-size: var(--fs-4);
   line-height: 1;
+  font-family: {{ theme.global_fonts.secondary.font }};
 }
 
 blockquote p {

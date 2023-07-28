@@ -48,4 +48,5 @@ Example:
 {% macro card_styles() %}
   border: 2px solid var(--orange);
   box-shadow: 8px 8px var(--light-green);
+  border-radius: 3px;
 {% endmacro %}

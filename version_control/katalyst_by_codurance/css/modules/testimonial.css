@@ -3,7 +3,7 @@
 
 .testimonials-wrapper {
     display: flex;
-    gap: var(--space-m);
+    gap: var(--space-l);
     margin-top: var(--space-l);
     max-width: min(var(--content-max-width), 100% - var(--space-l));
     margin-inline: auto;
@@ -11,11 +11,12 @@
 
 
 .testimonial {
-    padding: var(--space-l) var(--space-m);
+    padding: var(--space-l);
     {{ macro.card_styles() }}
 }
-
-.testimonial__author-content {
+    
+.testimonial__author-content {    
+    font-size: var(--fs--1);
     color: var(--orange);
     margin-top: var(--space-l);
 }

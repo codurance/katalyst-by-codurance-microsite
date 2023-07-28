@@ -85,13 +85,15 @@ code {
 
 blockquote:before {
   content: open-quote;
-  font-size: var(--fs-4);
-  line-height: 1;
+  font-size: 6rem;
+  line-height: 0;
+  top: 2rem;
+  position: relative;
   font-family: {{ theme.global_fonts.secondary.font }};
 }
 
 blockquote p {
-  font-size: var(--fs-0);
+  font-size: var(--fs--1);
 }
 
 blockquote {

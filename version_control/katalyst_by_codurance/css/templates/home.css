@@ -140,7 +140,7 @@
     .methodology__content {
         grid-column: 2 / 3;
         background: var(--dark-blue);
-        padding: var(--space-2xl);
+        padding: var(--space-3xl);
     }
 
 {% endcall %}

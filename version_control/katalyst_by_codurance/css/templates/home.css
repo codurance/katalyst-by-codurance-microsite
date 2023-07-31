@@ -105,7 +105,8 @@
 }
 
 .methodology .secondary-header {
-    margin-top: var(--space-l);
+    margin-top: var(--space-m);
+    font-size: var(--fs-0);
 }
 
 .methodology .secondary-header {

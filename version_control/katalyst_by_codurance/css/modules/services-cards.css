@@ -34,7 +34,7 @@
     }
 {% endcall %}    
 
-.service-cards__card svg {
+.service-cards__card img {
     position: absolute;
     top: 0;
     left: 0;
@@ -50,7 +50,7 @@
     font-family: {{theme.global_fonts.primary.font}};
     font-weight: var(--fw-medium);
     font-size: var(--fs-1);
-    margin-top: var(--space-s);
+    margin-top: var(--space-xl);
     margin-bottom: 0;
 }
 

@@ -4,7 +4,7 @@ const serviceListing = document.querySelector(".services-cards");
 const serviceCards = serviceListing.querySelectorAll(".service-cards__card");
 
 serviceCards.forEach((card) => {
-  const graphic = card.querySelector("svg");
+  const graphic = card.querySelector(".service-cards__img");
 
   const observer = new IntersectionObserver(
     () => {

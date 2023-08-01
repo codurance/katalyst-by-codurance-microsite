@@ -177,8 +177,8 @@ img.methodology__graphic {
 /* Testimonials section */
 
 .testimonials {
-    padding-top: var(--space-2xl);
-    padding-bottom: var(--space-2xl);
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
 }
 
 .testimonial {
@@ -189,7 +189,9 @@ img.methodology__graphic {
 
 .contact {
     padding: var(--space-2xl) 0;
-    background: var(--light-green) url("https://www.katalystbycodurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/bg-logo-isotype-contact-us.svg") bottom right no-repeat;
+    background: 
+        var(--light-grey) 
+        url("https://www.katalystbycodurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/bg-logo-isotype-contact-us.svg") bottom right no-repeat;
 }
 
 .contact__form {

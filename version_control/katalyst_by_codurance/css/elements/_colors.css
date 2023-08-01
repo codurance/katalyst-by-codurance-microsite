@@ -1,8 +1,11 @@
 :root {
-    --orange: hsla(24, 86%, 54%, 1);
-    --light-orange: hsla(25, 85%, 90%, 1);
-    --dark-blue: hsla(226, 56%, 11%, 1);
-    --light-green: hsla(175, 85%, 95%, 1);
     --black: hsla(240, 4%, 20%, 1);
+    --orange: hsla(24, 86%, 54%, 1);
+    --turquoise: hsla(174, 96%, 81%, 1);
     --purple: hsla(295, 100%, 50%, 1);
+    
+    --light-grey: hsla(192, 16%, 94%, 1);
+    --light-orange: hsla(25, 85%, 90%, 1);
+    --light-green: hsla(175, 85%, 95%, 1);
+    --dark-blue: hsla(226, 56%, 11%, 1);
 }

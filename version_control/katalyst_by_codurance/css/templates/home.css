@@ -88,6 +88,10 @@
 
 /* Methodology Section */
 
+.methodology {
+    display: grid;
+}
+
 .methodology__content {
         background: var(--dark-blue);
         padding: var(--space-2xl) var(--space-m);
@@ -118,10 +122,24 @@
     
 }
 
+.methodology__image {
+    grid-row: 1/2;
+    position: relative;
+}
+
+img.methodology__graphic {
+        position: absolute;
+      
+
+        bottom: -10%;
+        left: 20%;
+        max-width: 300px;
+        transform: translateX(-50%);
+}
+
 
 {% call breakpoints.medium_large_and_extra_large() %}
     .methodology {
-        display: grid;
         grid-template-columns: 40% 1fr;
         min-height: 400px;
     }
@@ -129,6 +147,13 @@
     .methodology__image {
         grid-column: 1 / 2;
         grid-row: 1;
+        position: relative;
+    }
+
+    .methodology__content {
+        grid-column: 2 / 3;
+        background: var(--dark-blue);
+        padding: var(--space-3xl);
     }
 
     .methodology img {
@@ -138,11 +163,13 @@
         object-position: right;
     }
 
-    .methodology__content {
-        grid-column: 2 / 3;
-        background: var(--dark-blue);
-        padding: var(--space-3xl);
+    img.methodology__graphic {
+        object-fit: revert;
+        bottom: -30%;
+        left: 50%;
+        max-width: 500px;
     }
+
 
 {% endcall %}
 

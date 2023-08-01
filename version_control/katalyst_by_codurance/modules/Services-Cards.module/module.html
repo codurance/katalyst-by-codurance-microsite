@@ -1,6 +1,7 @@
 {{ require_css(get_asset_url("../css/modules/services-cards.css")) }}
 
 {% set cards_with_img = [1, 4, 6, 7] %}
+{% set cards_img = "https://www.codurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/Cards/katalyst_cards_element.svg" %}
 
 <div class="services-cards container">
 	{% for item in module.cards %}
@@ -11,7 +12,7 @@
 		
 		<article class="service-cards__card {{ card_width_class }}">
 			{% if loop.index is within cards_with_img %}
-				<img src="https://www.codurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/katalyst_cards_element_cropped_1.svg" class="service-cards__img" />
+				<img src="{{ cards_img }}" />
 			{% endif %}
 			<i class="las {{item.icon}}"></i>
 			<h3>{{ item.title }}</h3>

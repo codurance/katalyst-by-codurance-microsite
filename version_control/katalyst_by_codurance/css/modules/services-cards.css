@@ -6,6 +6,76 @@
     background-color: white;
     {{ macros.card_styles() }}
     position: relative;
+    overflow: hidden;
+}
+
+.service-cards__card img {
+    position: absolute;
+}
+
+/* Positioning of card inner graphics */
+.service-cards__card:nth-child(1) img {
+    left: -6%;
+    top: -32%;
+}
+
+.service-cards__card:nth-child(4) img {
+    left: 18%;
+    rotate: 322deg;
+    top: -33%;
+}
+
+.service-cards__card:nth-child(6) img {
+    rotate: 317deg;
+    right: -6%;
+    top: 77%;
+}
+
+.service-cards__card:nth-child(7) img {
+    rotate: 50deg;
+    right: -6%;
+    top: -17%;
+}
+
+{% call breakpoints.small_and_medium() %}
+    .service-cards__card:nth-child(1) img {
+        left: -11%;
+        top: -40%;
+    }
+
+    .service-cards__card:nth-child(4) img {
+        top: -50%;
+    }
+
+    .service-cards__card:nth-child(6) img {
+        right: -12%;
+        top: 85%;
+    }
+
+    .service-cards__card:nth-child(7) img {
+        right: -24%;
+        top: -26%;
+    }
+{% endcall %}
+/* End positioning of card inner graphics */
+
+.service-cards__card i {
+    font-size: var(--fs-4);
+    position: relative;
+}
+
+.services-cards h3 {
+    font-family: {{theme.global_fonts.primary.font}};
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-1);
+    margin-top: var(--space-s);
+    margin-bottom: 0;
+    position: relative;
+}
+
+.services-cards p {
+    margin-top: var(--space-xs);
+    position: relative;
 }
 
 {% call breakpoints.small_and_medium() %}
@@ -29,32 +99,13 @@
         grid-column: span 6;
     }
 
+    .service-cards__card.col-6 p {
+        max-width: 90%;
+    }
+
     .service-cards__card.col-4 {
         grid-column: span 4;
         padding-bottom: var(--space-m);
     }
 {% endcall %}    
 
-.service-cards__card img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-.service-cards__card i {
-    font-size: var(--fs-3);
-    position: relative;
-}
-
-.services-cards h3 {
-    font-family: {{theme.global_fonts.primary.font}};
-    font-weight: var(--fw-medium);
-    font-size: var(--fs-1);
-    margin-top: var(--space-xl);
-    margin-bottom: 0;
-}
-
-.services-cards p {
-    margin-top: var(--space-xs);
-}

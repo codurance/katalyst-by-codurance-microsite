@@ -21,16 +21,17 @@
         gap: var(--space-l);
     }
 
-    .col-6 {
+    .service-cards__card {
+        align-self: start;
+    }
+
+    .service-cards__card.col-6 {
         grid-column: span 6;
     }
 
-    .col-4 {
+    .service-cards__card.col-4 {
         grid-column: span 4;
-    }
-
-    .service-cards__card {
-        align-self: start;
+        padding-bottom: var(--space-m);
     }
 {% endcall %}    
 

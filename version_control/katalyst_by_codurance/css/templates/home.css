@@ -122,7 +122,7 @@
     
 }
 
-.methodology__image {
+.methodology__image-container {
     grid-row: 1/2;
     position: relative;
 }
@@ -144,7 +144,7 @@ img.methodology__graphic {
         min-height: 400px;
     }
 
-    .methodology__image {
+    .methodology__image-container {
         grid-column: 1 / 2;
         grid-row: 1;
         position: relative;
@@ -165,6 +165,7 @@ img.methodology__graphic {
 
     img.methodology__graphic {
         object-fit: revert;
+
         bottom: -30%;
         left: 50%;
         max-width: 500px;

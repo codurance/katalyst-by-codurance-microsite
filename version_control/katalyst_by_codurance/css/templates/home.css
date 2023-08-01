@@ -138,7 +138,7 @@ img.methodology__graphic {
 }
 
 
-{% call breakpoints.medium_large_and_extra_large() %}
+{% call breakpoints.large_and_extra_large() %}
     .methodology {
         grid-template-columns: 40% 1fr;
         min-height: 400px;

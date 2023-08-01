@@ -40,10 +40,10 @@
 {% endcall %}
 
 /* Services section */
+
 .services {
     padding-top: var(--space-3xl);
     padding-bottom: var(--space-3xl);
-    background-color: lightgray;
 }
 
 .services-cards {
@@ -139,7 +139,6 @@ img.methodology__graphic {
         transform: translateX(-50%);
 }
 
-
 {% call breakpoints.large_and_extra_large() %}
     .methodology {
         grid-template-columns: 40% 1fr;
@@ -171,12 +170,7 @@ img.methodology__graphic {
         left: 50%;
         max-width: 500px;
     }
-
-
 {% endcall %}
-
-
-
 
 /* Testimonials section */
 

@@ -129,8 +129,6 @@
 
 img.methodology__graphic {
         position: absolute;
-      
-
         bottom: -10%;
         left: 20%;
         max-width: 300px;
@@ -165,7 +163,6 @@ img.methodology__graphic {
 
     img.methodology__graphic {
         object-fit: revert;
-
         bottom: -30%;
         left: 50%;
         max-width: 500px;

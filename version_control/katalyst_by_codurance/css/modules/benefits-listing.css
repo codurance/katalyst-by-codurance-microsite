@@ -42,6 +42,10 @@
     font-weight: bold;
 }
 
+.benefit__content p {
+    font-weight: var(--fw-medium);
+}
+
 {% call utils.medium_large_and_extra_large() %}
     .benefits__listing {
         display: grid;
@@ -49,6 +53,12 @@
         gap: var(--space-xl);
     }
 
+{% endcall %}
+
+{% call utils.small_and_medium() %}
+    .benefit__icon i {
+        font-size: var(--fs-3);
+    }
 {% endcall %}
 
 {% call utils.small() %}

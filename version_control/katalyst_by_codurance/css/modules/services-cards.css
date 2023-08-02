@@ -87,7 +87,7 @@
 {% call breakpoints.large_and_extra_large() %}
     .services-cards {
         display: grid;
-        grid-template-columns: repeat(12, min-max(10px,1fr));
+        grid-template-columns: repeat(12, minmax(10px,1fr));
         gap: var(--space-l);
     }
 

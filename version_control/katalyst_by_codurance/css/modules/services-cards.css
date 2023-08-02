@@ -87,23 +87,23 @@
 {% call breakpoints.large_and_extra_large() %}
     .services-cards {
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(12, min-max(10px,1fr));
         gap: var(--space-l);
     }
 
     .service-cards__card {
-        align-self: start;
+        align-self: stretch;
     }
 
-    .service-cards__card.col-6 {
+    .col-6 {
         grid-column: span 6;
     }
 
-    .service-cards__card.col-6 p {
+    .col-6 p {
         max-width: 90%;
     }
 
-    .service-cards__card.col-4 {
+    .col-4 {
         grid-column: span 4;
         padding-bottom: var(--space-m);
     }

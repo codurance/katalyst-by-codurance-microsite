@@ -7,7 +7,7 @@
 
 .benefit {
     display: flex;
-    gap: var(--space-m);
+    gap: var(--space-s);
 }
 
 
@@ -50,7 +50,7 @@
     .benefits__listing {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: var(--space-xl);
+        gap: var(--space-2xl);
     }
 
 {% endcall %}

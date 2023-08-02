@@ -59,10 +59,6 @@
     margin-top: var(--space-2xl);
 }
 
-.benefits__listing p {
-    font-weight: var(--fw-medium);
-}
-
 {% call utils.small_medium_and_large() %}
     .benefits {
         padding-inline: var(--space-s);

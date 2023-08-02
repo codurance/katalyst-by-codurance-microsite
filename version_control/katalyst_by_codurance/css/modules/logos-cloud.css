@@ -20,5 +20,9 @@
     .logos-container {
         grid-template-columns: repeat( auto-fit, minmax(160px, 1fr) );
         row-gap: 2em;
+        position: relative;
+        z-index: 2;
     }
+
+
 {% endcall %}

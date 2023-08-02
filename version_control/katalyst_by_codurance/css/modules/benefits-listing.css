@@ -5,18 +5,37 @@
     margin-inline: auto;
 }
 
-.benefits__listing li {
+.benefit {
     display: flex;
     gap: var(--space-m);
 }
 
 
-.benefits__listing i {
-    font-size: var(--fs-4);
+.benefit__icon {
+    max-width: 100px;
+    flex-basis: 15%;
+    position: relative;
 }
 
 
-.benefits__listing h3 {
+.benefit__icon i {
+    font-size: var(--fs-4);
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+}
+
+.icon-background {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.benefit__content {
+    flex-basis: 125%;
+}
+
+.benefit__content h3 {
     font-size: var(--fs-1);
     margin-top: var(--space-2xs);
     font-family: {{ theme.text.body_font.font.font }};
@@ -33,7 +52,11 @@
 {% endcall %}
 
 {% call utils.small() %}
+    .benefit__content h3 {
+        margin-top: 0;
+    }
+
     .benefits__listing li:not(:first-of-type) {
-        margin-top: var(--space-2xl);
+        margin-top: var(--space-l);
     }
 {% endcall %}

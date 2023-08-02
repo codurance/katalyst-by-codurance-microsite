@@ -24,6 +24,42 @@
     "show_emoji_picker" : false,
     "type" : "text"
   }, {
+    "id" : "a68f5651-0d43-6ffb-03e5-19558e3ef152",
+    "name" : "icon_background",
+    "display_width" : null,
+    "label" : "Icon background",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "ad13bb59-ae63-3eac-8825-8fef9c9e8641",
+      "name" : "svg",
+      "display_width" : null,
+      "label" : "SVG",
+      "required" : false,
+      "locked" : false,
+      "responsive" : true,
+      "resizable" : true,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "svg" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      }
+    }
+  }, {
     "id" : "daefbeb7-41e2-11e6-418a-4aea055a13c7",
     "name" : "title",
     "display_width" : null,
@@ -35,10 +71,10 @@
     "show_emoji_picker" : false,
     "type" : "text"
   }, {
-    "id" : "cd65b6c2-9695-a869-7c74-8c4141dc8111",
-    "name" : "text",
+    "id" : "description",
+    "name" : "description",
     "display_width" : null,
-    "label" : "Text",
+    "label" : "Description",
     "required" : false,
     "locked" : false,
     "validation_regex" : "",
@@ -49,5 +85,14 @@
   "tab" : "CONTENT",
   "expanded" : false,
   "type" : "group",
-  "default" : { }
+  "default" : {
+    "icon_background" : {
+      "svg" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      }
+    }
+  }
 } ]

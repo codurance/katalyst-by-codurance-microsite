@@ -54,22 +54,13 @@
 /* Benefits Section */
 
 .benefits {
-    background: var(--dark-blue);
     padding-top: var(--space-2xl);
     padding-bottom: var(--space-3xl);
 }
 
-.benefits h2,
-.benefits p {
-    color: white;
-}
 
 .benefits__listing {
-    margin-top: var(--space-3xl);
-}
-
-.benefits__listing p {
-    font-weight: var(--fw-medium);
+    margin-top: var(--space-2xl);
 }
 
 {% call utils.small_medium_and_large() %}

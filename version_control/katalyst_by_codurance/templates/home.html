@@ -13,13 +13,15 @@
 {# 1 HEADER INTRO TEXT AND IMAGE #}
 
 <section class="hero-banner">
-  <div class="hero-banner__content">
-    <h1>{% module "hero_title" label="Hero title" path="@hubspot/text" no_wrapper=True%}</h1>
-    <p>{% module "hero_subtitle" label="Hero subtitle" path="@hubspot/text" no_wrapper=True%}</p>
-      {% module "button" label="Hero button" path="@hubspot/button" no_wrapper=True %}
-  </div>
-  <div class="hero-banner__image">
-    {% module "linked_image" label="Hero image" path="@hubspot/linked_image" no_wrapper=True %}
+  <div class="hero-banner__wrapper container">
+    <div class="hero-banner__content">
+      <h1>{% module "hero_title" label="Hero title" path="@hubspot/text" no_wrapper=True%}</h1>
+      <p>{% module "hero_subtitle" label="Hero subtitle" path="@hubspot/text" no_wrapper=True%}</p>
+        {% module "button" label="Hero button" path="@hubspot/button" no_wrapper=True %}
+    </div>
+    <div class="hero-banner__image">
+      {% module "linked_image" label="Hero image" path="@hubspot/linked_image" no_wrapper=True %}
+    </div>
   </div>
 </section>
 
@@ -44,15 +46,13 @@
 </section>
 {# 5 TEXT AND IMAGE #}
 <section class="methodology">
-  <div class="methodology__wrapper container">
     <div class="methodology__content">
       {% section_header "methodology_section_header" label="Methodology Section Header" %}
-      {% module "methodology_button" label="Methodology Section Button" path="@hubspot/button" no_wrapper=True %}
     </div>
-    <div class="methodology__image">
+    <div class="methodology__image-container">
       {% module "methodology_image" label="Methodology Section Image" path="@hubspot/linked_image" no_wrapper=True %}
+      <img class="methodology__graphic" src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/Methodology%20section/katalyst_methodology_elements.svg" width=100% height=auto alt""/>
     </div>
-  </div>
 </section>
 {# 6 TESTIMONIAL CARDS #}
 

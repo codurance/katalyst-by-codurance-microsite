@@ -94,6 +94,7 @@
 
 .section-header h2 {
   font-size: var(--fs-4);
+  font-weight: var(--fw-medium);
   color: black;
 }
 

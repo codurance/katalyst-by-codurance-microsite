@@ -35,11 +35,17 @@ form input[type=file],
 form select,
 form textarea {
   display: inline-block;
+  border: none;
   font-size: var(--fs--1);
   padding: var(--space-s);
   width: 100%;
-  border: black solid 2px;
-  border-radius: 20px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 20px var(--light-grey);
+}
+
+form input:focus,
+form input:active {
+  outline: 1px solid var(--orange);
 }
 
 form textarea {
@@ -136,8 +142,6 @@ form .hs-richtext img {
 
 .legal-consent-container .hs-form-booleancheckbox-display p {
   font-size: var(--fs--1);
-  font-weight: bold;
-  color: var(--purple);
 }
 
 /* Validation */

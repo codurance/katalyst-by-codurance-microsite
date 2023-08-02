@@ -8,8 +8,9 @@
   --fs-5: clamp(2.49rem, calc(2.16rem + 1.64vw), 3.43rem); /* 39.81-54.93 px */
   --fs-6: clamp(2.99rem, calc(2.53rem + 2.27vw), 4.29rem); /* 47.78-68.66 px */
 
-
+  --fw-medium: 500;
   --fw-semibold: 600;
+  --fw-extra-bold: 800;
 }
 
 body {
@@ -84,12 +85,15 @@ code {
 
 blockquote:before {
   content: open-quote;
-  font-size: var(--fs-4);
-  line-height: 1;
+  font-size: 6rem;
+  line-height: 0;
+  top: 2rem;
+  position: relative;
+  font-family: {{ theme.global_fonts.secondary.font }};
 }
 
 blockquote p {
-  font-size: var(--fs-0);
+  font-size: var(--fs--1);
 }
 
 blockquote {

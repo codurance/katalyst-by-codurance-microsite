@@ -10,18 +10,6 @@
     gap: var(--space-m);
 }
 
-li::after {
-    content: "";
-    width: 2em;
-    height: 2em;
-    background: var(--light-green);
-    position: absolute;
-    display: block;
-    z-index: -1;
-    clip-path: circle();
-    transform: translate(50%, 50%);
-}
-
 
 .benefits__listing i {
     font-size: var(--fs-4);

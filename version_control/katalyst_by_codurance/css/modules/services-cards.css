@@ -11,50 +11,47 @@
 
 .service-cards__card img {
     position: absolute;
+    --left-position: -6%;
+    --top-position: -32%;
+    --rotation: 0deg;
+    left: var(--left-position);
+    top: var(--top-position);
+    rotate: var(--rotation);
 }
 
 /* Positioning of card inner graphics */
-.service-cards__card:nth-child(1) img {
-    left: -6%;
-    top: -32%;
-}
-
 .service-cards__card:nth-child(4) img {
-    left: 18%;
-    rotate: 322deg;
-    top: -33%;
+    --left-position: 18%;
+    --top-position: -33%;
+    --rotation: 322deg;
 }
 
 .service-cards__card:nth-child(6) img {
-    rotate: 317deg;
-    right: -6%;
-    top: 77%;
+    --left-position: 54%;
+    --top-position: 77%;
+    --rotation: 316deg;
 }
 
 .service-cards__card:nth-child(7) img {
-    rotate: 50deg;
-    right: -6%;
-    top: -17%;
+    --left-position: 54%;
+    --top-position: -17%;
+    --rotation: 50deg;
 }
 
 {% call breakpoints.small_and_medium() %}
     .service-cards__card:nth-child(1) img {
-        left: -11%;
-        top: -40%;
+        --left-position: -11%;
+        --top-position: -40%;
     }
 
     .service-cards__card:nth-child(4) img {
-        top: -50%;
+        --top-position: -50%;
     }
 
     .service-cards__card:nth-child(6) img {
-        right: -12%;
-        top: 85%;
-    }
-
-    .service-cards__card:nth-child(7) img {
-        right: -24%;
-        top: -26%;
+        --left-position: 17%;
+        --top-position: 74%;
+        --rotation: 199deg;
     }
 {% endcall %}
 /* End positioning of card inner graphics */

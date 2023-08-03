@@ -17,11 +17,11 @@
 
 .hero-banner__image {
     background: url(https://www.codurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/Header/katalyst_header_elements.svg) no-repeat bottom right;
+    margin-top: var(--space-2xl);
 }
 
 .hero-banner__image img {
-    margin-top: var(--space-2xl);
-    width: 100%;
+    filter: drop-shadow(0 1px 10px var(--light-grey));
 }
 
 {% call breakpoints.medium_large_and_extra_large() %}
@@ -39,9 +39,6 @@
         min-height: 45rem;
         padding-right: 7.8rem;
         margin-right: -7.8rem;
-    }
-
-    .hero-banner img {
         margin-top: initial;
     }
 {% endcall %}

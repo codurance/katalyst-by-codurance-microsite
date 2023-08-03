@@ -113,8 +113,9 @@
 .methodology__content {
         background: var(--dark-blue);
         padding: var(--space-2xl) var(--space-m);
-        color: white;
+        z-index: 0;
 }
+
 
 .methodology .section-header {
     text-align: left;
@@ -122,8 +123,9 @@
     max-width: 65ch;
 }
 
-.methodology h2 {
-    font-size: var(--fs-4);
+.methodology__content .section-header h2,
+.methodology__content .section-header p{
+    color: white;
 }
 
 .methodology .secondary-header {
@@ -215,19 +217,23 @@ img.methodology__graphic {
 /* Highlight element */
 
 .highlight {
-    position:relative;
-    padding-inline: .2em;
+    position: relative;
+    padding-inline: 0.6rem;
+    margin-inline: -0.2rem;
 }
+
 .highlight:after {
-    background-image: url("https://14557846.fs1.hubspotusercontent-na1.net/hubfs/14557846/Path%203844.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: block;
     content: "";
     width: 100%;
     height: 100%;
     position:absolute;
     left:0;
     top:0;
+    clip-path: polygon(3% 13px,100% 17%,98% 84%,0 96%);
+    background: var(--turquoise);
     z-index:-1
+}
+
+.dark-blue {
+    color: var(--dark-blue);
 }

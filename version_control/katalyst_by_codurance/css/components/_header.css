@@ -6,7 +6,7 @@ header.header {
 }
 
 .header__wrapper {
-  padding: var(--space-l) 0;
+  padding-top: var(--space-l);
 }
 
 {% call breakpoints.medium_large_and_extra_large() %}

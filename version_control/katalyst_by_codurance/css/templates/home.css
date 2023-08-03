@@ -2,7 +2,7 @@
 
 /* Hero Banner */
 .hero-banner {
-    padding: var(--space-3xl) 0;
+    padding-top: var(--space-3xl);
 }
 
 .hero-banner__content {
@@ -15,7 +15,11 @@
     margin-top: var(--space-m);
 }
 
-.hero-banner img {
+.hero-banner__image {
+    background: url(https://www.codurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/Header/katalyst_header_elements.svg) no-repeat bottom right;
+}
+
+.hero-banner__image img {
     margin-top: var(--space-2xl);
     width: 100%;
 }
@@ -27,11 +31,14 @@
     }
 
     .hero-banner__content {
-        width: 40%;
+        max-width: 40%;
     }
 
     .hero-banner__image {
-        width: 60%;
+        flex-grow: 1;
+        min-height: 45rem;
+        padding-right: 7.8rem;
+        margin-right: -7.8rem;
     }
 
     .hero-banner img {

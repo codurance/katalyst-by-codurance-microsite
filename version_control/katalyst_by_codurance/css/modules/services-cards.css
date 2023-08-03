@@ -1,117 +1,108 @@
 {% import '../tools/_breakpoints.css' as breakpoints %}
-
-.services-cards {
-    margin-top: var(--space-l);
-}
+{% import '../tools/_macros.css' as macros %}
 
 .service-cards__card {
-    padding: var(--space-l);
+    padding: var(--space-xl) var(--space-l);
     background-color: white;
-    border-radius: 20px;
+    {{ macros.card_styles() }}
+    position: relative;
+    overflow: hidden;
+}
+
+.service-cards__card img {
+    position: absolute;
+    --left-position: -6%;
+    --top-position: -32%;
+    --rotation: 0deg;
+    left: var(--left-position);
+    top: var(--top-position);
+    rotate: var(--rotation);
+}
+
+/* Positioning of card inner graphics */
+.service-cards__card:nth-child(4) img {
+    --left-position: 18%;
+    --top-position: -33%;
+    --rotation: 322deg;
+}
+
+.service-cards__card:nth-child(6) img {
+    --left-position: 54%;
+    --top-position: 77%;
+    --rotation: 316deg;
+}
+
+.service-cards__card:nth-child(7) img {
+    --left-position: 54%;
+    --top-position: -17%;
+    --rotation: 50deg;
 }
 
 {% call breakpoints.small_and_medium() %}
-.services-cards article:not(:first-child) {
-    margin-top: var(--space-m);
-}
+    .service-cards__card:nth-child(1) img {
+        --left-position: -11%;
+        --top-position: -40%;
+    }
+
+    .service-cards__card:nth-child(4) img {
+        --top-position: -50%;
+    }
+
+    .service-cards__card:nth-child(6) img {
+        --left-position: 17%;
+        --top-position: 74%;
+        --rotation: 199deg;
+    }
 {% endcall %}
+/* End positioning of card inner graphics */
 
-{% call breakpoints.large_and_extra_large() %}
-    .services-cards {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: var(--space-m);
-    }
-
-    .col-3 {
-        grid-column: span 3;
-    }
-
-    .col-4 {
-        grid-column: span 4;
-    }
-
-    .service-cards__card {
-        align-self: start;
-        transition: scale .2s,
-                    outline .2s;
-    }
-{% endcall %}    
-
-
-
-.service-cards__card:hover,
-.service-cards__card:focus {
-    outline: 2px solid var(--orange);
-    scale: 1.05;
-    transition: scale .3s,
-                outline .2s; 
-}
-
-.icon-wrapper {
-    position: relative;
-}
-
-.service-cards__card:hover h3,
-.service-cards__card:focus h3 {
-    margin-top: var(--space-l);
-    transition: margin .2s ease-in-out;
-}
-
-.triangle {
-    position: absolute;
-    opacity: 0; 
-    top: var(--space-xs);
-    left: calc(-1 * var(--space-s));
-    z-index: -1;
-    animation: fade-out-backwards .2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-.service-cards__card:hover .triangle,
-.service-cards__card:focus .triangle {
-    opacity: 1;
-    animation: fade-in-forward .4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-.icon-wrapper i {
-    font-size: var(--fs-3);
-    color: var(--orange);
+.service-cards__card i {
+    font-size: var(--fs-4);
     position: relative;
 }
 
 .services-cards h3 {
     font-family: {{theme.global_fonts.primary.font}};
-    font-weight: var(--fw-semibold);
+    font-weight: var(--fw-medium);
     font-size: var(--fs-1);
     margin-top: var(--space-s);
     margin-bottom: 0;
-    transition: margin .2s ease-in-out;
+    position: relative;
 }
 
 .services-cards p {
     margin-top: var(--space-xs);
+    position: relative;
 }
 
+{% call breakpoints.small_and_medium() %}
+    .services-cards article:not(:first-child) {
+        margin-top: var(--space-l);
+    }
+{% endcall %}
 
+{% call breakpoints.large_and_extra_large() %}
+    .services-cards {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(10px,1fr));
+        gap: var(--space-l);
+    }
 
-@keyframes fade-in-forward {
-    0% {
-        opacity: 0;
-        transform: translateZ(-1400px);
+    .service-cards__card {
+        align-self: stretch;
     }
-    100% {
-        opacity: 1;
-        transform: translateZ(0);
-    }
-}
 
-@keyframes fade-out-backwards {
-    0% {
-        opacity: 1;
-        transform: translateZ(0);
+    .col-6 {
+        grid-column: span 6;
     }
-    100% {
-        opacity: 0;
-        transform: translateZ(-1400px);
+
+    .col-6 p {
+        max-width: 90%;
     }
-}
+
+    .col-4 {
+        grid-column: span 4;
+        padding-bottom: var(--space-m);
+    }
+{% endcall %}    
+

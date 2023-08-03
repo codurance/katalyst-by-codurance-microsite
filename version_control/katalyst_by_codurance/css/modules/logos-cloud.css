@@ -2,22 +2,25 @@
 {% import '../tools/_breakpoints.css' as breakpoints %}
 
 .logos-container {
-    filter: contrast(0%);
+    filter: brightness(0%);
     display: grid;
     gap: 1em;
     grid-template-columns: repeat( auto-fit, minmax(130px, 1fr) );
     justify-items: center;
+    align-items: center;
     margin-top: var(--space-l);
     margin-bottom: var(--space-l);
 }
 
 .logos-container img {
-    max-height: 40px;
+    max-height: 45px;
 }
 
 {% call breakpoints.large_and_extra_large() %}
     .logos-container {
         grid-template-columns: repeat( auto-fit, minmax(160px, 1fr) );
         row-gap: 2em;
+        position: relative;
+        z-index: 2;
     }
 {% endcall %}

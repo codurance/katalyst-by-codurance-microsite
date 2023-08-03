@@ -220,6 +220,7 @@ img.methodology__graphic {
     position: relative;
     padding-inline: 0.6rem;
     margin-inline: -0.2rem;
+    white-space: no-wrap;
 }
 
 .highlight:after {
@@ -234,6 +235,3 @@ img.methodology__graphic {
     z-index:-1
 }
 
-.dark-blue {
-    color: var(--dark-blue);
-}

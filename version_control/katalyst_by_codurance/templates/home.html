@@ -32,12 +32,15 @@
   {% module "benefits_listing" path="../modules/Benefits-Listing" no_wrapper=True %}
 </section>
 {# 3 CLIENTS LOGO CLOUD #}
-<section class="client-logos container">
-  <h2>
-      {% module "clients_header" path="@hubspot/text" label="Clients logos title"%}
-  </h2>
-  
-  {% module 'clients logos' path='../modules/Logos-Cloud.module' label="Clients Logos" no_wrapper=True%}
+<section class="client-logos">
+  <div class="container">
+    <h2>
+        {% module "clients_header" path="@hubspot/text" label="Clients logos title"%}
+    </h2>
+    
+    {% module 'clients logos' path='../modules/Logos-Cloud.module' label="Clients Logos" no_wrapper=True%}
+      </div>
+    <img class="client-logos__graphic" src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/katalyst_logo_section_element.svg" >
 </section>
 {# 4 TRAINING CARDS #}
 <section class="services">

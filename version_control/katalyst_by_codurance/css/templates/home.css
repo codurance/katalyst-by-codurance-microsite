@@ -73,13 +73,36 @@
 
 .client-logos {
     padding: var(--space-2xl) 0;
+    background-color: var(--light-grey); 
+    position: relative;
 }
 
 .client-logos h2 {
     text-align: center;
+    color: var(--black);
     font-size: var(--fs-0);
     font-family: {{ theme.global_fonts.primary.font }};
 }
+
+.client-logos__graphic {
+    --light-orange: hsl(25, 60%, 90%);
+    position: absolute;
+    top: -40%;
+    max-width: 25%;
+    width: 450px;
+    z-index: 0;
+    left: 0;
+    filter: drop-shadow(0 1px 10px var(--light-orange));
+}
+
+{% call breakpoints.small_and_medium() %}
+    .client-logos__graphic {
+        display: none;
+    }
+{% endcall %}
+
+
+
 
 /* Methodology Section */
 

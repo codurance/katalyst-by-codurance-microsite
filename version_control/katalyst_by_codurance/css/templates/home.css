@@ -23,7 +23,7 @@
 {% call breakpoints.medium_large_and_extra_large() %}
     .hero-banner__wrapper {
         display: flex;
-        gap: var(--space-2xl);
+        gap: var(--space-3xl);
     }
 
     .hero-banner__content {

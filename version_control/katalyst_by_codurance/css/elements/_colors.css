@@ -9,3 +9,9 @@
     --light-green: hsla(175, 85%, 95%, 1);
     --dark-blue: hsla(226, 56%, 11%, 1);
 }
+
+/* Helper class */
+
+.dark-blue {
+    color: var(--dark-blue);
+}

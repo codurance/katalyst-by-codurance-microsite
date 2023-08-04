@@ -220,7 +220,8 @@ img.methodology__graphic {
     position: relative;
     padding-inline: 0.6rem;
     margin-inline: -0.2rem;
-    white-space: no-wrap;
+    z-index: 0;
+    white-space: nowrap;
 }
 
 .highlight:after {

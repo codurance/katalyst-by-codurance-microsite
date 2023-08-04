@@ -31,7 +31,6 @@ input[type="submit"] {
 }
 
 
-
 button:hover,
 button:focus,
 .btn-primary:hover,
@@ -60,8 +59,6 @@ input[type="submit"]:disabled, {
 }
 
 
-
-
 /* No button */
 
 .no-button,
@@ -86,13 +83,29 @@ input[type="submit"]:disabled, {
 }
 
 
+.arrow-down {
+  display: flex;
+  width: max-content;
+  align-items: center;
+}
+
 .arrow-down:after {
   content: url("https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/katalyst_arrow.svg");
-  margin-left: 0.6rem;
-  align-self: start;
-  justify-self: center;
   height: 22px;
-  width: 22px;
+  width: 0;
   display: block;
-  translate: 0 10%;
+  opacity: 0;
+  transition: 
+    width .2s cubic-bezier(.18,.89,.32,1.28),
+    opacity .2s ease-in,
+    margin-left .3s ease-out;
 }
+
+.arrow-down:hover:after {
+  opacity: 1;
+  margin-left: 0.6rem;
+  width: 22px;
+  transition: 
+    width .1s cubic-bezier(.18,.89,.32,1.28),
+}
+

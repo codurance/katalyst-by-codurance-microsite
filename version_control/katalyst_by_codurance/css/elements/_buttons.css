@@ -15,8 +15,6 @@ html {
   font-weight: bold;
   text-align: center;
   white-space: normal;
-  
-  transition: all 0.15s linear;
 {% endmacro %}
 
 
@@ -28,6 +26,7 @@ button,
 input[type="submit"] {
   {{ btn() }}
   background-color: var(--btn-primary);
+  transition: background-color 0.2s linear;
 }
 
 

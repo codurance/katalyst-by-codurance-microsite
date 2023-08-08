@@ -10,8 +10,6 @@
 
 {% block body %}
 
-{# 1 HEADER INTRO TEXT AND IMAGE #}
-
 <section class="hero-banner">
   <div class="hero-banner__wrapper container">
     <div class="hero-banner__content">
@@ -24,13 +22,11 @@
   </div>
 </section>
 
-
-{# 2 INTRO TEXT + ICON WITH TITLE AND SUBTITLE #}
 <section class="benefits container">
   {% section_header "benefits_header" label="Benefits Section Header" extra_classes="fade-in" %}
   {% module "benefits_listing" path="../modules/Benefits-Listing" extra_classes="fade-in" %}
 </section>
-{# 3 CLIENTS LOGO CLOUD #}
+
 <section class="client-logos">
   <div class="container">
     <h2>
@@ -41,12 +37,12 @@
       </div>
     <img class="client-logos__graphic" src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/katalyst_logo_section_element.svg" >
 </section>
-{# 4 TRAINING CARDS #}
+
 <section class="services">
   {% section_header 'services_header' label="Services Section Header"  extra_classes="fade-in" %}
   {% module 'services_cards' path='../modules/Services-Cards.module' label="Services Cards" extra_classes="fade-in" %}
 </section>
-{# 5 TEXT AND IMAGE #}
+
 <section class="methodology">
     <div class="methodology__content">
       {% section_header "methodology_section_header" label="Methodology Section Header" %}
@@ -56,7 +52,6 @@
       <img class="methodology__graphic" src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/Methodology%20section/katalyst_methodology_elements.svg" width=100% height=auto alt=""/>
     </div>
 </section>
-{# 6 TESTIMONIAL CARDS #}
 
 <section class="testimonials">
   {% module "testimonial_header" 
@@ -67,7 +62,6 @@
   {% module "testimonials" path="../modules/Testimonial.module" label="Testimonials Listing" extra_classes="fade-in" %}
 </section>
 
-{# 7 CONTACT FORM #}
 <section class="contact">
   <div class="contact__wrapper container">
     {% section_header "contact_section_header" label="Contact Section Header" %}

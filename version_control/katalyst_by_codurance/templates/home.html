@@ -19,17 +19,16 @@
       <p>{% module "hero_subtitle" label="Hero subtitle" path="@hubspot/text" no_wrapper=True %}</p>
       {% module "button" label="Hero button" path="@hubspot/button" no_wrapper=True %}
     </div>
-    <div class="hero-banner__image">
-      {% module "linked_image" label="Hero image" path="@hubspot/linked_image" no_wrapper=True %}
-    </div>
+    
+    {% module "linked_image" label="Hero image" path="@hubspot/linked_image" extra_classes="hero-banner__image" %}
   </div>
 </section>
 
 
 {# 2 INTRO TEXT + ICON WITH TITLE AND SUBTITLE #}
 <section class="benefits container">
-  {% section_header "benefits_header" label="Benefits Section Header" %}
-  {% module "benefits_listing" path="../modules/Benefits-Listing" no_wrapper=True %}
+  {% section_header "benefits_header" label="Benefits Section Header" extra_classes="fade-in" %}
+  {% module "benefits_listing" path="../modules/Benefits-Listing" extra_classes="fade-in" %}
 </section>
 {# 3 CLIENTS LOGO CLOUD #}
 <section class="client-logos">
@@ -44,8 +43,8 @@
 </section>
 {# 4 TRAINING CARDS #}
 <section class="services">
-  {% section_header 'services_header' label="Services Section Header" %}
-  {% module 'services_cards' path='../modules/Services-Cards.module' label="Services Cards" no_wrapper=True %}
+  {% section_header 'services_header' label="Services Section Header"  extra_classes="fade-in" %}
+  {% module 'services_cards' path='../modules/Services-Cards.module' label="Services Cards" extra_classes="fade-in" %}
 </section>
 {# 5 TEXT AND IMAGE #}
 <section class="methodology">
@@ -54,14 +53,18 @@
     </div>
     <div class="methodology__image-container">
       {% module "methodology_image" label="Methodology Section Image" path="@hubspot/linked_image" no_wrapper=True %}
-      <img class="methodology__graphic" src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/Methodology%20section/katalyst_methodology_elements.svg" width=100% height=auto alt""/>
+      <img class="methodology__graphic" src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/Methodology%20section/katalyst_methodology_elements.svg" width=100% height=auto alt=""/>
     </div>
 </section>
 {# 6 TESTIMONIAL CARDS #}
 
 <section class="testimonials">
-  {% module "testimonial_header" path="@hubspot/section_header" label="Testimonials Section Header" %}
-  {% module "testimonials" path="../modules/Testimonial.module" label="Testimonials Listing" %}
+  {% module "testimonial_header" 
+    path="@hubspot/section_header" 
+    label="Testimonials Section Header" 
+    extra_classes="fade-in" 
+  %}
+  {% module "testimonials" path="../modules/Testimonial.module" label="Testimonials Listing" extra_classes="fade-in" %}
 </section>
 
 {# 7 CONTACT FORM #}

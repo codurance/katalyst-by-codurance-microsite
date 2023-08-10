@@ -7,6 +7,7 @@
 {% extends "./layouts/base.html" %}
 
 {{ require_css(get_asset_url("../css/templates/home.css")) }}
+{% import '../snippets/button-snippets.html' as snippets %}
 
 {% block body %}
 <div class="parallax-sections">
@@ -15,7 +16,7 @@
       <div class="hero-banner__content">
         <h1>{% module "hero_title" label="Hero title" path="@hubspot/text" no_wrapper=True %}</h1>
         <p>{% module "hero_subtitle" label="Hero subtitle" path="@hubspot/text" no_wrapper=True %}</p>
-        {% module "button" label="Hero button" path="@hubspot/button" no_wrapper=True %}
+        {% module "hero_button" path="@hubspot/button" label="Button header" extra_classes="arrow-down"%}
       </div>
       
       {% module "linked_image" label="Hero image" path="@hubspot/linked_image" extra_classes="hero-banner__image" %}
@@ -67,7 +68,7 @@
   <div class="contact__wrapper container">
     {% section_header "contact_section_header" label="Contact Section Header" %}
 
-    <div class="contact__form">
+    <div id="contact-us" class="contact__form">
       {% form "contact_section_form" label="Contact Section Form" %}
     </div>
   </div>

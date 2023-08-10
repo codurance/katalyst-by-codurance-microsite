@@ -7,31 +7,28 @@
 {% extends "./layouts/base.html" %}
 
 {{ require_css(get_asset_url("../css/templates/home.css")) }}
+{% import '../snippets/button-snippets.html' as snippets %}
 
 {% block body %}
-
-{# 1 HEADER INTRO TEXT AND IMAGE #}
-
-<section class="hero-banner">
-  <div class="hero-banner__wrapper container">
-    <div class="hero-banner__content">
-      <h1>{% module "hero_title" label="Hero title" path="@hubspot/text" no_wrapper=True %}</h1>
-      <p>{% module "hero_subtitle" label="Hero subtitle" path="@hubspot/text" no_wrapper=True %}</p>
-      {% module "button" label="Hero button" path="@hubspot/button" no_wrapper=True %}
+<div class="parallax-sections">
+  <section class="hero-banner">
+    <div class="hero-banner__wrapper container">
+      <div class="hero-banner__content">
+        <h1>{% module "hero_title" label="Hero title" path="@hubspot/text" no_wrapper=True %}</h1>
+        <p>{% module "hero_subtitle" label="Hero subtitle" path="@hubspot/text" no_wrapper=True %}</p>
+        {% module "hero_button" path="@hubspot/button" label="Button header" extra_classes="arrow-down"%}
+      </div>
+      
+      {% module "linked_image" label="Hero image" path="@hubspot/linked_image" extra_classes="hero-banner__image" %}
     </div>
-    <div class="hero-banner__image">
-      {% module "linked_image" label="Hero image" path="@hubspot/linked_image" no_wrapper=True %}
-    </div>
-  </div>
-</section>
+  </section>
 
+  <section class="benefits container">
+    {% section_header "benefits_header" label="Benefits Section Header" extra_classes="fade-in" %}
+    {% module "benefits_listing" path="../modules/Benefits-Listing" extra_classes="fade-in" %}
+  </section>
+</div>
 
-{# 2 INTRO TEXT + ICON WITH TITLE AND SUBTITLE #}
-<section class="benefits container">
-  {% section_header "benefits_header" label="Benefits Section Header" extra_classes="fade-in" %}
-  {% module "benefits_listing" path="../modules/Benefits-Listing" extra_classes="fade-in" %}
-</section>
-{# 3 CLIENTS LOGO CLOUD #}
 <section class="client-logos">
   <div class="container">
     <h2>
@@ -42,12 +39,12 @@
       </div>
     <img class="client-logos__graphic" src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/katalyst_logo_section_element.svg" >
 </section>
-{# 4 TRAINING CARDS #}
+
 <section class="services">
   {% section_header 'services_header' label="Services Section Header"  extra_classes="fade-in" %}
   {% module 'services_cards' path='../modules/Services-Cards.module' label="Services Cards" extra_classes="fade-in" %}
 </section>
-{# 5 TEXT AND IMAGE #}
+
 <section class="methodology">
     <div class="methodology__content">
       {% section_header "methodology_section_header" label="Methodology Section Header" %}
@@ -57,7 +54,6 @@
       <img class="methodology__graphic" src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/Methodology%20section/katalyst_methodology_elements.svg" width=100% height=auto alt=""/>
     </div>
 </section>
-{# 6 TESTIMONIAL CARDS #}
 
 <section class="testimonials">
   {% module "testimonial_header" 
@@ -68,12 +64,11 @@
   {% module "testimonials" path="../modules/Testimonial.module" label="Testimonials Listing" extra_classes="fade-in" %}
 </section>
 
-{# 7 CONTACT FORM #}
 <section class="contact">
   <div class="contact__wrapper container">
     {% section_header "contact_section_header" label="Contact Section Header" %}
 
-    <div class="contact__form">
+    <div id="contact-us" class="contact__form">
       {% form "contact_section_form" label="Contact Section Form" %}
     </div>
   </div>

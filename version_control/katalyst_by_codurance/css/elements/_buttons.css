@@ -1,24 +1,39 @@
-button,
-.button,
-.hs-button,
-.hs-blog-post-listing__post-button,
-input[type="submit"] {
+html {
+  --btn-primary: var(--orange);
+  --btn-primary--hover: var(--orange-400);
+}
+
+{% macro btn() %}
   cursor: pointer;
+  min-width: 100px;
   display: inline-block;
-  text-align: center;
-  transition: all 0.15s linear;
-  white-space: normal;
-  background-color: var(--orange);
   color: white;
   margin-top: var(--space-s);
   padding: var(--space-xs) var(--space-l);
   border-radius: 2rem;
   border: none;
-  font-weight: var(--fw-semibold);
+  font-weight: bold;
+  text-align: center;
+  white-space: normal;
+{% endmacro %}
+
+
+button,
+.btn-primary,
+.button,
+.hs-button,
+.hs-blog-post-listing__post-button,
+input[type="submit"] {
+  {{ btn() }}
+  background-color: var(--btn-primary);
+  transition: background-color 0.2s linear;
 }
+
 
 button:hover,
 button:focus,
+.btn-primary:hover,
+.btn-primary:focus,
 .button:hover,
 .button:focus,
 .hs-button:hover,
@@ -28,7 +43,8 @@ button:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
   color: white;
-  background-color: var(--light-orange);
+  font-weight: bold;
+  background-color: var(--btn-primary--hover);
   border-radius: 2rem;
 }
 
@@ -40,6 +56,7 @@ input[type="submit"]:disabled, {
   border-color: #D0D0D0;
   color: #E6E6E6;
 }
+
 
 /* No button */
 
@@ -63,3 +80,31 @@ input[type="submit"]:disabled, {
   text-decoration: none;
   transition: none;
 }
+
+
+.arrow-down .hs-button {
+  display: flex;
+  width: max-content;
+  align-items: center;
+}
+
+.arrow-down .hs-button:after {
+  content: url("https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/katalyst_arrow.svg");
+  height: 22px;
+  width: 0;
+  display: block;
+  opacity: 0;
+  transition: 
+    width .2s cubic-bezier(.18,.89,.32,1.28),
+    opacity .2s ease-in,
+    margin-left .3s ease-out;
+}
+
+.arrow-down .hs-button:hover:after {
+  opacity: 1;
+  margin-left: 0.6rem;
+  width: 22px;
+  transition: 
+    width .1s cubic-bezier(.18,.89,.32,1.28),
+}
+

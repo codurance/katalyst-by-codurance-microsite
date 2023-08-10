@@ -10,7 +10,7 @@
         --hero-image-height: 720px;
         background: url(https://www.codurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/Header/katalyst_header_elements.svg) no-repeat;
         background-attachment: fixed;
-        background-position: calc(100% - 235px) calc(var(--hero-image-height) / 2);
+        background-position: calc(100% - 40px) calc(var(--hero-image-height)/3);
     }
 {% endcall %}
 

@@ -277,6 +277,17 @@ form,
   {{ form_padding }};
 }
 
+.submitted-message {
+  {{ card_styles() }}
+  font-size: var(--fs-1);
+  text-align: center;
+  background: white;
+  padding: 2em;
+  max-width: 80%;
+  margin: 0 auto;
+  color: var(--black);
+}
+
 /* Form title */
 
 .form-title {

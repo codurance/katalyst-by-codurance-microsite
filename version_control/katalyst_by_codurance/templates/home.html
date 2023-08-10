@@ -18,14 +18,8 @@
     <div class="hero-banner__content">
       <h1>{% module "hero_title" label="Hero title" path="@hubspot/text" no_wrapper=True%}</h1>
       <p>{% module "hero_subtitle" label="Hero subtitle" path="@hubspot/text" no_wrapper=True%}</p>
-          {{ snippets.primary_btn(
-            classnames="arrow-down",
-            url="#contact-us",
-            text="Discover how",
-            target="",
-            aria_label_text="button"
-          )}}
-    </div>
+        {% module "hero_button" path="@hubspot/button" label="Button header" extra_classes="arrow-down"%}
+        </div>
     <div class="hero-banner__image">
       {% module "linked_image" label="Hero image" path="@hubspot/linked_image" no_wrapper=True %}
     </div>

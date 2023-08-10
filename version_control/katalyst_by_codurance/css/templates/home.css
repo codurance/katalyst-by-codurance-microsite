@@ -1,41 +1,62 @@
 {% import '../tools/_breakpoints.css' as breakpoints %}
 
-/* Hero Banner */
-.hero-banner {
-    padding: var(--space-3xl) 0;
-    background: var(--light-green);
+/* Parallax sections */
+.parallax-sections {
+    padding-top: var(--space-3xl);
 }
 
+{% call breakpoints.large_and_extra_large() %}
+    .parallax-sections {
+        --hero-image-height: 720px;
+        background: url(https://www.codurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/Header/katalyst_header_elements.svg) no-repeat;
+        background-attachment: fixed;
+        background-position: calc(100% - 40px) calc(var(--hero-image-height)/3);
+    }
+{% endcall %}
+
+/* Hero Banner */
 .hero-banner__content {
     text-wrap: balance;
+    margin-top: var(--space-xl);
 }
 
 .hero-banner__content p {
     font-size: var(--fs-1);
     max-width: 40ch;
+    margin-top: var(--space-m);
 }
 
-.hero-banner img {
+.hero-banner__image {
+    
     margin-top: var(--space-2xl);
-    width: 100%;
+    position: relative;
+}
+
+.hero-banner__image img {
+    filter: drop-shadow(0 1px 10px var(--light-grey));
 }
 
 {% call breakpoints.medium_large_and_extra_large() %}
     .hero-banner__wrapper {
         display: flex;
-        gap: var(--space-2xl);
+        gap: var(--space-3xl);
     }
 
     .hero-banner__content {
-        width: 60%;
+        max-width: 40%;
     }
 
     .hero-banner__image {
-        width: 40%;
-    }
-
-    .hero-banner img {
+        min-height: var(--hero-image-height);
         margin-top: initial;
+        flex-grow: 1;
+    }
+{% endcall %}
+
+{% call breakpoints.small_and_medium() %}
+    .hero-banner__image {
+        background: url(https://www.codurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/Header/katalyst_header_elements.svg) no-repeat bottom right;
+        background-size: contain;
     }
 {% endcall %}
 

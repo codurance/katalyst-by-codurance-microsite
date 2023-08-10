@@ -82,13 +82,13 @@ input[type="submit"]:disabled, {
 }
 
 
-.arrow-down {
+.arrow-down .hs-button {
   display: flex;
   width: max-content;
   align-items: center;
 }
 
-.arrow-down:after {
+.arrow-down .hs-button:after {
   content: url("https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/katalyst_arrow.svg");
   height: 22px;
   width: 0;
@@ -100,7 +100,7 @@ input[type="submit"]:disabled, {
     margin-left .3s ease-out;
 }
 
-.arrow-down:hover:after {
+.arrow-down .hs-button:hover:after {
   opacity: 1;
   margin-left: 0.6rem;
   width: 22px;

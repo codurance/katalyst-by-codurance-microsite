@@ -5,10 +5,10 @@
 }
 
 .footer__wrapper {
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(3,minmax(10px,1fr));
 }
 
 .footer p,
@@ -21,14 +21,18 @@
 .footer h6,
 .footer label,
 .footer span,
-.footer li,
 .footer img {
   color: white;
+}
+
+.footer a {
+    color: var(--light-grey);
 }
 
 .footer a:hover {
     color: white;
     text-decoration: underline;
+    transition: color .2s ease-in-out;
 }
 
 .footer p {
@@ -40,18 +44,16 @@
     width: 100%;
 }
 
-.footer__logo {
-    grid-column-start: 2;
-}
-
-.footer__policies {
-    width: fit-content;
-}
 
 .footer__policies ul {
     list-style-type: none;
+    margin-top: var(--space-xl);
+    padding: 0;
+
+    display: flex;
+    gap: var(--space-xs);
 }
 
-.footer__policies li:not(:first-of-type) {
-    margin-top: var(--space-xs);
+.footer__policies li {
+    font-size: var(--fs--1);
 }

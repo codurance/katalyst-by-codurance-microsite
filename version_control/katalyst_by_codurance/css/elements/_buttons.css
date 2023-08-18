@@ -69,12 +69,11 @@ input[type="submit"]:disabled, {
   font-size: var(--fs--1);
   padding: var(--space-xs);
   border-radius: 50%;
-  height: 92px;
-  width: 92px;
+  height: 90px;
+  width: 90px;
   display: flex;
   justify-content: center;
   text-transform: uppercase;
-  white-space: break-spaces;
   text-align: center;
   padding: 0;
   padding-top: .6rem;

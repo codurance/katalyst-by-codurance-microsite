@@ -1,7 +1,12 @@
 {% import '../tools/_breakpoints.css' as breakpoints %}
 
-/* Parallax sections */
+/* Floating button */
 
+.btn.btn-floating {
+    display: none;
+}
+
+/* Parallax sections */
 
 {% call breakpoints.medium_large_and_extra_large() %}
     .parallax-sections {

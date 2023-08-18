@@ -1,6 +1,6 @@
 
 {% set href = module.link_field.url.href %}
-<a href="{{ href }}"
+<a class="btn btn-floating" href="{{ href }}"
 	{% if module.link_field.open_in_new_tab %}target="_blank"{% endif %}
 	{% if module.link_field.rel %}rel="{{ module.link_field.rel }}"{% endif %}
 	>

@@ -5,7 +5,6 @@ html {
 
 {% macro btn() %}
   cursor: pointer;
-  min-width: 100px;
   display: inline-block;
   color: white;
   margin-top: var(--space-s);
@@ -26,6 +25,7 @@ button,
 input[type="submit"] {
   {{ btn() }}
   background-color: var(--btn-primary);
+  min-width: 100px;
   transition: background-color 0.2s linear;
 }
 
@@ -57,6 +57,33 @@ input[type="submit"]:disabled, {
   color: #E6E6E6;
 }
 
+/* Floating button */
+
+.btn-floating {
+  {{ btn() }}
+  position: fixed;
+  bottom: var(--space-m);
+  right: var(--space-s);
+  z-index: 3;
+  background: var(--orange);
+  font-size: var(--fs--1);
+  padding: var(--space-xs);
+  border-radius: 50%;
+  height: 92px;
+  width: 92px;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  white-space: break-spaces;
+  text-align: center;
+  padding: 0;
+  padding-top: .6rem;
+
+  box-shadow: 
+  1px 3px 10px var(--grey-300),
+  0px 0px 10px var(--grey-100);
+}
+
 
 /* No button */
 
@@ -81,6 +108,8 @@ input[type="submit"]:disabled, {
   transition: none;
 }
 
+
+/* Arrow button */
 
 .arrow-down .hs-button {
   display: flex;

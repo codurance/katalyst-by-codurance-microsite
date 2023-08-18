@@ -1,4 +1,5 @@
 {% import './tools/_macros.css' %}
+{% import './tools/_breakpoints.css' as breakpoints%}
 
 {## Table of contents
 
@@ -405,10 +406,20 @@ tfoot td {
 {###########################   7. Website header   #########################}
 {###########################################################################}
 
-.header {
-  background-color: {{ header_bg_color }};
-}
 
+.header {
+  background-color: white;
+  z-index: 3;
+  }
+  
+{% call breakpoints.medium_large_and_extra_large() %}
+  .header {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+  }
+{% endcall %}
+  
 .header__logo .logo-company-name {
   color: {{ nav_font_color }};
   font-family: {{ body_font.font }};

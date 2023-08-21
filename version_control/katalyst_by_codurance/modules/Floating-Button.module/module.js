@@ -1,7 +1,9 @@
 const floatingBtn = document.querySelector(".btn.btn-floating");
+const initialBtnText = floatingBtn.innerText;
 const contactUsSection = document.querySelector("#contact-us");
-const MOBILE_MAX_WIDTH = 786;
+
 const BASE_URL = window.location.origin + window.location.pathname;
+const MOBILE_MAX_WIDTH = 786;
 
 const icon = document.createElement("I");
 icon.classList.add("las", "la-arrow-up");
@@ -15,7 +17,7 @@ function updateBtnListeners() {
 
 function resetBtnListeners() {
   floatingBtn.removeEventListener("click", scrollToTop);
-  floatingBtn.innerText = "Contact us";
+  floatingBtn.innerText = initialBtnText;
   floatingBtn.href = BASE_URL + "#contact-us";
 }
 

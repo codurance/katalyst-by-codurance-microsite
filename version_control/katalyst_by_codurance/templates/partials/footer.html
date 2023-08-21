@@ -3,11 +3,15 @@
   label: Footer
 -->
 <footer class="footer">
-  <div class="footer-wrapper">
-    <p>Powered by</p>
-    {% module 'footer_logo'
-      path='@hubspot/logo'
-      label="Footer Logo"
-      no_wrapper=True %}
+  <div class="footer__wrapper container">
+    <div class="footer__logo">
+      <p>Powered by</p>
+      {% module 'footer_logo'
+        path='@hubspot/logo'
+        label="Footer Logo"
+        no_wrapper=True %}
+    </div>
+
+    {% rich_text "footer_policies" extra_classes="footer__policies" label="Footer policies" %}
   </div>
 </footer>

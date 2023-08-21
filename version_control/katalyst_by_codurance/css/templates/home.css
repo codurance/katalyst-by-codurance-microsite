@@ -6,6 +6,10 @@
     display: none;
 }
 
+.btn.btn-floating i {
+    font-size: var(--fs-4);
+}
+
 /* Parallax sections */
 
 {% call breakpoints.medium_large_and_extra_large() %}

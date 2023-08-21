@@ -67,20 +67,25 @@ input[type="submit"]:disabled, {
   z-index: 3;
   background: var(--orange);
   font-size: var(--fs--1);
-  padding: var(--space-xs);
   border-radius: 50%;
   height: 90px;
   width: 90px;
   display: flex;
   justify-content: center;
+  align-items: center;
   text-transform: uppercase;
   text-align: center;
   padding: 0;
-  padding-top: .6rem;
+  margin: 0;
 
   box-shadow: 
   1px 3px 10px var(--grey-300),
   0px 0px 10px var(--grey-100);
+}
+
+.btn-floating:hover {
+  color: white;
+  font-weight: var(--fw-semibold);
 }
 
 

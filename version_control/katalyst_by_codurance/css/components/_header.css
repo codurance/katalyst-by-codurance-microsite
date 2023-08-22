@@ -4,6 +4,16 @@
 
 header.header {
   background: white;
+  transform: translateY(0);
+}
+
+.header.hide {
+  transform: translateY(-160px);
+}
+
+header.header,
+.header.hide {
+  transition: transform .3s ease-in-out;
 }
 
 .header__wrapper {
@@ -43,3 +53,5 @@ header.header {
 .header__logo img {
   max-width: 100%;
 }
+
+

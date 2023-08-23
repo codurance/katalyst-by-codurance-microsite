@@ -4,10 +4,15 @@
   display: block;
 }
 
-.menu--desktop ul {
+.menu__wrapper {
   display: flex;
   gap: var(--space-xl);
   border-bottom: 2px solid var(--orange);
+}
+
+/* Overrides margin: 0 on.no-list class*/
+.menu__wrapper.no-list {
+  margin-top: 1rem;
 }
 
 .menu--mobile {

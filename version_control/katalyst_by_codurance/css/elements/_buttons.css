@@ -62,7 +62,7 @@ input[type="submit"]:disabled, {
 .btn-floating {
   {{ btn() }}
   position: fixed;
-  bottom: var(--space-m);
+  bottom: var(--space-2xl);
   right: var(--space-s);
   z-index: 3;
   background: var(--orange);

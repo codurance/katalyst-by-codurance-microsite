@@ -1,23 +1,19 @@
 const floatingBtn = document.querySelector(".btn.btn-floating");
-const initialBtnText = floatingBtn.innerText;
+const buttonIcon = floatingBtn.querySelector(".icon");
 const contactUsSection = document.querySelector("#contact-us");
 
-const BASE_URL = window.location.origin + window.location.pathname;
 const MOBILE_MAX_WIDTH = 786;
-
-const icon = document.createElement("I");
-icon.classList.add("las", "la-arrow-up");
 
 function updateBtnListeners() {
   floatingBtn.addEventListener("click", scrollToTop);
-  floatingBtn.innerText = null;
-  floatingBtn.appendChild(icon);
+  buttonIcon.classList.remove("la-envelope");
+  buttonIcon.classList.add("la-arrow-up");
 }
 
 function resetBtnListeners() {
   floatingBtn.removeEventListener("click", scrollToTop);
-  floatingBtn.innerText = initialBtnText;
-  floatingBtn.href = BASE_URL + "#contact-us";
+  buttonIcon.classList.remove("la-arrow-up");
+  buttonIcon.classList.add("la-envelope");
 }
 
 function scrollToTop(e) {

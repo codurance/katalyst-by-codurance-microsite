@@ -10,7 +10,6 @@ icon.classList.add("las", "la-arrow-up");
 
 function updateBtnListeners() {
   floatingBtn.addEventListener("click", scrollToTop);
-  floatingBtn.href = BASE_URL + "#";
   floatingBtn.innerText = null;
   floatingBtn.appendChild(icon);
 }
@@ -21,22 +20,27 @@ function resetBtnListeners() {
   floatingBtn.href = BASE_URL + "#contact-us";
 }
 
-function scrollToTop() {
+function scrollToTop(e) {
+  e.preventDefault();
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
 
-window.addEventListener("scroll", (e) => {
-  const windowHeight = window.innerHeight;
-  const isMobileWidth = window.innerWidth < MOBILE_MAX_WIDTH;
-  const positionFromBottom = window.scrollY + windowHeight;
-  const targetPosition =
-    document.body.offsetHeight - contactUsSection.offsetHeight;
+window.addEventListener(
+  "scroll",
+  () => {
+    const windowHeight = window.innerHeight;
+    const isMobileWidth = window.innerWidth < MOBILE_MAX_WIDTH;
+    const positionFromBottom = window.scrollY + windowHeight;
+    const targetPosition =
+      document.body.offsetHeight - contactUsSection.offsetHeight;
 
-  floatingBtn.style.display =
-    isMobileWidth && window.scrollY > windowHeight ? "flex" : "none";
+    floatingBtn.style.display =
+      isMobileWidth && window.scrollY > windowHeight ? "flex" : "none";
 
-  positionFromBottom >= targetPosition
-    ? updateBtnListeners()
-    : resetBtnListeners();
-});
+    positionFromBottom >= targetPosition
+      ? updateBtnListeners()
+      : resetBtnListeners();
+  },
+  { passive: true }
+);

@@ -1,0 +1,34 @@
+[ {
+  "id" : "icon_class",
+  "name" : "icon_class",
+  "display_width" : null,
+  "label" : "Icon class",
+  "help_text" : "For more information, you should use one of the icons in <a href=\"https://icons8.com/line-awesome\">Line Awesome library</a> ",
+  "inline_help_text" : "This button will only show up on mobile screens up to 768px",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "la-envelope"
+}, {
+  "id" : "f09155fe-5319-834d-04b2-8184956f39bf",
+  "name" : "link_field",
+  "display_width" : null,
+  "label" : "Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "BLOG", "CALL_TO_ACTION" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "EXTERNAL"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+} ]

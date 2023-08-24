@@ -4,6 +4,17 @@
   display: block;
 }
 
+.menu__wrapper {
+  display: flex;
+  gap: var(--space-xl);
+  border-bottom: 2px solid var(--orange);
+}
+
+/* Overrides margin: 0 on.no-list class*/
+.menu__wrapper.no-list {
+  margin-top: 1rem;
+}
+
 .menu--mobile {
   display: none;
 }
@@ -11,10 +22,6 @@
 @media (max-width: 767px) {
   .menu--desktop {
     display: none;
-  }
-
-  .menu--mobile {
-    display: block;
   }
 }
 
@@ -24,47 +31,68 @@
   position: relative;
 }
 
-.menu__link {
-  font-size: 0.917rem;
-  line-height: 1.667rem;
-  text-decoration: none;
+
+.menu__item:last-child {
+  margin-left: auto;
 }
 
-.menu__link:hover,
-.menu__link:focus,
-.menu__link:active {
-  text-decoration: none;
+.menu__item:last-child a {
+  color: var(--orange);
+  text-transform: uppercase;
 }
+
+
+
+.menu__link {
+  font-size: var(--fs--1);
+  text-decoration: none;
+  color: var(--black);
+}
+
+
+.menu__link:hover, 
+.menu__link:focus, 
+.menu__link:active {
+  color: var(--black);
+  text-stroke: .03rem CurrentColor;
+  -webkit-text-stroke: .03rem CurrentColor;
+}
+
+
+.menu__link::after {
+  content: "";
+  width: 0;
+  transition: width .3s ease-out;
+}
+
+.menu__link:hover::after {
+  content: "";
+  width: 100%;
+  background: var(--turquoise);
+  height: 10px;
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  transition: width .2s ease-in-out;
+}
+
+
 
 .menu__link--active-link,
 .menu__link--active-branch {
   font-weight: bold;
 }
 
-@media (min-width: 768px) and (max-width: 1150px) {
-  .menu__link {
-    font-size: 0.833rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .menu__item {
-    display: block;
-    width: 100%;
-  }
-
-  .menu__link {
-    display: block;
-    font-size: 1.083rem;
-  }
-}
 
 /* Menu items - top level */
 
+.menu__item--depth-1:first-child {
+  padding-left: var(--space-xs);
+}
+
 .menu__item--depth-1 {
   display: inline-block;
-  padding: 0.7rem 0.875rem;
-  text-transform: uppercase;
+  padding: 0.7rem 1rem;
 }
 
 .menu__item--depth-1 > .menu__link--active-link:after {
@@ -210,6 +238,7 @@
 
   .menu__submenu .menu__item .menu__link:hover,
   .menu__submenu .menu__item .menu__link:focus {
+    
     background-color: inherit;
     transition: none;
   }

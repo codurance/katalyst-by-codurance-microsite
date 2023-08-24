@@ -11,7 +11,10 @@
         label="Footer Logo"
         no_wrapper=True %}
     </div>
-
-    {% rich_text "footer_policies" extra_classes="footer__policies" label="Footer policies" %}
+    <hr/>
+    <div class="footer__links">
+      {% rich_text "footer_policies" extra_classes="footer__policies" label="Privacy policies" %}
+      {% module "language_selector" path="../../modules/Language-Selector" label="Language selector" no_wrapper=True %}
+    </div>
   </div>
 </footer>

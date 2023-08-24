@@ -10,6 +10,12 @@
     --light-green: hsla(175, 85%, 95%, 1);
     --dark-blue: hsla(226, 56%, 11%, 1);
 
+    --grey-100: hsla(0, 0%, 90%);
+    --grey-300: hsla(0, 0%, 70%);
+    --grey-500: hsla(0, 0%, 50%);
+    --grey-700: hsla(0, 0%, 30%);
+    --grey-900: hsla(0, 0%, 10%);
+
 }
 
 

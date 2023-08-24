@@ -26,6 +26,7 @@
 {% endmacro %}
 
 <ul class="language-selector">
+	<i class="las la-language"></i>
 	{% for lang in module.language %}
 		<li>
 		{{ generate_language_link(lang.choice, content.translated_content) }}

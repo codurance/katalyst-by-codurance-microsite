@@ -1,16 +1,24 @@
 {% import '../tools/_breakpoints.css' as breakpoints %}
 
-/* Parallax sections */
-.parallax-sections {
-    padding-top: var(--space-3xl);
+/* Floating button */
+
+.btn.btn-floating {
+    display: none;
 }
 
-{% call breakpoints.large_and_extra_large() %}
+.btn.btn-floating i {
+    font-size: var(--fs-4);
+}
+
+/* Parallax sections */
+
+{% call breakpoints.medium_large_and_extra_large() %}
     .parallax-sections {
         --hero-image-height: 720px;
         background: url(https://www.codurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/Header/katalyst_header_elements.svg) no-repeat;
         background-attachment: fixed;
         background-position: calc(100% - 40px) calc(var(--hero-image-height)/3);
+        padding-top: calc(var(--space-2xl) * 4);
     }
 {% endcall %}
 

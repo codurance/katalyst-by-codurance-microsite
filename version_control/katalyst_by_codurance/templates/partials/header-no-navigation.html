@@ -3,10 +3,7 @@
   label: Header no navigation
 -->
 
-{{ require_js(get_asset_url('../../js/header.js'), { position: "footer", defer: true }) }}
-
-
-<header class="header">
+<header class="header header--no-navigation">
   <div class="header__wrapper container">
     {# The link below is used for a navigation skipper which allows users navigating the site with their keyboard to skip over the site navigation. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
 
@@ -14,15 +11,14 @@
     
     <div class="header__logo header__logo--main">
       {% module "site_logo"
-        path="@hubspot/logo"
+        path="@hubspot/logo",
         img={
           "src": "https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/Katalyst_by_codurance_logo.svg",
-          "loading": "eager"
+          "loading": "eager",
+          override_inherited_src: true
         }
       %}
     </div>
-
-    
   </div>
 </header>
 

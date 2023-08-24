@@ -2,39 +2,27 @@
   templateType: global_partial
   label: Header no navigation
 -->
-<header class="header header--no-navigation">
 
-  {# Top header drag and drop area #}
+{{ require_js(get_asset_url('../../js/header.js'), { position: "footer", defer: true }) }}
 
-  {% dnd_area "header-top"
-    label="Top header",
-    class="content-wrapper"
-  %}
-  {% end_dnd_area %}
 
-  {# Main header #}
+<header class="header">
+  <div class="header__wrapper container">
+    {# The link below is used for a navigation skipper which allows users navigating the site with their keyboard to skip over the site navigation. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
 
-  <div class="header__container content-wrapper">
-
-    {# Logo #}
-
-    <div class="header__logo">
+    <a href="#main-content" class="header__skip">Skip to content</a>
+    
+    <div class="header__logo header__logo--main">
       {% module "site_logo"
         path="@hubspot/logo"
         img={
+          "src": "https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/Katalyst_by_codurance_logo.svg",
           "loading": "eager"
         }
       %}
     </div>
 
+    
   </div>
-
-  {# Bottom header drag and drop area #}
-
-  {% dnd_area "header-bottom"
-    label="Bottom header",
-    class="content-wrapper"
-  %}
-  {% end_dnd_area %}
-
 </header>
+

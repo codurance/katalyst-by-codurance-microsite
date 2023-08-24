@@ -6,6 +6,10 @@
 -->
 {% extends "./layouts/base.html" %}
 
+{% block header %}
+  {% global_partial path="../partials/header-no-navigation.html" %}
+{% endblock header %}
+
 {% block body %}
   {% dnd_area "dnd_area"
     label="Main section",

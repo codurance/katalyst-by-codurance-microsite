@@ -83,7 +83,9 @@ input[type="submit"]:disabled, {
   0px 0px 10px var(--grey-100);
 }
 
-.btn-floating:hover {
+.btn-floating:hover, 
+.btn-floating:active,
+.btn-floating:focus {
   color: white;
   font-weight: var(--fw-semibold);
 }

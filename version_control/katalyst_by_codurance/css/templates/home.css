@@ -12,7 +12,7 @@
 
 /* Parallax sections */
 
-{% call breakpoints.medium_large_and_extra_large() %}
+{% call breakpoints.large_and_extra_large() %}
     .parallax-sections {
         --hero-image-height: 720px;
         background: url(https://www.codurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/Header/katalyst_header_elements.svg) no-repeat;
@@ -35,7 +35,6 @@
 }
 
 .hero-banner__image {
-    
     margin-top: var(--space-2xl);
     position: relative;
 }
@@ -55,7 +54,7 @@
     }
 
     .hero-banner__image {
-        min-height: var(--hero-image-height);
+        min-height: 600px;
         margin-top: initial;
         flex-grow: 1;
     }

@@ -34,6 +34,10 @@
     margin-top: var(--space-m);
 }
 
+.hero-banner__content .hs-button {
+    margin-top: var(--space-l);
+}
+
 .hero-banner__image {
     margin-top: var(--space-2xl);
     position: relative;

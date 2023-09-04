@@ -410,10 +410,10 @@ tfoot td {
 .header {
   background-color: white;
   z-index: 3;
-  }
+}
   
 {% call breakpoints.medium_large_and_extra_large() %}
-  .header {
+  .header:not(.header--no-navigation) {
     position: fixed;
     z-index: 3;
     width: 100%;

@@ -2,7 +2,7 @@ const floatingBtn = document.querySelector(".btn.btn-floating");
 const buttonIcon = floatingBtn.querySelector(".icon");
 const contactUsSection = document.querySelector("#contact-us");
 
-const MOBILE_MAX_WIDTH = 786;
+const MOBILE_MAX_WIDTH = 1024;
 
 function updateBtnListeners() {
   floatingBtn.addEventListener("click", scrollToTop);

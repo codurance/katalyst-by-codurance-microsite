@@ -1,3 +1,5 @@
+{% import '../../css/tools/_breakpoints.css' as breakpoints %}
+
 /* Menu */
 
 .menu--desktop {
@@ -19,18 +21,17 @@
   display: none;
 }
 
-@media (max-width: 767px) {
+{% call breakpoints.small_and_medium() %}
   .menu--desktop {
     display: none;
   }
-}
+{% endcall %}
 
 /* Menu items */
 
 .menu__item {
   position: relative;
 }
-
 
 .menu__item:last-child {
   margin-left: auto;

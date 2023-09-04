@@ -25,7 +25,6 @@
 /* Hero Banner */
 .hero-banner__content {
     text-wrap: balance;
-    margin-top: var(--space-xl);
 }
 
 .hero-banner__content p {
@@ -47,6 +46,12 @@
     filter: drop-shadow(0 1px 10px var(--light-grey));
 }
 
+{% call breakpoints.large_and_extra_large() %}
+    .hero-banner__content {
+        margin-top: var(--space-3xl);
+    }
+{% endcall %}
+
 {% call breakpoints.medium_large_and_extra_large() %}
     .hero-banner__wrapper {
         display: flex;
@@ -55,6 +60,7 @@
 
     .hero-banner__content {
         max-width: 40%;
+        margin-top: var(--space-xl);
     }
 
     .hero-banner__image {
@@ -65,6 +71,10 @@
 {% endcall %}
 
 {% call breakpoints.small_and_medium() %}
+    .hero-banner__wrapper {
+        margin-top: var(--space-xl);
+    }
+
     .hero-banner__image {
         background: url(https://www.codurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/Header/katalyst_header_elements.svg) no-repeat bottom right;
         background-size: contain;

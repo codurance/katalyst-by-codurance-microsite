@@ -2,7 +2,7 @@ const floatingBtn = document.querySelector(".btn.btn-floating");
 const buttonIcon = floatingBtn.querySelector(".icon");
 const contactUsSection = document.querySelector("#contact-us");
 
-const MOBILE_MAX_WIDTH = 786;
+const TABLET_MAX_WIDTH = 1024;
 
 function updateBtnListeners() {
   floatingBtn.addEventListener("click", scrollToTop);
@@ -26,7 +26,7 @@ window.addEventListener(
   "scroll",
   () => {
     const windowHeight = window.innerHeight;
-    const isMobileWidth = window.innerWidth < MOBILE_MAX_WIDTH;
+    const isMobileWidth = window.innerWidth < TABLET_MAX_WIDTH;
     const positionFromBottom = window.scrollY + windowHeight;
     const targetPosition =
       document.body.offsetHeight - contactUsSection.offsetHeight;

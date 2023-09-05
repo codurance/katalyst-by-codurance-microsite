@@ -412,7 +412,7 @@ tfoot td {
   z-index: 3;
 }
   
-{% call breakpoints.medium_large_and_extra_large() %}
+{% call breakpoints.large_and_extra_large() %}
   .header:not(.header--no-navigation) {
     position: fixed;
     z-index: 3;

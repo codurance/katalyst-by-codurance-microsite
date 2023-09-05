@@ -12,7 +12,7 @@
 
 /* Parallax sections */
 
-{% call breakpoints.medium_large_and_extra_large() %}
+{% call breakpoints.large_and_extra_large() %}
     .parallax-sections {
         --hero-image-height: 720px;
         background: url(https://www.codurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/Header/katalyst_header_elements.svg) no-repeat;
@@ -25,7 +25,6 @@
 /* Hero Banner */
 .hero-banner__content {
     text-wrap: balance;
-    margin-top: var(--space-xl);
 }
 
 .hero-banner__content p {
@@ -34,8 +33,11 @@
     margin-top: var(--space-m);
 }
 
+.hero-banner__content .hs-button {
+    margin-top: var(--space-l);
+}
+
 .hero-banner__image {
-    
     margin-top: var(--space-2xl);
     position: relative;
 }
@@ -43,6 +45,12 @@
 .hero-banner__image img {
     filter: drop-shadow(0 1px 10px var(--light-grey));
 }
+
+{% call breakpoints.large_and_extra_large() %}
+    .hero-banner__content {
+        margin-top: var(--space-3xl);
+    }
+{% endcall %}
 
 {% call breakpoints.medium_large_and_extra_large() %}
     .hero-banner__wrapper {
@@ -52,16 +60,21 @@
 
     .hero-banner__content {
         max-width: 40%;
+        margin-top: var(--space-xl);
     }
 
     .hero-banner__image {
-        min-height: var(--hero-image-height);
+        min-height: 600px;
         margin-top: initial;
         flex-grow: 1;
     }
 {% endcall %}
 
 {% call breakpoints.small_and_medium() %}
+    .hero-banner__wrapper {
+        margin-top: var(--space-xl);
+    }
+
     .hero-banner__image {
         background: url(https://www.codurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/Header/katalyst_header_elements.svg) no-repeat bottom right;
         background-size: contain;

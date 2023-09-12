@@ -91,7 +91,7 @@ input[type="submit"]:disabled, {
 }
 
 
-/* No button */
+/* No button (show button as simple link) */
 
 .no-button,
 .no-button:hover,

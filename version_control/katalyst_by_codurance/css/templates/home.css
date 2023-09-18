@@ -76,22 +76,11 @@
     }
 
     .hero-banner__image {
-        background: url(https://www.codurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/Header/katalyst_header_elements.svg) no-repeat bottom right;
+        background: url(https://www.codurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/Header/katalyst_header_shapes_mobile.svg) no-repeat bottom right;
         background-size: contain;
+        padding-bottom: var(--space-3xl);
     }
 {% endcall %}
-
-/* Services section */
-
-.services {
-    padding-top: var(--space-3xl);
-    padding-bottom: var(--space-3xl);
-}
-
-.services-cards {
-    margin-top: var(--space-2xl);
-}
-
 
 /* Benefits Section */
 
@@ -100,14 +89,13 @@
     padding-bottom: var(--space-3xl);
 }
 
-
 .benefits__listing {
     margin-top: var(--space-2xl);
 }
 
-{% call utils.small_medium_and_large() %}
-    .benefits {
-        padding-inline: var(--space-s);
+{% call breakpoints.small_and_medium() %}
+    .benefits .section-header {
+        max-width: 100%;
     }
 {% endcall %}
 
@@ -143,8 +131,16 @@
     }
 {% endcall %}
 
+/* Services section */
 
+.services {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
+}
 
+.services-cards {
+    margin-top: var(--space-2xl);
+}
 
 /* Methodology Section */
 

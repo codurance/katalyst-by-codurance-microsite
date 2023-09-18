@@ -76,7 +76,7 @@
     }
 
     .hero-banner__image {
-        background: url(https://www.codurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/Header/katalyst_header_elements.svg) no-repeat bottom right;
+        background: url(https://www.codurance.com/hubfs/KATALYST%20BY%20CODURANCE/Microsite/Header/katalyst_header_shapes_mobile.svg) no-repeat bottom right;
         background-size: contain;
     }
 {% endcall %}

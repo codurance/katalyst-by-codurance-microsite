@@ -22,7 +22,14 @@
         {% module "hero_button" path="@hubspot/button" label="Button header" extra_classes="arrow-down"%}
       </div>
       
-      {% module "linked_image" label="Hero image" path="@hubspot/linked_image" extra_classes="hero-banner__image" %}
+      {% image_src "hero_image_desktop" label="Hero image desktop" export_to_template_context=True %}
+      {% image_src "hero_image_mobile" label="Hero image mobile" export_to_template_context=True %}
+      {% set hero_image_desktop = widget_data.hero_image_desktop.src %}
+      <picture class="hero-banner__image">
+        <source media="(max-width: 767px)" srcset="{{ widget_data.hero_image_mobile.src }}">
+        <source media="(min-width: 768px)" srcset="{{ hero_image_desktop }}">
+        <img src="{{ hero_image_desktop }}" />
+      </picture>
     </div>
   </section>
 

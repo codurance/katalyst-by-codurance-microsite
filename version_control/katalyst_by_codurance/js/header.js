@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const currentScrollTop = window.scrollY;
     const heightThreshold = 150;
 
-    if (currentScrollTop > heightThreshold && currentScrollTop > scrollTop) {
+    if (currentScrollTop > heightThreshold) {
       header.classList.add("hide");
     } else {
       header.classList.remove("hide");

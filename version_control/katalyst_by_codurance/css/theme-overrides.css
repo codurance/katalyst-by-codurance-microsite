@@ -332,6 +332,10 @@ form textarea {
   border-radius: {{ form_field_corner_radius }};
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4de30be0d763427f34239768fdb2ce1a079ac37e
 .hs-form > fieldset[class*="form-columns-"] > .hs-form-field .hs-input {
   width: 100% !important;
 }

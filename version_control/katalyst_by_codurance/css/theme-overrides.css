@@ -332,6 +332,10 @@ form textarea {
   border-radius: {{ form_field_corner_radius }};
 }
 
+.hs-form > fieldset[class*="form-columns-"] > .hs-form-field .hs-input {
+  width: 100% !important;
+}
+
 /* Form placeholder text */
 
 ::-webkit-input-placeholder {

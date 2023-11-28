@@ -1,0 +1,29 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Course Page
+  screenshotPath: ../images/template-previews/course-page-preview.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block header %}
+  {% global_partial path="./partials/header-no-navigation.html" %}
+{% endblock header %}
+
+{% block body %}
+  <section class="heading">
+    {% module "course_title" path="@hubspot/header" label="Course title" %}
+    {% module "course_description" path="@hubspot/rich_text" label="Course description" %}
+    {% module "course_instructor" path="@hubspot/text" label="Course instructor" %}
+
+      <div class="course-info-banner">
+        {% module "icon_language" path="@hubspot/icon" title="language"%}
+        {% module "course_language" path="@hubspot/text" label="Course language" %}
+        {% module "icon_captions" path="@hubspot/icon" title="closed captions languages"%}
+        {% module "course_closed_captions" path="@hubspot/text" label="Course closed captions" %}
+      </div>
+  </section>
+
+
+{% endblock body %}
+

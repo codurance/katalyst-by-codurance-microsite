@@ -1,0 +1,22 @@
+{% import '../tools/_breakpoints.css' as breakpoints %}
+
+section {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+.course-info-banner {
+    background-color: var(--light-grey);
+    padding: var(--space-m);
+    display: flex;
+    align-items: center;
+}
+
+.two-col-text {
+    column-count: 2;
+}
+
+.accordion {
+    background-color: var(--dark-blue);
+    padding: var(--space-l);
+}

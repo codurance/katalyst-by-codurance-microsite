@@ -5,25 +5,64 @@
   screenshotPath: ../images/template-previews/course-page-preview.png
 -->
 {% extends "./layouts/base.html" %}
+{{ require_css(get_asset_url("../css/templates/course-page.css")) }}
 
 {% block header %}
   {% global_partial path="./partials/header-no-navigation.html" %}
 {% endblock header %}
 
 {% block body %}
-  <section class="heading">
+  <section class="heading container">
     {% module "course_title" path="@hubspot/header" label="Course title" %}
     {% module "course_description" path="@hubspot/rich_text" label="Course description" %}
     {% module "course_instructor" path="@hubspot/text" label="Course instructor" %}
-
-      <div class="course-info-banner">
-        {% module "icon_language" path="@hubspot/icon" title="language"%}
-        {% module "course_language" path="@hubspot/text" label="Course language" %}
-        {% module "icon_captions" path="@hubspot/icon" title="closed captions languages"%}
-        {% module "course_closed_captions" path="@hubspot/text" label="Course closed captions" %}
-      </div>
   </section>
 
+  <section class="course-info-banner">
+    {% module "icon_language" path="@hubspot/icon" title="language"%}
+    {% module "course_language" path="@hubspot/text" label="Course language" %}
+    {% module "icon_captions" path="@hubspot/icon" title="closed captions languages"%}
+    {% module "course_closed_captions" path="@hubspot/text" label="Course closed captions" %}
+  </section>
 
+  <section>
+    {% module "intro_description_title" path="@hubspot/header" label="Intro Text Title" %}
+    <div class="two-col-text">
+      {% module "intro_description_text" path="@hubspot/rich_text" label="Intro Description text" %}
+    </div>
+  </section>
+
+  <section class="accordion"></section>
+
+
+  <section class="in-depth-description">
+    {% module "intro_description_title" path="@hubspot/header" label="Intro Text Title" %}
+    {% module "intro_description_text" path="@hubspot/rich_text" label="Intro Description text" %}
+    {% module "divider" path="@hubspot/divider" %}
+  </section>
+
+  <section class="rich-text">
+    {% module "rich_text_title" path="@hubspot/header" label="Rich text Title" %}
+    {% module "rich_text_description_text" path="@hubspot/rich_text" label="Rich text intro Description text" %}
+    {% module "rich_text_divider" path="@hubspot/divider" %}
+  </section>
+
+  <section class="requirements">
+    {% module "requirements_title" path="@hubspot/header" label="Requirements Title" %}
+    {% module "requirements_description_text" path="@hubspot/rich_text" label="Intro Description text" %}
+    {% module "requirements-divider" path="@hubspot/divider" %}
+  </section>
+
+  <section id="clients" class="client-logos">
+    <div class="container">
+      <h2>
+          {% module "clients_header" path="@hubspot/text" label="Clients logos title"%}
+      </h2>
+      
+      {% module 'clients logos' path='../modules/Logos-Cloud.module' label="Clients Logos" no_wrapper=True%}
+    </div>
+    <img class="client-logos__graphic" src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/katalyst_logo_section_element.svg" >
+  </section>
+  
 {% endblock body %}
 

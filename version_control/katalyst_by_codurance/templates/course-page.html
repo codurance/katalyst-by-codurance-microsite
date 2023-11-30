@@ -25,7 +25,7 @@
     {% module "course_closed_captions" path="@hubspot/text" label="Course closed captions" %}
   </section>
 
-  <section>
+  <section class="container">
     {% module "intro_description_title" path="@hubspot/header" label="Intro Text Title" %}
     <div class="two-col-text">
       {% module "intro_description_text" path="@hubspot/rich_text" label="Intro Description text" %}
@@ -35,22 +35,28 @@
   <section class="accordion"></section>
 
 
-  <section class="in-depth-description">
+  <section class="in-depth-description container">
     {% module "intro_description_title" path="@hubspot/header" label="Intro Text Title" %}
     {% module "intro_description_text" path="@hubspot/rich_text" label="Intro Description text" %}
-    {% module "divider" path="@hubspot/divider" %}
+    <hr/>    
   </section>
 
-  <section class="rich-text">
+  <section class="rich-text container">
     {% module "rich_text_title" path="@hubspot/header" label="Rich text Title" %}
     {% module "rich_text_description_text" path="@hubspot/rich_text" label="Rich text intro Description text" %}
-    {% module "rich_text_divider" path="@hubspot/divider" %}
+    <hr/>
   </section>
 
-  <section class="requirements">
+  <section class="requirements container">
     {% module "requirements_title" path="@hubspot/header" label="Requirements Title" %}
     {% module "requirements_description_text" path="@hubspot/rich_text" label="Intro Description text" %}
-    {% module "requirements-divider" path="@hubspot/divider" %}
+    <hr/>
+  </section>
+
+  <section class="teaser-video container">
+    {% module "teaser-video_title" path="@hubspot/header" label="Teaser Video Title" %}
+    {% module "video" path="@hubspot/video" label="Video To insert" no_wrapper=True %}
+    {% module "teaser-video_description_text" path="@hubspot/rich_text" label="Intro Video text" %}
   </section>
 
   <section id="clients" class="client-logos">

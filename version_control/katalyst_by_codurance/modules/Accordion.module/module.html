@@ -1,7 +1,9 @@
 
-{% for item in module.accordion_group %}
-  <details>
-    <summary>{{ item.title }}</summary>
-    <main>{{ item.content }}</main>
-  </details>
-{% endfor %}
+<div class="accordion-group">
+  {% for item in module.accordion_group %}
+    <details class="accordion-item">
+      <summary>{{ item.title }}</summary>
+      <main>{{ item.content }}</main>
+    </details>
+  {% endfor %}
+</div>

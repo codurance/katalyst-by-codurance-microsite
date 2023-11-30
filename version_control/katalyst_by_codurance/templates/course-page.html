@@ -19,10 +19,12 @@
   </section>
 
   <section class="course-info-banner">
-    {% module "icon_language" path="@hubspot/icon" title="language"%}
-    {% module "course_language" path="@hubspot/text" label="Course language" %}
-    {% module "icon_captions" path="@hubspot/icon" title="closed captions languages"%}
-    {% module "course_closed_captions" path="@hubspot/text" label="Course closed captions" %}
+    <div class="course-info-banner__wrapper container">
+      {% module "icon_language" path="@hubspot/icon" title="language"%}
+      {% module "course_language" path="@hubspot/text" label="Course language" %}
+      {% module "icon_captions" path="@hubspot/icon" title="closed captions languages"%}
+      {% module "course_closed_captions" path="@hubspot/text" label="Course closed captions" %}
+    </div>
   </section>
 
   <section class="container">
@@ -32,7 +34,10 @@
     </div>
   </section>
 
-  <section class="accordion"></section>
+  <section class="accordion">
+    {% module "accordion_title" path="@hubspot/header" label="Accordion Title" %}
+    {% module "accordion" path="../modules/Accordion.module" label="Accordion" %}
+  </section>
 
 
   <section class="in-depth-description container">

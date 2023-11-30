@@ -27,13 +27,13 @@ section h2 {
 
 .course-info-banner {
     background-color: var(--light-grey);
-    padding: var(--space-m);
-    display: flex;
-    align-items: center;
+    padding: var(--space-m) var(--space-s);
+    
 }
     
-.course-info-banner > div {
-    max-width: var(--text-max-width);    
+.course-info-banner__wrapper {
+    display: flex;
+    align-items: center; 
 }
 
 .two-col-text {
@@ -44,6 +44,18 @@ section h2 {
 .accordion {
     background-color: var(--dark-blue);
     padding: var(--space-l);
+    color: white;
+}
+
+.accordion h2 {
+    color: white;
+}
+
+.accordion-item {
+    background-color: white;
+    color: var(--black);
+    padding: var(--space-s);
+    margin-bottom: var(--space-xs);
 }
 
 .oembed_container {

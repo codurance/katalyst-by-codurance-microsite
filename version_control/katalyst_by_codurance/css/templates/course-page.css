@@ -1,8 +1,28 @@
 {% import '../tools/_breakpoints.css' as breakpoints %}
 
-section {
+section:not(.client-logos) {
     margin-top: var(--space-xl);
     margin-bottom: var(--space-xl);
+}
+
+section > div {
+    max-width: var(--text-max-width);
+}
+
+section hr {
+    margin-top: var(--space-xl);
+    border-bottom: 2px solid var(--light-grey);
+}
+
+section h2 {
+    color: var(--black);
+    font-family: Inter;
+    font-size: var(--fs-2);
+}
+
+.heading .hs_cos_wrapper_type_rich_text {
+    display: block;
+    max-width: 600px;
 }
 
 .course-info-banner {
@@ -11,12 +31,46 @@ section {
     display: flex;
     align-items: center;
 }
+    
+.course-info-banner > div {
+    max-width: var(--text-max-width);    
+}
 
 .two-col-text {
     column-count: 2;
+    column-gap: var(--space-m) ;
 }
 
 .accordion {
     background-color: var(--dark-blue);
     padding: var(--space-l);
+}
+
+.oembed_container {
+    margin-top: var(--space-s);
+    margin-bottom: var(--space-m);
+}
+
+.client-logos {
+    background-color: var(--light-grey);
+    padding: var(--space-2xl) 0;
+    position: relative;
+}
+
+.client-logos h2 {
+    color: var(--black);
+    font-family: Inter;
+    font-size: var(--fs-0);
+    text-align: center;
+}
+
+.client-logos__graphic {
+    --light-orange: #f5e3d6;
+    filter: drop-shadow(0 1px 10px var(--light-orange));
+    left: 0;
+    max-width: 25%;
+    position: absolute;
+    top: -40%;
+    width: 450px;
+    z-index: 0;
 }

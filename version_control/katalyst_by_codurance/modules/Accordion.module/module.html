@@ -1,0 +1,7 @@
+
+{% for item in module.accordion_group %}
+  <details>
+    <summary>{{ item.title }}</summary>
+    <main>{{ item.content }}</main>
+  </details>
+{% endfor %}

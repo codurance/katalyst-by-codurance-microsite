@@ -13,6 +13,12 @@
     border-radius: 3px;
 }
 
+.accordion-item__time-completion {
+  display: block;
+  font-size: var(--fs--1);
+  color: var(--gray-500);
+}
+
 details main {
     margin-top: var(--space-xs);
     padding: var(--space-s);

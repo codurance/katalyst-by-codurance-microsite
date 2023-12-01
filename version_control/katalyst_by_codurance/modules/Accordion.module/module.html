@@ -1,10 +1,17 @@
+{{ require_css(get_asset_url("../../css/modules/accordion.css")) }}
+{{ require_css("https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css") }}
 
 <div class="accordion-group">
   {% for item in module.accordion_group %}
     <details class="accordion-item">
       <summary>
         {{ item.title }}
-        {{ item.completion_time }}
+        {% if item.completion_time %}
+          <span class="accordion-item__time-completion">
+            <i class="las la-clock"></i>
+            {{ item.completion_time }}
+          </span>
+        {% endif %}
       </summary>
       <main>{{ item.content }}</main>
     </details>

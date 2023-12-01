@@ -12,9 +12,14 @@
 {% endblock header %}
 
 {% block body %}
-  <section class="heading container">
+  <section class="heading container desktop">
     {% module "course_title" path="@hubspot/header" label="Course title" %}
     {% module "course_description" path="@hubspot/rich_text" label="Course description" %}
+  </section>
+
+  <section class="heading container mobile">
+    {{ content.widgets.course_title.body.value }}
+    {{ content.widgets.course_description.body.html }}
   </section>
 
   <section class="course-info-banner">

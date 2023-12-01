@@ -1,5 +1,17 @@
 {% import '../tools/_breakpoints.css' as breakpoints %}
 
+{% call breakpoints.medium_large_and_extra_large() %}
+    .mobile {
+        display: none;
+    }
+{% endcall %}
+
+{% call breakpoints.small() %}
+    .desktop {
+        display: none;
+    }
+{% endcall %}
+
 section:not(.client-logos) {
     margin-top: var(--space-xl);
     margin-bottom: var(--space-xl);

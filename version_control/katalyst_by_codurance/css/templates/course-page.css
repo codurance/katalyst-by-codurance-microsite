@@ -1,6 +1,6 @@
 {% import '../tools/_breakpoints.css' as breakpoints %}
 {% import '../tools/_macros.css' as macros %}
-{{ require_css("https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css") }}
+
 
 {% call breakpoints.medium_large_and_extra_large() %}
     .mobile {

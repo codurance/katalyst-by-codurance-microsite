@@ -1,4 +1,5 @@
 {% import '../tools/_breakpoints.css' as breakpoints %}
+{{ require_css("https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css") }}
 
 {% call breakpoints.medium_large_and_extra_large() %}
     .mobile {
@@ -57,17 +58,6 @@ section h2 {
     background-color: var(--dark-blue);
     padding: var(--space-l);
     color: white;
-}
-
-.accordion h2 {
-    color: white;
-}
-
-.accordion-item {
-    background-color: white;
-    color: var(--black);
-    padding: var(--space-s);
-    margin-bottom: var(--space-xs);
 }
 
 .oembed_container {

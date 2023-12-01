@@ -23,6 +23,17 @@
     "show_emoji_picker" : false,
     "type" : "text"
   }, {
+    "id" : "ed481e23-ab97-1dbf-0682-4bd714cab3bb",
+    "name" : "completion_time",
+    "display_width" : null,
+    "label" : "Completion Time",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
     "id" : "97e6c11d-f5f2-4ec9-e1db-0a772fc367e7",
     "name" : "content",
     "display_width" : null,

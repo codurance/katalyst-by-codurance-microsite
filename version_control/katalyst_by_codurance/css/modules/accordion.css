@@ -1,0 +1,20 @@
+{% import "../tools/_breakpoints.css" as utils %}
+
+
+.accordion h2 {
+    color: white;
+}
+
+.accordion-item {
+    background-color: white;
+    color: var(--black);
+    padding: var(--space-s);
+    margin-bottom: var(--space-xs);
+    border-radius: 3px;
+}
+
+details main {
+    margin-top: var(--space-xs);
+    padding: var(--space-s);
+    border-top: 2px solid var(--light-grey);
+}

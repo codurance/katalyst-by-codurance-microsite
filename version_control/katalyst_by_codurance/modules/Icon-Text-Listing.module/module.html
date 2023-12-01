@@ -1,0 +1,6 @@
+{{ module.list_direction }}
+
+{% for item in module.list_items %}
+	{% inline_text field="icon" value="{{ item.icon }}" %}
+	{% inline_text field="text" value="{{ item.text }}" %}
+{% endfor %}

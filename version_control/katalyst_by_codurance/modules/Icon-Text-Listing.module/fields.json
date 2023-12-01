@@ -1,0 +1,57 @@
+[ {
+  "id" : "5824f11e-35a7-e904-63d6-01cc20cc28b6",
+  "name" : "list_direction",
+  "display_width" : null,
+  "label" : "List direction",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "vertical", "Vertical" ], [ "horizontal", "Horizontal" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "vertical"
+}, {
+  "id" : "0c81756f-28c8-6228-73dc-5b1eb2877b6c",
+  "name" : "list_items",
+  "display_width" : null,
+  "label" : "List items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "d9299226-fe3f-c6fe-4808-9ee48f13455a",
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "fc9fb558-008b-e7d1-f3df-51615d775db0",
+    "name" : "icon",
+    "display_width" : null,
+    "label" : "Icon",
+    "inline_help_text" : "Please, input an icon class (la-...) from the <a href='https://icons8.com/line-awesome'>Line Awesome icon library</a>",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "d9299226-fe3f-c6fe-4808-9ee48f13455a",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "This is some text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ ]
+} ]

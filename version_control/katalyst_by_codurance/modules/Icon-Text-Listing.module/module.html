@@ -1,0 +1,11 @@
+{{ require_css(get_asset_url("../../css/modules/icon-text-listing.css")) }}
+{{ require_css("https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css") }}
+
+<ul class="icon-text-listing {{ module.list_direction }}">
+	{% for item in module.list_items %}
+		<li>
+			<i class="las {{ item.icon }}"></i>
+			{{ item.text }}
+		</li>
+	{% endfor %}
+</ul>

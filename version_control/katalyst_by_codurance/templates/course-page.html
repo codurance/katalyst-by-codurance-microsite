@@ -12,16 +12,28 @@
 {% endblock header %}
 
 {% block body %}
-  <section class="heading container">
+  <section class="heading container desktop">
     {% module "course_title" path="@hubspot/header" label="Course title" %}
     {% module "course_description" path="@hubspot/rich_text" label="Course description" %}
+    
+    <div class="course-info-card">
+      {% module "course_video" path="@hubspot/video" video_type="embed" label="Course video" %}
+      <p>{% module "course_price_label" path="@hubspot/text" %} <span>€ {% module "course_price" path="@hubspot/text" %}</span></p>
+      {% module "purchase_button" path="@hubspot/button" label="Purchase button" %}
+      {% module "course_features_listing" path="../modules/Icon-Text-Listing.module" label="Course features listing" %}
+    </div>
+  </section>
+
+  <section class="heading container mobile">
+    {{ content.widgets.course_title.body.value }}
+    {{ content.widgets.course_description.body.html }}
   </section>
 
   <section class="course-info-banner">
     <div class="container">
       {% module "course_instructor" path="@hubspot/text" label="Course instructor" %}
       <div class="course-info-banner__wrapper">
-        {% module "icon_language" path="@hubspot/icon" title="language"%}
+        {% module "icon_language" path="@hubspot/icon" title="language" %}
         {% module "course_language" path="@hubspot/text" label="Course language" %}
         {% module "icon_captions" path="@hubspot/icon" title="closed captions languages"%}
         {% module "course_closed_captions" path="@hubspot/text" label="Course closed captions" %}

@@ -1,0 +1,8 @@
+.icon-text-listing {
+	list-style-type: none;
+}
+
+.icon-text-listing.horizontal {
+	display: flex;
+	gap: var(--space-xl);
+}

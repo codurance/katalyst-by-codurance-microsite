@@ -15,15 +15,17 @@
   <section class="heading container">
     {% module "course_title" path="@hubspot/header" label="Course title" %}
     {% module "course_description" path="@hubspot/rich_text" label="Course description" %}
-    {% module "course_instructor" path="@hubspot/text" label="Course instructor" %}
   </section>
 
   <section class="course-info-banner">
-    <div class="course-info-banner__wrapper container">
-      {% module "icon_language" path="@hubspot/icon" title="language"%}
-      {% module "course_language" path="@hubspot/text" label="Course language" %}
-      {% module "icon_captions" path="@hubspot/icon" title="closed captions languages"%}
-      {% module "course_closed_captions" path="@hubspot/text" label="Course closed captions" %}
+    <div class="container">
+      {% module "course_instructor" path="@hubspot/text" label="Course instructor" %}
+      <div class="course-info-banner__wrapper">
+        {% module "icon_language" path="@hubspot/icon" title="language"%}
+        {% module "course_language" path="@hubspot/text" label="Course language" %}
+        {% module "icon_captions" path="@hubspot/icon" title="closed captions languages"%}
+        {% module "course_closed_captions" path="@hubspot/text" label="Course closed captions" %}
+      </div>
     </div>
   </section>
 

@@ -1,4 +1,5 @@
 {% import '../tools/_breakpoints.css' as breakpoints %}
+{% import '../tools/_macros.css' as macros %}
 {{ require_css("https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css") }}
 
 {% call breakpoints.medium_large_and_extra_large() %}
@@ -33,9 +34,23 @@ section h2 {
     font-size: var(--fs-2);
 }
 
+.heading {
+    position: relative;
+}
+
 .heading .hs_cos_wrapper_type_rich_text {
     display: block;
     max-width: 600px;
+}
+
+.course-info-card {
+    {{ macros.card_styles() }}
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40rem;
+    width: 35%;
 }
 
 .course-info-banner {

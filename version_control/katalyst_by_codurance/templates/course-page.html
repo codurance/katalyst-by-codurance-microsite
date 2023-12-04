@@ -16,12 +16,17 @@
     {% module "course_title" path="@hubspot/header" label="Course title" %}
     {% module "course_description" path="@hubspot/rich_text" label="Course description" %}
     
-    <div class="course-info-card">
+    <aside class="course-info-card">
       {% module "course_video" path="@hubspot/video" video_type="embed" label="Course video" %}
-      <p>{% module "course_price_label" path="@hubspot/text" %} <span>€ {% module "course_price" path="@hubspot/text" %}</span></p>
-      {% module "purchase_button" path="@hubspot/button" label="Purchase button" %}
-      {% module "course_features_listing" path="../modules/Icon-Text-Listing.module" label="Course features listing" %}
-    </div>
+      <div class="course-info-card__content">
+        <div class="price">
+          {% module "course_price_label" path="@hubspot/text" %}
+          <span>€ {% module "course_price" path="@hubspot/text" no_wrapper=True %} </span>
+        </div>
+        {% module "purchase_button" path="@hubspot/button" label="Purchase button" %}
+        {% module "course_features_listing" path="../modules/Icon-Text-Listing.module" label="Course features listing" %}
+      </div>
+    </aside>
   </section>
 
   <section class="heading container mobile">
@@ -33,10 +38,7 @@
     <div class="container">
       {% module "course_instructor" path="@hubspot/text" label="Course instructor" %}
       <div class="course-info-banner__wrapper">
-        {% module "icon_language" path="@hubspot/icon" title="language" %}
-        {% module "course_language" path="@hubspot/text" label="Course language" %}
-        {% module "icon_captions" path="@hubspot/icon" title="closed captions languages"%}
-        {% module "course_closed_captions" path="@hubspot/text" label="Course closed captions" %}
+        {% module "course_info_listing" path="../modules/Icon-Text-Listing.module" label="Course info listing" %}
       </div>
     </div>
   </section>
@@ -86,8 +88,13 @@
       
       {% module 'clients logos' path='../modules/Logos-Cloud.module' label="Clients Logos" no_wrapper=True%}
     </div>
-    <img class="client-logos__graphic" src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Microsite/katalyst_logo_section_element.svg" >
+    <img class="client-logos__graphic" src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Course%20Page/Course_page__orange_triangle.svg" alt="" >
   </section>
   
+<section class="contact-us">
+    {% module "contact_us_header" path="@hubspot/header" label="Contact us title"%}
+    {% module "contact_us_content" path="@hubspot/text" label="Contact us title"%}
+</section>
+
 {% endblock body %}
 

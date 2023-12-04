@@ -53,12 +53,9 @@ section h2 {
 }
 
 .course-info-card__content {
-    padding: var(--space-m);
+    padding: var(--space-l);
 }
 
-.course-info-card__content:not(.hs-button) {
-    margin-left: var(--space-xl);
-}
 
 .price {
     font-size: var(--fs-2);
@@ -67,7 +64,7 @@ section h2 {
 }
 
 .price > span {
-   font-weight: var(--fw-semibold);
+    font-weight: var(--fw-semibold);
 }
 
 .course-info-banner {
@@ -81,10 +78,10 @@ section h2 {
     align-items: center; 
 }
 {% call breakpoints.medium_large_and_extra_large() %}
-.two-col-text {
-    column-count: 2;
-    column-gap: var(--space-m) ;
-}
+    .two-col-text {
+        column-count: 2;
+        column-gap: var(--space-m) ;
+    }
 {% endcall %}
 
 .accordion {

@@ -46,16 +46,18 @@ section h2 {
 .course-info-card {
     {{ macros.card_styles() }}
     background: white;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     min-height: 20rem;
+    min-width: 21rem;
+    top: 20%;
+    z-index: 2;
 }
 
 .course-info-card__content {
     padding: var(--space-l);
 }
-
 
 .price {
     font-size: var(--fs-2);
@@ -65,6 +67,10 @@ section h2 {
 
 .price > span {
     font-weight: var(--fw-semibold);
+}
+
+.course-info-card__content .hs-button {
+    width: 100%;
 }
 
 .course-info-banner {

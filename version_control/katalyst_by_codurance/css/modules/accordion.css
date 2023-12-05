@@ -24,3 +24,46 @@ details main {
     padding: var(--space-s);
     border-top: 2px solid var(--light-grey);
 }
+
+.accordion-item[open] {
+    outline: 2px solid var(--orange);
+}
+
+.accordion-item[open] summary::before {
+    transform: translateY(-50%) rotate(225deg);
+}
+
+summary {
+    cursor: pointer;
+    position: relative;
+}
+
+summary::before {
+    transition: 200ms;
+}
+
+
+summary::marker{
+    content: none;
+}
+
+details {
+    transition: 1s;
+}
+
+details summary::before{
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-right: 0px;
+    border-bottom: 1px solid var(--black);
+    border-right: 1px solid var(--black);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+
+

@@ -12,7 +12,7 @@
 {% endblock header %}
 
 {% block body %}
-  <section class="heading container desktop">
+  <section class="heading container desktop-view">
     {% module "course_title" path="@hubspot/header" label="Course title" %}
     {% module "course_description" path="@hubspot/rich_text" label="Course description" %}
     
@@ -30,10 +30,22 @@
   </section>
 
 
-  <section class="heading container mobile">
-    {{ content.widgets.course_title.body.value }}
-    {{ content.widgets.course_description.body.html }}
+  <section class="heading container mobile-view">
+    <h1>{{ content.widgets.course_title.body.value }}</h1>
+    <p>{{ content.widgets.course_description.body.html }}</p>
   </section>
+
+  <aside class="fixed-container mobile-view">
+    <div class="price">
+      <p>{{ content.widgets.course_price_label.body.value }}</p>
+      <span>€  {{ content.widgets.course_price.body.value }}</span>
+      </div>
+      <a class="button" href=" {{ content.widgets.purchase_button.body.link.url.href }} ">
+        {{ content.widgets.purchase_button.body.button_text }} 
+      </a>
+  </aside>
+
+
 
   <section class="course-info-banner">
     <div class="container">

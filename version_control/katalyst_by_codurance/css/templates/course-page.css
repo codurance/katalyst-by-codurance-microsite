@@ -72,15 +72,24 @@ section h2 {
 }
 
 .course-info-card {
-    {{ macros.card_styles() }}
-    background: white;
+    max-width: var(--content-max-width);
+    padding-right: var(--space-l);
+    margin-inline: auto;
+    width: 100%;
     position: fixed;
     top: 20%;
-    right: var(--space-m);
+    z-index: 2;
+}
+
+.course-info-card__wrapper {
+    {{ macros.card_styles() }}
+    background-color: white;
     min-height: 20rem;
     min-width: 21rem;
     z-index: 2;
-}
+    max-width: 25rem;
+    margin-left: auto;
+} 
 
 .course-info-card__content {
     padding: var(--space-l);
@@ -111,9 +120,12 @@ section h2 {
     align-items: center; 
 }
 {% call breakpoints.medium_large_and_extra_large() %}
-    .two-col-text {
-        column-count: 2;
-        column-gap: var(--space-m) ;
+    .two-col-text ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto-fill;
+        column-gap: var(--space-m);
+        row-gap: var(--space-s);
     }
 {% endcall %}
 

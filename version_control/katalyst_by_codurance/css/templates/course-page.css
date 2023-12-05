@@ -1,0 +1,192 @@
+{% import '../tools/_breakpoints.css' as breakpoints %}
+{% import '../tools/_macros.css' as macros %}
+
+
+{% call breakpoints.medium_large_and_extra_large() %}
+    .mobile-view {
+        display: none !important;
+    }
+{% endcall %}
+
+{% call breakpoints.small() %}
+    .desktop-view {
+        display: none !important;
+    }
+{% endcall %}
+
+.fixed-container {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    padding: var(--space-m);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+    z-index: 2;
+    box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.07); 
+}
+
+.fixed-container .price {
+    flex-direction: column;
+    gap: 0;
+}
+
+.fixed-container .price p {
+    font-size: var(--fs-2);
+    margin-bottom: 0;
+}
+
+.fixed-container .button {
+    flex-grow: 1;
+    margin-top: 0;
+}
+
+section:not(.client-logos):not(.contact-us) {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+section > div {
+    max-width: var(--text-max-width);
+}
+
+section hr {
+    margin-top: var(--space-xl);
+    border-bottom: 2px solid var(--light-grey);
+}
+
+section h2 {
+    color: var(--black);
+    font-family: Inter;
+    font-size: var(--fs-2);
+}
+
+.heading {
+    position: relative;
+}
+
+.heading .hs_cos_wrapper_type_rich_text {
+    display: block;
+    max-width: 600px;
+}
+
+.course-info-card {
+    max-width: var(--content-max-width);
+    padding-right: var(--space-l);
+    margin-inline: auto;
+    width: 100%;
+    position: fixed;
+    top: 20%;
+    z-index: 2;
+}
+
+.course-info-card__wrapper {
+    {{ macros.card_styles() }}
+    background-color: white;
+    min-height: 20rem;
+    min-width: 21rem;
+    z-index: 2;
+    max-width: 25rem;
+    margin-left: auto;
+} 
+
+.course-info-card__content {
+    padding: var(--space-l);
+}
+
+.price {
+    font-size: var(--fs-2);
+    display: flex;
+    gap: .3rem;
+}
+
+.price > span {
+    font-weight: var(--fw-semibold);
+}
+
+.course-info-card__content .hs-button {
+    width: 100%;
+}
+
+.course-info-banner {
+    background-color: var(--light-grey);
+    padding: var(--space-m) var(--space-s);
+    
+}
+    
+.course-info-banner__wrapper {
+    display: flex;
+    align-items: center; 
+}
+{% call breakpoints.medium_large_and_extra_large() %}
+    .two-col-text ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto-fill;
+        column-gap: var(--space-m);
+        row-gap: var(--space-s);
+    }
+{% endcall %}
+
+.accordion {
+    background-color: var(--dark-blue);
+    padding: var(--space-l);
+    color: white;
+}
+
+.teaser-video .oembed_container {
+    margin-top: var(--space-s);
+    margin-bottom: var(--space-m);
+}
+
+.client-logos {
+    background-color: var(--light-grey);
+    padding: var(--space-2xl) 0;
+    position: relative;
+}
+
+.client-logos .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+.client-logos h2 {
+    color: var(--black);
+    font-size: var(--fs-0);
+    text-align: center;
+}
+
+.client-logos__graphic {
+    --light-orange: #f5e3d6;
+    filter: drop-shadow(0 1px 10px var(--light-orange));
+    right: 0;
+    max-width: 25%;
+    position: absolute;
+    bottom: -20%;
+    width: 450px;
+    z-index: 0;
+}
+
+.contact-us {
+    background: url("https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Course%20Page/Course_page__triangles.svg");
+    text-align: center;
+    padding: 80px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-us h2 {
+    font-family: {{ theme.global_fonts.secondary.font }};
+    font-size: var(--fs-4);
+}
+
+{% call breakpoints.small() %}
+    .contact-us {
+        background-size: cover;
+    }
+{% endcall %}

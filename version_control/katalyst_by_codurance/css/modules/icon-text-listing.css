@@ -1,0 +1,23 @@
+.icon-text-listing {
+	list-style-type: none;
+	gap: var(--space-xs);
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+}
+
+.icon-text-listing li {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: var(--fs--1);
+}
+
+.icon-text-listing li i {
+	font-size: var(--fs-2);
+}
+
+.icon-text-listing.horizontal {
+	flex-direction: row;
+	gap: var(--space-l);
+}

@@ -5,6 +5,11 @@
     --course-info-card-width: 25rem;
 }
 
+header {
+    position: static !important;
+}
+
+
 {% call breakpoints.medium_large_and_extra_large() %}
     .mobile-view {
         display: none !important;
@@ -156,8 +161,12 @@ section h2 {
 
 .accordion {
     background-color: var(--dark-blue);
-    padding: var(--space-l);
     color: white;
+}
+
+.accordion-content {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
 }
 
 .teaser-video .oembed_container {

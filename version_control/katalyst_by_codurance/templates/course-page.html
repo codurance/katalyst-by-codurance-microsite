@@ -7,40 +7,37 @@
 {% extends "./layouts/base.html" %} 
 {{ require_css(get_asset_url("../css/templates/course-page.css")) }}
 
-{% block header %} 
-  {% global_partial path="./partials/header-no-navigation.html" %} 
-{% endblock header %} 
+
 {% block body %}
-
-<aside class="course-info-card">
-  {% module "course_video" path="@hubspot/video" video_type="embed"
-  label="Course video" %}
-  <div class="course-info-card__content">
-    <div class="price">
-      {% module "course_price_label" path="@hubspot/text" %}
-      <span
-        >€ {% module "course_price" path="@hubspot/text" no_wrapper=True %}
-      </span>
+  <aside class="course-info-card">
+    {% module "course_video" path="@hubspot/video" video_type="embed"
+    label="Course video" %}
+    <div class="course-info-card__content">
+      <div class="price">
+        {% module "course_price_label" path="@hubspot/text" %}
+        <span
+          >€ {% module "course_price" path="@hubspot/text" no_wrapper=True %}
+        </span>
+      </div>
+      {% module "purchase_button" path="@hubspot/button" label="Purchase button"
+      no_wrapper=True %} {% module "course_features_listing"
+      path="../modules/Icon-Text-Listing.module" label="Course features listing"
+      %}
     </div>
-    {% module "purchase_button" path="@hubspot/button" label="Purchase button"
-    no_wrapper=True %} {% module "course_features_listing"
-    path="../modules/Icon-Text-Listing.module" label="Course features listing"
-    %}
-  </div>
-</aside>
+  </aside>
 
-<aside class="course-info--mobile">
-  <div class="price">
-    <p>{{ content.widgets.course_price_label.body.value }}</p>
-    <span>€ {{ content.widgets.course_price.body.value }}</span>
-  </div>
-  <a
-    class="button"
-    href=" {{ content.widgets.purchase_button.body.link.url.href }} "
-  >
-    {{ content.widgets.purchase_button.body.button_text }}
-  </a>
-</aside>
+  <aside class="course-info--mobile">
+    <div class="price">
+      <p>{{ content.widgets.course_price_label.body.value }}</p>
+      <span>€ {{ content.widgets.course_price.body.value }}</span>
+    </div>
+    <a
+      class="button"
+      href=" {{ content.widgets.purchase_button.body.link.url.href }} "
+    >
+      {{ content.widgets.purchase_button.body.button_text }}
+    </a>
+  </aside>
 
 <section class="heading container desktop-view">
   {% module "course_title" path="@hubspot/header" label="Course title" %} {%

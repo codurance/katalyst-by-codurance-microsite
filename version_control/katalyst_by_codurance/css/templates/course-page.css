@@ -22,12 +22,14 @@ section:not(.client-logos):not(.contact-us) {
     margin-bottom: var(--space-xl);
 }
 
-section > div {
+section > div,
+.accordion-content {
     max-width: var(--text-max-width); 
 }
 
 {% call breakpoints.large_and_extra_large() %}
-    section > div {
+    section > div,
+    .accordion-content {
         max-width: min(
             var(--text-max-width), 
             calc(100% - var(--course-info-card-width) - var(--space-l))

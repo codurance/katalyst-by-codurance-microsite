@@ -1,6 +1,9 @@
 {% import '../tools/_breakpoints.css' as breakpoints %}
 {% import '../tools/_macros.css' as macros %}
 
+:root {
+    --course-info-card-width: 25rem;
+}
 
 {% call breakpoints.medium_large_and_extra_large() %}
     .mobile-view {
@@ -14,41 +17,16 @@
     }
 {% endcall %}
 
-.fixed-container {
-    background-color: white;
-    position: fixed;
-    bottom: 0;
-    padding: var(--space-m);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: var(--space-s);
-    z-index: 2;
-    box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.07); 
-}
-
-.fixed-container .price {
-    flex-direction: column;
-    gap: 0;
-}
-
-.fixed-container .price p {
-    font-size: var(--fs-2);
-    margin-bottom: 0;
-}
-
-.fixed-container .button {
-    flex-grow: 1;
-    margin-top: 0;
-}
-
 section:not(.client-logos):not(.contact-us) {
     margin-top: var(--space-xl);
     margin-bottom: var(--space-xl);
 }
 
 section > div {
-    max-width: var(--text-max-width);
+    max-width: min(
+        var(--text-max-width), 
+        calc(100% - var(--course-info-card-width) - var(--space-l))
+    );
 }
 
 section hr {
@@ -72,24 +50,15 @@ section h2 {
 }
 
 .course-info-card {
-    max-width: var(--content-max-width);
-    padding-right: var(--space-l);
-    margin-inline: auto;
-    width: 100%;
     position: fixed;
+    right: var(--space-l);
     top: 20%;
     z-index: 2;
-}
-
-.course-info-card__wrapper {
     {{ macros.card_styles() }}
     background-color: white;
     min-height: 20rem;
-    min-width: 21rem;
-    z-index: 2;
-    max-width: 25rem;
-    margin-left: auto;
-} 
+    width: var(--course-info-card-width);
+}
 
 .course-info-card__content {
     padding: var(--space-l);
@@ -109,6 +78,46 @@ section h2 {
     width: 100%;
 }
 
+.course-info--mobile {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    padding: var(--space-m);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+    z-index: 2;
+    box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.07); 
+}
+
+.course-info--mobile .price {
+    flex-direction: column;
+    gap: 0;
+}
+
+.course-info--mobile .price p {
+    font-size: var(--fs-2);
+    margin-bottom: 0;
+}
+
+.course-info--mobile .button {
+    flex-grow: 1;
+    margin-top: 0;
+}
+
+{% call breakpoints.large_and_extra_large() %}
+    .course-info--mobile {
+        display: none;
+    }
+{% endcall %}
+
+{% call breakpoints.small_and_medium() %}
+    .course-info-card {
+        display: none;
+    }
+{% endcall %}
+
 .course-info-banner {
     background-color: var(--light-grey);
     padding: var(--space-m) var(--space-s);
@@ -119,6 +128,7 @@ section h2 {
     display: flex;
     align-items: center; 
 }
+
 {% call breakpoints.medium_large_and_extra_large() %}
     .two-col-text ul {
         display: grid;

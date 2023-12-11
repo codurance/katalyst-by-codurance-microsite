@@ -15,29 +15,26 @@
   <section class="heading container desktop-view">
     {% module "course_title" path="@hubspot/header" label="Course title" %}
     {% module "course_description" path="@hubspot/rich_text" label="Course description" %}
-    
-    <aside class="course-info-card">
-      <div class="course-info-card__wrapper">
-        {% module "course_video" path="@hubspot/video" video_type="embed" label="Course video" %}
-        <div class="course-info-card__content">
-          <div class="price">
-            {% module "course_price_label" path="@hubspot/text" %}
-            <span>€ {% module "course_price" path="@hubspot/text" no_wrapper=True %} </span>
-          </div>
-          {% module "purchase_button" path="@hubspot/button" label="Purchase button" no_wrapper=True %}
-          {% module "course_features_listing" path="../modules/Icon-Text-Listing.module" label="Course features listing" %}
-        </div>
-      </div>
-    </aside>
   </section>
 
+  <aside class="course-info-card">
+    {% module "course_video" path="@hubspot/video" video_type="embed" label="Course video" %}
+    <div class="course-info-card__content">
+      <div class="price">
+        {% module "course_price_label" path="@hubspot/text" %}
+        <span>€ {% module "course_price" path="@hubspot/text" no_wrapper=True %} </span>
+      </div>
+      {% module "purchase_button" path="@hubspot/button" label="Purchase button" no_wrapper=True %}
+      {% module "course_features_listing" path="../modules/Icon-Text-Listing.module" label="Course features listing" %}
+    </div>
+  </aside>
 
   <section class="heading container mobile-view">
     <h1>{{ content.widgets.course_title.body.value }}</h1>
     <p>{{ content.widgets.course_description.body.html }}</p>
   </section>
 
-  <aside class="fixed-container mobile-view">
+  <aside class="course-info--mobile">
     <div class="price">
       <p>{{ content.widgets.course_price_label.body.value }}</p>
       <span>€  {{ content.widgets.course_price.body.value }}</span>
@@ -46,8 +43,6 @@
         {{ content.widgets.purchase_button.body.button_text }} 
       </a>
   </aside>
-
-
 
   <section class="course-info-banner">
     <div class="container">

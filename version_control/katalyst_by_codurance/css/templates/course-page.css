@@ -23,11 +23,17 @@ section:not(.client-logos):not(.contact-us) {
 }
 
 section > div {
-    max-width: min(
-        var(--text-max-width), 
-        calc(100% - var(--course-info-card-width) - var(--space-l))
-    );
+    max-width: var(--text-max-width); 
 }
+
+{% call breakpoints.large_and_extra_large() %}
+    section > div {
+        max-width: min(
+            var(--text-max-width), 
+            calc(100% - var(--course-info-card-width) - var(--space-l))
+        );
+    }   
+{% endcall %}
 
 section hr {
     margin-top: var(--space-xl);
@@ -50,15 +56,22 @@ section h2 {
 }
 
 .course-info-card {
-    position: fixed;
-    right: var(--space-l);
-    top: 20%;
-    z-index: 2;
     {{ macros.card_styles() }}
+    position: sticky;
+    float: right;
+    right: var(--space-l);
+    top: 10%;
+    z-index: 2;
     background-color: white;
     min-height: 20rem;
     width: var(--course-info-card-width);
 }
+
+{% call breakpoints.extra_large() %}
+    .course-info-card {
+        right: 10vw;
+    }
+{% endcall %}
 
 .course-info-card__content {
     padding: var(--space-l);

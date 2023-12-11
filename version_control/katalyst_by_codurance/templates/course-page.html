@@ -11,12 +11,8 @@
   {% global_partial path="./partials/header-no-navigation.html" %}
 {% endblock header %}
 
-{% block body %}
-  <section class="heading container desktop-view">
-    {% module "course_title" path="@hubspot/header" label="Course title" %}
-    {% module "course_description" path="@hubspot/rich_text" label="Course description" %}
-  </section>
 
+{% block body %}
   <aside class="course-info-card">
     {% module "course_video" path="@hubspot/video" video_type="embed" label="Course video" %}
     <div class="course-info-card__content">
@@ -29,11 +25,6 @@
     </div>
   </aside>
 
-  <section class="heading container mobile-view">
-    <h1>{{ content.widgets.course_title.body.value }}</h1>
-    <p>{{ content.widgets.course_description.body.html }}</p>
-  </section>
-
   <aside class="course-info--mobile">
     <div class="price">
       <p>{{ content.widgets.course_price_label.body.value }}</p>
@@ -43,6 +34,18 @@
         {{ content.widgets.purchase_button.body.button_text }} 
       </a>
   </aside>
+
+  <section class="heading container desktop-view">
+    {% module "course_title" path="@hubspot/header" label="Course title" %}
+    {% module "course_description" path="@hubspot/rich_text" label="Course description" %}
+  </section>
+
+  <section class="heading container mobile-view">
+    <h1>{{ content.widgets.course_title.body.value }}</h1>
+    <p>{{ content.widgets.course_description.body.html }}</p>
+  </section>
+
+  
 
   <section class="course-info-banner">
     <div class="container">
@@ -89,7 +92,10 @@
     {% module "video" path="@hubspot/video" label="Video To insert" no_wrapper=True %}
     {% module "teaser-video_description_text" path="@hubspot/rich_text" label="Intro Video text" %}
   </section>
+  
+{% endblock body %}
 
+{% block footer %}
   <section id="clients" class="client-logos">
     <div class="container">
       <h2>
@@ -100,11 +106,10 @@
     </div>
     <img class="client-logos__graphic" src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Course%20Page/Course_page__orange_triangle.svg" alt="" >
   </section>
-  
-<section class="contact-us">
+
+  <section class="contact-us">
     {% module "contact_us_header" path="@hubspot/header" label="Contact us title"%}
     {% module "contact_us_content" path="@hubspot/text" label="Contact us title"%}
-</section>
-
-{% endblock body %}
-
+  </section>
+  {% global_partial path="./partials/footer.html" %}
+{% endblock footer %}

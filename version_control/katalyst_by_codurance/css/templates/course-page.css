@@ -9,19 +9,6 @@ header {
     position: static !important;
 }
 
-
-{% call breakpoints.medium_large_and_extra_large() %}
-    .mobile-view {
-        display: none !important;
-    }
-{% endcall %}
-
-{% call breakpoints.small() %}
-    .desktop-view {
-        display: none !important;
-    }
-{% endcall %}
-
 section:not(.client-logos):not(.contact-us) {
     margin-top: var(--space-xl);
     margin-bottom: var(--space-xl);
@@ -145,15 +132,7 @@ section h2 {
     align-items: center; 
 }
 
-{% call breakpoints.medium_large_and_extra_large() %}
-    .two-col-text ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto-fill;
-        column-gap: var(--space-m);
-        row-gap: var(--space-s);
-    }
-{% endcall %}
+
 
 .accordion {
     background-color: var(--dark-blue);
@@ -221,6 +200,32 @@ section h2 {
     }
 {% endcall %}
 
+
+/* Unique breakpoints on layout */
+
+
+{% call breakpoints.small() %}
+    .desktop-view {
+        display: none !important;
+    }
+{% endcall %}
+
+{% call breakpoints.medium_large_and_extra_large() %}
+    .mobile-view {
+        display: none !important;
+    }
+{% endcall %}
+
+
+{% call breakpoints.medium_large_and_extra_large() %}
+    .two-col-text ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto-fill;
+        column-gap: var(--space-m);
+        row-gap: var(--space-s);
+    }
+{% endcall %}
 
 {% call breakpoints.extra_large() %}
     .body-container-wrapper {

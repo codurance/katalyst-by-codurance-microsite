@@ -8,21 +8,15 @@
 {{ require_css(get_asset_url("../css/templates/course-page.css")) }}
 
 {% block body %}
-
   <aside class="course-info-card">
-    {% module "course_video" path="@hubspot/video" video_type="embed"
-    label="Course video" %}
+    {% module "course_video" path="@hubspot/video" video_type="embed" label="Course video" %}
     <div class="course-info-card__content">
       <div class="price">
         {% module "course_price_label" path="@hubspot/text" %}
-        <span
-          >€ {% module "course_price" path="@hubspot/text" no_wrapper=True %}
-        </span>
+        <span>€ {% module "course_price" path="@hubspot/text" no_wrapper=True %}</span>
       </div>
-      {% module "purchase_button" path="@hubspot/button" label="Purchase button"
-      no_wrapper=True %} {% module "course_features_listing"
-      path="../modules/Icon-Text-Listing.module" label="Course features listing"
-      %}
+      {% module "purchase_button" path="@hubspot/button" label="Purchase button" no_wrapper=True %} 
+      {% module "course_features_listing" path="../modules/Icon-Text-Listing.module" label="Course features listing" %}
     </div>
   </aside>
 
@@ -33,7 +27,7 @@
     </div>
     <a
       class="button"
-      href=" {{ content.widgets.purchase_button.body.link.url.href }} "
+      href="{{ content.widgets.purchase_button.body.link.url.href }}"
     >
       {{ content.widgets.purchase_button.body.button_text }}
     </a>
@@ -42,9 +36,8 @@
   
   <div class="content">
     <section class="heading container desktop-view">
-      {% module "course_title" path="@hubspot/header" label="Course title" %} {%
-      module "course_description" path="@hubspot/rich_text" label="Course
-      description" %}
+      {% module "course_title" path="@hubspot/header" label="Course title" %} 
+      {% module "course_description" path="@hubspot/rich_text" label="Course description" %}
     </section>
     <section class="heading container mobile-view">
       <h1>{{ content.widgets.course_title.body.value }}</h1>
@@ -52,81 +45,68 @@
     </section>
     <section class="course-info-banner">
       <div class="container">
-        {% module "course_instructor" path="@hubspot/text" label="Course instructor"
-        %}
+        {% module "course_instructor" path="@hubspot/text" label="Course instructor" %}
         <div class="course-info-banner__wrapper">
-          {% module "course_info_listing" path="../modules/Icon-Text-Listing.module"
-          label="Course info listing" %}
+          {% module "course_info_listing" path="../modules/Icon-Text-Listing.module" label="Course info listing" %}
         </div>
       </div>
     </section>
     <section class="container">
-      {% module "intro_description_title" path="@hubspot/header" label="Intro Text
-      Title" %}
+      {% module "intro_description_title" path="@hubspot/header" label="Intro Text Title" %}
       <div class="two-col-text">
-        {% module "intro_description_text" path="@hubspot/rich_text" label="Intro
-        Description text" %}
+        {% module "intro_description_text" path="@hubspot/rich_text" label="Intro Description text" %}
       </div>
     </section>
     <section class="accordion">
       <div class="container">
         <div class="accordion-content">
-          {% module "accordion_title" path="@hubspot/header" label="Accordion Title"
-          %} {% module "accordion" path="../modules/Accordion.module"
-          label="Accordion" %}
+          {% module "accordion_title" path="@hubspot/header" label="Accordion Title"%} 
+          {% module "accordion" path="../modules/Accordion.module" label="Accordion" %}
         </div>
       </div>
     </section>
     <section class="in-depth-description container">
-      {% module "intro_description_title" path="@hubspot/header" label="Intro Text
-      Title" %} {% module "intro_description_text" path="@hubspot/rich_text"
-      label="Intro Description text" %}
+      {% module "intro_description_title" path="@hubspot/header" label="Intro Text Title" %} 
+      {% module "intro_description_text" path="@hubspot/rich_text" label="Intro Description text" %}
       <hr />
     </section>
     <section class="rich-text container">
       {% module "rich_text_title" path="@hubspot/header" label="Rich text Title" %}
-      {% module "rich_text_description_text" path="@hubspot/rich_text" label="Rich
-      text intro Description text" %}
+      {% module "rich_text_description_text" path="@hubspot/rich_text" label="Rich text intro Description text" %}
       <hr />
     </section>
     <section class="requirements container">
-      {% module "requirements_title" path="@hubspot/header" label="Requirements
-      Title" %} {% module "requirements_description_text" path="@hubspot/rich_text"
-      label="Intro Description text" %}
+      {% module "requirements_title" path="@hubspot/header" label="Requirements Title" %} 
+      {% module "requirements_description_text" path="@hubspot/rich_text" label="Intro Description text" %}
       <hr />
     </section>
     <section class="teaser-video container">
-      {% module "teaser-video_title" path="@hubspot/header" label="Teaser Video
-      Title" %} {% module "video" path="@hubspot/video" label="Video To insert"
-      no_wrapper=True %} {% module "teaser-video_description_text"
-      path="@hubspot/rich_text" label="Intro Video text" %}
+      {% module "teaser-video_title" path="@hubspot/header" label="Teaser Video Title" %} 
+      {% module "video" path="@hubspot/video" label="Video To insert" no_wrapper=True %} 
+      {% module "teaser-video_description_text" path="@hubspot/rich_text" label="Intro Video text" %}
     </section>
   </div>
-
 {% endblock body %} 
 
-
 {% block footer %}
-<section id="clients" class="client-logos">
-  <div class="container">
-    <h2>
-      {% module "clients_header" path="@hubspot/text" label="Clients logos
-      title"%}
-    </h2>
+  <section id="clients" class="client-logos">
+    <div class="container">
+      <h2>
+        {% module "clients_header" path="@hubspot/text" label="Clients logos title" %}
+      </h2>
 
-    {% module 'clients logos' path='../modules/Logos-Cloud.module'
-    label="Clients Logos" no_wrapper=True%}
-  </div>
-  <img
-    class="client-logos__graphic"
-    src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Course%20Page/Course_page__orange_triangle.svg"
-    alt=""
-  />
-</section>
+      {% module 'clients logos' path='../modules/Logos-Cloud.module' label="Clients Logos" no_wrapper=True %}
+    </div>
+    <img
+      class="client-logos__graphic"
+      src="https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Course%20Page/Course_page__orange_triangle.svg"
+      alt=""
+    />
+  </section>
 
-<section class="contact-us">
-  {% module "contact_us_header" path="@hubspot/header" label="Contact us
-  title"%} {% module "contact_us_content" path="@hubspot/text" label="Contact us
-  title"%}
-</section>
-{% global_partial path="./partials/footer.html" %} {% endblock footer %}
+  <section class="contact-us">
+    {% module "contact_us_header" path="@hubspot/header" label="Contact us title" %} 
+    {% module "contact_us_content" path="@hubspot/text" label="Contact us title" %}
+  </section>
+  {% global_partial path="./partials/footer.html" %} 
+{% endblock footer %}

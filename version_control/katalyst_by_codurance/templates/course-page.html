@@ -12,8 +12,8 @@
     {% module "course_video" path="@hubspot/video" video_type="embed" label="Course video" %}
     <div class="course-info-card__content">
       <div class="price">
-        {% module "course_price_label" path="@hubspot/text" %}
-        <span>€ {% module "course_price" path="@hubspot/text" no_wrapper=True %}</span>
+        {% module "course_price_label" path="@hubspot/text" label="Course title" %}
+        <span>€ {% module "course_price" path="@hubspot/text" label="Course price" no_wrapper=True %}</span>
       </div>
       {% module "purchase_button" path="@hubspot/button" label="Purchase button" no_wrapper=True %} 
       {% module "course_features_listing" path="../modules/Icon-Text-Listing.module" label="Course features listing" %}

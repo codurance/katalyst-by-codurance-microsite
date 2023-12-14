@@ -66,8 +66,8 @@
       </div>
     </section>
     <section class="in-depth-description container">
-      {% module "intro_description_title" path="@hubspot/header" label="Intro Text Title" %} 
-      {% module "intro_description_text" path="@hubspot/rich_text" label="Intro Description text" %}
+      {% module "in_depth_description_title" path="@hubspot/header" label="In depth Text Title" %} 
+      {% module "in_depth_description_text" path="@hubspot/rich_text" label="In depth Description text" %}
       <hr />
     </section>
     <section class="rich-text container">
@@ -81,9 +81,9 @@
       <hr />
     </section>
     <section class="teaser-video container">
-      {% module "teaser-video_title" path="@hubspot/header" label="Teaser Video Title" %} 
+      {% module "teaser_video_title" path="@hubspot/header" label="Teaser Video Title" %} 
       {% module "video" path="@hubspot/video" label="Video To insert" no_wrapper=True %} 
-      {% module "teaser-video_description_text" path="@hubspot/rich_text" label="Intro Video text" %}
+      {% module "teaser_video_description_text" path="@hubspot/rich_text" label="Teaser Video text" %}
     </section>
   </div>
 {% endblock body %} 
@@ -95,7 +95,7 @@
         {% module "clients_header" path="@hubspot/text" label="Clients logos title" %}
       </h2>
 
-      {% module 'clients logos' path='../modules/Logos-Cloud.module' label="Clients Logos" no_wrapper=True %}
+      {% module 'clients_logos' path='../modules/Logos-Cloud.module' label="Clients Logos" no_wrapper=True %}
     </div>
     <img
       class="client-logos__graphic"

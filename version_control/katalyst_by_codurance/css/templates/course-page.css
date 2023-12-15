@@ -141,13 +141,22 @@ section h2 {
 
 .course-info-banner {
     background-color: var(--light-grey);
-    padding: var(--space-m) var(--space-s);
-    
+    padding-top: var(--space-m);
+    padding-bottom: var(--space-m);
 }
     
 .course-info-banner__wrapper {
     display: flex;
     align-items: center; 
+}
+
+.course-features-listing--mobile {
+    margin-inline: auto;
+    max-width: min(var(--content-max-width),100% - var(--space-3xl));
+}
+
+.course-features-listing--mobile ul {
+    margin: unset;
 }
 
 .accordion {

@@ -56,6 +56,20 @@
         </div>
       </div>
     </section>
+
+    <section class="course-features-listing--mobile mobile-view">
+      {% set course_features_listing = content.widgets.course_features_listing.body.list_items %}
+      
+      <ul class="icon-text-listing">
+        {% for item in course_features_listing %}
+          <li>
+            <i class="las {{ item.icon }}"></i>
+            {{ item.text }}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+
     <section class="container">
       {% module "intro_description_title" path="@hubspot/header" label="Intro Text Title" %}
       <div class="two-col-text">

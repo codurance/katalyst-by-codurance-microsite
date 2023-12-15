@@ -40,6 +40,11 @@
       {% module "course_description" path="@hubspot/rich_text" label="Course description" %}
     </section>
     <section class="heading container mobile-view">
+      <div class="course-video--mobile">
+        <div class="iframe_wrapper">
+          {{ content.widgets.course_video.body.embed_field.oembed_response.html }}
+        </div>
+      </div>
       <h1>{{ content.widgets.course_title.body.value }}</h1>
       <p>{{ content.widgets.course_description.body.html }}</p>
     </section>

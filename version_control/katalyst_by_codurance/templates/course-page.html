@@ -12,7 +12,7 @@
     {% module "course_video" path="@hubspot/video" video_type="embed" label="Course video" %}
     <div class="course-info-card__content">
       <div class="price">
-        {% module "course_price_label" path="@hubspot/text" label="Course title" %}
+        {% module "course_price_label" path="@hubspot/text" label="Course price label" %}
         <span>€ {% module "course_price" path="@hubspot/text" label="Course price" no_wrapper=True %}</span>
       </div>
       {% module "purchase_button" path="@hubspot/button" label="Purchase button" no_wrapper=True %} 
@@ -40,6 +40,11 @@
       {% module "course_description" path="@hubspot/rich_text" label="Course description" %}
     </section>
     <section class="heading container mobile-view">
+      <div class="course-video--mobile">
+        <div class="iframe_wrapper">
+          {{ content.widgets.course_video.body.embed_field.oembed_response.html }}
+        </div>
+      </div>
       <h1>{{ content.widgets.course_title.body.value }}</h1>
       <p>{{ content.widgets.course_description.body.html }}</p>
     </section>
@@ -51,6 +56,20 @@
         </div>
       </div>
     </section>
+
+    <section class="course-features-listing--mobile mobile-view">
+      {% set course_features_listing = content.widgets.course_features_listing.body.list_items %}
+      
+      <ul class="icon-text-listing">
+        {% for item in course_features_listing %}
+          <li>
+            <i class="las {{ item.icon }}"></i>
+            {{ item.text }}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+
     <section class="container">
       {% module "intro_description_title" path="@hubspot/header" label="Intro Text Title" %}
       <div class="two-col-text">

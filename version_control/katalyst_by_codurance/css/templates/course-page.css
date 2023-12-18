@@ -121,10 +121,28 @@ section h2 {
     }
 {% endcall %}
 
+.course-video--mobile {
+    position: relative;
+}
+
+.course-video--mobile iframe {
+    height: 100%;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.heading.mobile-view h1 {
+    margin-top: var(--space-l);
+}
+
 .course-info-banner {
     background-color: var(--light-grey);
-    padding: var(--space-m) var(--space-s);
-    
+    padding-top: var(--space-m);
+    padding-bottom: var(--space-m);
 }
     
 .course-info-banner__wrapper {
@@ -132,7 +150,14 @@ section h2 {
     align-items: center; 
 }
 
+.course-features-listing--mobile {
+    margin-inline: auto;
+    max-width: min(var(--content-max-width),100% - var(--space-3xl));
+}
 
+.course-features-listing--mobile ul {
+    margin: unset;
+}
 
 .accordion {
     background-color: var(--dark-blue);

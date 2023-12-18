@@ -210,13 +210,13 @@ section h2 {
 /* Unique breakpoints on layout */
 
 
-{% call breakpoints.small() %}
+{% call breakpoints.small_and_medium() %}
     .desktop-view {
         display: none !important;
     }
 {% endcall %}
 
-{% call breakpoints.medium_large_and_extra_large() %}
+{% call breakpoints.large_and_extra_large() %}
     .mobile-view {
         display: none !important;
     }

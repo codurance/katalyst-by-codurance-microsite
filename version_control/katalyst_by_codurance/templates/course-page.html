@@ -9,7 +9,7 @@
 
 {% block body %}
   <aside class="course-info-card">
-    {% module "course_video" path="@hubspot/video" video_type="embed" label="Course video" %}
+    {% module "course_image" path="@hubspot/linked_image" label="Course image" %}
     <div class="course-info-card__content">
       <div class="price">
         {% module "course_price_label" path="@hubspot/text" label="Course price label" %}
@@ -40,11 +40,9 @@
       {% module "course_description" path="@hubspot/rich_text" label="Course description" %}
     </section>
     <section class="heading container mobile-view">
-      <div class="course-video--mobile">
-        <div class="iframe_wrapper">
-          {{ content.widgets.course_video.body.embed_field.oembed_response.html }}
-        </div>
-      </div>
+      {% set course_image = content.widgets.course_image.body.img %}
+      <img src="{{ course_image.src }}" width="{{ course_image.width }}" height="auto" />
+
       <h1>{{ content.widgets.course_title.body.value }}</h1>
       <p>{{ content.widgets.course_description.body.html }}</p>
     </section>

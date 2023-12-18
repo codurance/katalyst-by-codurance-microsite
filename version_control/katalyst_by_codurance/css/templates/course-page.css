@@ -38,6 +38,7 @@ section h2 {
     color: var(--black);
     font-family: Inter;
     font-size: var(--fs-2);
+    font-weight: var(--fw-bold);
 }
 
 .heading {
@@ -58,7 +59,7 @@ section h2 {
     margin-bottom: var(--space-m);
     z-index: 2;
     background-color: white;
-    min-height: 20rem;
+    height: fit-content;
     width: var(--course-info-card-width);
 }
 
@@ -121,20 +122,6 @@ section h2 {
     }
 {% endcall %}
 
-.course-video--mobile {
-    position: relative;
-}
-
-.course-video--mobile iframe {
-    height: 100%;
-    left: 0;
-    margin: 0 auto;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-}
-
 .heading.mobile-view h1 {
     margin-top: var(--space-l);
 }
@@ -167,11 +154,6 @@ section h2 {
 .accordion-content {
     padding-top: var(--space-xl);
     padding-bottom: var(--space-xl);
-}
-
-.teaser-video .oembed_container {
-    margin-top: var(--space-s);
-    margin-bottom: var(--space-m);
 }
 
 .client-logos {
@@ -229,13 +211,13 @@ section h2 {
 /* Unique breakpoints on layout */
 
 
-{% call breakpoints.small() %}
+{% call breakpoints.small_and_medium() %}
     .desktop-view {
         display: none !important;
     }
 {% endcall %}
 
-{% call breakpoints.medium_large_and_extra_large() %}
+{% call breakpoints.large_and_extra_large() %}
     .mobile-view {
         display: none !important;
     }
@@ -264,10 +246,9 @@ section h2 {
         grid-row: 1/-1;
     }
 
-    .course-info-card, {
+    .course-info-card {
         grid-column: 3/4;
         grid-row: 1/2;
-        height: 100%;
         justify-self: end;
         margin-top: var(--space-xl);
     }

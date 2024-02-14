@@ -14,7 +14,7 @@ section:not(.client-logos):not(.contact-us) {
     margin-bottom: var(--space-xl);
 }
 
-section:not(.contact-us) > div,
+section > div,
 .accordion-content {
     max-width: var(--text-max-width); 
 }

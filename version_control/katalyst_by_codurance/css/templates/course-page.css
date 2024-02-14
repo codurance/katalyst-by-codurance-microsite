@@ -14,7 +14,7 @@ section:not(.client-logos):not(.contact-us) {
     margin-bottom: var(--space-xl);
 }
 
-section > div,
+section:not(.contact-us) > div,
 .accordion-content {
     max-width: var(--text-max-width); 
 }
@@ -186,11 +186,10 @@ section h2 {
 }
 
 .contact-us {
-    background: url("https://3042464.fs1.hubspotusercontent-na1.net/hubfs/3042464/KATALYST%20BY%20CODURANCE/Course%20Page/Course_page__triangles.svg");
     text-align: center;
-    padding: 80px;
-    background-repeat: no-repeat;
-    background-size: contain;
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+    padding-inline: var(--space-xl);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -199,6 +198,10 @@ section h2 {
 .contact-us h2 {
     font-family: {{ theme.global_fonts.secondary.font }};
     font-size: var(--fs-4);
+}
+
+.contact-us__form {
+    margin-top: var(--space-xl);
 }
 
 {% call breakpoints.small() %}

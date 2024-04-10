@@ -1,0 +1,12 @@
+[ {
+  "id" : "72cc32cd-8a5d-df06-cca2-06cf51cfcc61",
+  "name" : "course_id",
+  "display_width" : null,
+  "label" : "Course ID",
+  "inline_help_text" : "Must be the same ID chosen for the course on Moodle",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "step" : 1,
+  "type" : "number"
+} ]

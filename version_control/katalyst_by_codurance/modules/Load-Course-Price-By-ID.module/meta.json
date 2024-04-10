@@ -1,0 +1,9 @@
+{
+  "global" : false,
+  "content_types" : [ "SITE_PAGE" ],
+  "icon" : "fontawesome-5.14.0:Alternate%20Money%20Bill:SOLID",
+  "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
+  "module_id" : 99421841089,
+  "label" : "Load course price by id",
+  "is_available_for_new_content" : true
+}

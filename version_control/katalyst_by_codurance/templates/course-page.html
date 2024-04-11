@@ -8,12 +8,18 @@
 {{ require_css(get_asset_url("../css/templates/course-page.css")) }}
 
 {% block body %}
+  {% module "course_id" 
+    path="../modules/Load-Course-Price-By-ID.module" 
+    label="Choose course ID to load price" 
+    no_wrapper=True 
+  %}
+
   <aside class="course-info-card">
     {% module "course_image" path="@hubspot/linked_image" label="Course image" %}
     <div class="course-info-card__content">
       <div class="price">
         {% module "course_price_label" path="@hubspot/text" label="Course price label" %}
-        <span>€ {% module "course_price" path="@hubspot/text" label="Course price" no_wrapper=True %}</span>
+        <span>€ <span class="course-price-js"></span></span>
       </div>
       {% module "purchase_button" path="@hubspot/button" label="Purchase button" no_wrapper=True %} 
       {% module "course_features_listing" path="../modules/Icon-Text-Listing.module" label="Course features listing" %}
@@ -23,7 +29,7 @@
   <aside class="course-info--mobile">
     <div class="price">
       <p>{{ content.widgets.course_price_label.body.value }}</p>
-      <span>€ {{ content.widgets.course_price.body.value }}</span>
+      <span>€ <span class="course-price-js"></span></span>
     </div>
     <a
       class="button"

@@ -50,6 +50,7 @@ form input:active {
 
 form textarea {
   resize: vertical;
+  min-height: 6.5rem;
 }
 
 form fieldset {

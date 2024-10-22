@@ -123,7 +123,6 @@
 /* Menu items - submenus */
 
 .menu__submenu {
-  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   display: none;
   left: 0;
@@ -131,7 +130,7 @@
   text-align: left;
   text-transform: none;
   top: 100%;
-  width: 270px;
+  width: 200px;
   z-index: 99;
 }
 
@@ -140,7 +139,7 @@
 }
 
 .menu__submenu--level-2 {
-  transform: translateX(-50%);
+  transform: translateX(-25%);
 }
 
 /* Keeps the first menu item's drop down menu aligned to the left of the top level menu item */
@@ -150,7 +149,9 @@
 }
 
 .menu__submenu .menu__item {
-  border-bottom: 1px solid #D1D6DC;
+  border-bottom: 1px solid var(--orange);
+  border-right: 1px solid var(--orange);
+  border-left: 1px solid var(--orange);
   padding: 0;
   width: 100%;
 }
@@ -186,7 +187,6 @@
 @media (min-width: 768px) {
   .menu__submenu--level-2 > .menu__item:first-child:before {
     border-radius: 6px;
-    box-shadow: 0 2px 9px 0 rgb(0 0 0 / 20%);
     content: '';
     display: block;
     height: 30px;
@@ -276,14 +276,18 @@
   }
 
   .menu__child-toggle-icon {
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top-style: solid;
-    border-top-width: 7px;
+    margin-top: -14px;
+    margin-left: 8px;
+    border-style: solid;
+    border-width: 0.15em 0.15em 0 0;
+    content: '';
     display: block;
-    height: 0;
-    margin-left: 1px;
-    width: 0;
+    height: 0.45em;
+    left: 0.15em;
+    top: 0.15em;
+    vertical-align: top;
+    width: 0.45em;
+    transform: rotate(135deg);
   }
 }
 

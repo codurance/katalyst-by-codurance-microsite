@@ -3,7 +3,12 @@
 setCoursePrice();
 
 async function setCoursePrice() {
-  const coursePrice = await fetchCoursePrice();
+  let coursePrice = await fetchCoursePrice();
+
+  if (!coursePrice) {
+    coursePrice = 14.99
+  }
+
   const coursePriceTags = document.querySelectorAll(".price");
 
   coursePriceTags.forEach((coursePriceTag) => {

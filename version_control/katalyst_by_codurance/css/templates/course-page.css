@@ -68,6 +68,10 @@ section h2 {
     padding: var(--space-l);
 }
 
+.course-price-base {
+    text-decoration: line-through;
+}
+
 .price {
     font-size: var(--fs-2);
     gap: .3rem;

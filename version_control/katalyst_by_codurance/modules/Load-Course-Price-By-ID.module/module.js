@@ -15,10 +15,10 @@ async function setCoursePrice() {
     priceSymbolTag.textContent = coursePrice.currency.symbol;
 
     if (coursePrice.discountPrice === undefined || coursePrice.discountPrice === null) {
-      priceNumberTag.textContent = coursePrice.basePrice.toString();
+      priceNumberTag.textContent = coursePrice.basePrice.toFixed(2);
     } else {
-      priceNumberTag.textContent = coursePrice.discountPrice.toString();
-      priceBaseTag.textContent = coursePrice.basePrice.toString();
+      priceNumberTag.textContent = coursePrice.discountPrice.toFixed(2);
+      priceBaseTag.textContent = coursePrice.basePrice.toFixed(2);
     }
 
     coursePriceTag.classList.add("price--shown");
